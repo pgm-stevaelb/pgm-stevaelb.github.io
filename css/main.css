@@ -1,0 +1,109 @@
+@import url('../fonts/fonts.css');
+
+:root {
+	--light-color: #E7E6F7;
+	--dark-color: #555555;
+	--color-yellow: #FAD744;
+	--color-red: #EF5455;
+	--color-blue: #2A3252;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans';
+	color: var(--dark-color);
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--light-color);
+}
+
+header {
+	background: url('../images/header-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: var(--color-blue);
+	background-blend-mode: lighten;
+	height: 20rem;
+}
+
+.logo {
+	max-width: 10rem;
+	height: auto;
+}
+
+li.menu__item {
+	list-style-type: none;
+}
+
+li.menu__item a {
+	text-decoration: none;
+	font-family: 'Ubuntu';
+	font-weight: bold;
+	float: left;
+	margin-right: 1rem;
+	padding: 0.25rem;
+	color: white;
+}
+
+li.menu__item a:hover {
+	border-bottom: 0.25rem solid var(--color-red);
+}
+
+main {
+	padding: 1rem;
+}
+
+article {
+	margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+	font-family: 'Ubuntu';
+	font-weight: bold;
+	font-style: italic;
+}
+
+h2 {
+	padding: 0.25rem;
+	border-bottom: 0.25rem solid var(--color-red);
+	margin-bottom: 1rem;
+}
+
+.services {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	row-gap: 1rem;
+	justify-content: center;
+	text-align: center;
+}
+
+.service__card {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow:
+		0px 5.9px 5.9px rgba(0, 0, 0, 0.025),
+		0px 12.3px 16.3px rgba(0, 0, 0, 0.04),
+		0px 22.9px 39.2px rgba(0, 0, 0, 0.056),
+		0px 68px 130px rgba(0, 0, 0, 0.08);
+}
+
+.service__image {
+	max-width: 4rem;
+	height: auto;
+}
+
+footer {
+	background-color: var(--color-yellow);
+	padding: 1rem;
+}
+
+.footer__text {
+	font-size: 0.8rem;
+}
