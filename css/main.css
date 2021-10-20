@@ -96,7 +96,19 @@ header {
 
 @media (min-width: 768px) {
 	header {
-		padding: 8rem 20rem;
+		padding: 8rem;
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		padding: 8rem 11rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		padding: 11rem;
 	}
 }
 
@@ -141,6 +153,20 @@ li.menu__item a:hover {
 
 .intro__text {
 	text-align: center;
+}
+
+@media (min-width: 992px) {
+	.intro__text {
+		margin: 0 10rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.intro__text {
+		display: block;
+		width: 50%;
+		margin: auto;
+	}
 }
 
 .icon {
