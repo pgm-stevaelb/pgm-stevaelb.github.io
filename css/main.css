@@ -31,6 +31,7 @@
 	font-family: 'Open Sans';
 	color: var(--light-color);
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -178,6 +179,11 @@ li.menu__item a:hover {
 
 .icon {
 	width: 4rem;
+	margin: auto;
+}
+
+.icon__link {
+	display: block;
 	margin: auto;
 }
 
