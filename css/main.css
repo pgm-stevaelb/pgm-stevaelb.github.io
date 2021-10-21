@@ -62,10 +62,15 @@ h3 {
 }
 
 hr {
-	margin: 2rem;
+	margin: 2rem auto;
+	width: 50%;
 	display: block;
 	border: 0;
 	border-top: 0.125rem solid var(--secondary-color);
+}
+
+hr.section__divider {
+	margin: 10rem auto 5rem auto;
 }
 
 /* Custom Multiple Use CSS */
@@ -102,13 +107,13 @@ header {
 
 @media (min-width: 992px) {
 	header {
-		padding: 8rem 11rem;
+		padding: 8rem;
 	}
 }
 
 @media (min-width: 1200px) {
 	header {
-		padding: 11rem;
+		padding: 8rem;
 	}
 }
 
@@ -151,27 +156,28 @@ li.menu__item a:hover {
 	transition: all 0.2s ease-in-out;
 }
 
-.intro__text {
+.description {
 	text-align: center;
+	margin-bottom: 5rem;
 }
 
 @media (min-width: 992px) {
-	.intro__text {
-		margin: 0 10rem;
+	.description {
+		margin: 0 10rem 5rem 10rem;
 	}
 }
 
 @media (min-width: 1200px) {
-	.intro__text {
+	.description {
 		display: block;
 		width: 50%;
-		margin: auto;
+		margin: 0 auto 5rem auto;
 	}
 }
 
 .icon {
 	width: 4rem;
-	margin: 2rem auto 0 auto;
+	margin: auto;
 }
 
 main {
@@ -216,14 +222,25 @@ article {
 	}
 }
 
-@media (min-width: 992px) {
-
-}
-
 .service__image {
 	width: 5rem;
 	max-width: 100%;
 	margin-bottom: 1rem;
+}
+
+video {
+	display: block;
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+	border-radius: 1rem;
+	width: 40rem;
+	max-width: 100%;
+	margin: 5rem auto;
+}
+
+@media (min-width: 992px) {
+	video {
+		margin: 10rem auto;
+	}
 }
 
 .team {
