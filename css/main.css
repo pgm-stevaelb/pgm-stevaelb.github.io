@@ -8,6 +8,7 @@
 	--primary-color: rgb(239, 84, 85);
 	--secondary-color: rgb(250, 215, 68);
 	--darker-color: rgb(22, 26, 44);
+	--primary-darker: rgb(201, 68, 68);
 }
 
 /* BREAKPOINTS
@@ -195,12 +196,14 @@ article {
 	margin: 4rem auto;
 }
 
-.services {
+.services,
+.contact-info {
 	display: flex;
 	flex-direction: column;
 }
 
-.service__card {
+.service__card,
+.contact-info__card {
 	background-color: var(--darker-color);
 	padding: 1.5rem;
 	margin-bottom: 1rem;
@@ -209,20 +212,28 @@ article {
 	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+.contact-info__card {
+	background-color: var(--primary-color);
+}
+
 @media (min-width: 768px) {
-	.services {
+
+	.services,
+	.contact-info {
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: nowrap;
-	}	
+	}
 
-	.service__card {
+	.service__card,
+	.contact-info__card {
 		flex-basis: 33%;
 		margin: 1rem;
 	}
 }
 
-.service__image {
+.service__image,
+.contact-info__image {
 	width: 5rem;
 	max-width: 100%;
 	margin-bottom: 1rem;
@@ -274,7 +285,7 @@ video {
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: wrap;
-	}	
+	}
 
 	.team__member {
 		flex-basis: 33%;
@@ -287,7 +298,7 @@ video {
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: nowrap;
-	}	
+	}
 
 	.team__member {
 		flex-basis: 33%;
@@ -327,6 +338,30 @@ footer {
 	border-radius: 50%;
 }
 
+.social-icon:hover {
+	background-color: var(--primary-darker);
+}
+
 .social-icon img {
 	width: 1.5rem;
+}
+
+.google-map {
+	display: block;
+	margin: auto;
+	width: 60rem;
+	max-width: 100%;
+	height: 20rem;
+	border-radius: 1rem;
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.contact-info__link {
+	text-decoration: none;
+	word-wrap: break-word;
+}
+
+.contact-info__link:hover {
+	color: var(--secondary-color);
+	border-bottom: 0.25rem solid var(--secondary-color);
 }
