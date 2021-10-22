@@ -9,6 +9,7 @@
 	--secondary-color: rgb(250, 215, 68);
 	--darker-color: rgb(22, 26, 44);
 	--primary-darker: rgb(201, 68, 68);
+	--secondary--darker: rgb(251, 211, 47);
 }
 
 /* BREAKPOINTS
@@ -388,6 +389,11 @@ footer {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding: 2rem;
+}
+
+h3.portfolio__item__title {
+	word-wrap: break-word;
 }
 
 .portfolio__item__tag {
@@ -414,32 +420,87 @@ footer {
 	}
 }
 
-.portfolio__item--baeck--cammy {
+.portfolio__item:hover, .portfolio__item--spotlight:hover {
+	cursor: crosshair;
+}
+
+.portfolio__items--spotlight {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	gap: 2rem;
+	margin-bottom: 4rem;
+}
+
+.portfolio__item--spotlight {
+	margin: 0 auto 4rem auto;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.portfolio__item--spotlight {
+		height: 20rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.portfolio__items--spotlight {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	.portfolio__item--spotlight {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+.before-btn {
+	margin-bottom: 2rem;
+}
+
+/* Following lines are now hardcoded... Need to become softcode */
+
+.portfolio__item__baeck--cammy {
 	background-image: url('../images/projects/baeck-cammi.jpg');
 }
 
-.portfolio__item--wade--logo {
+.portfolio__item__wade--logo {
 	background-image: url('../images/projects/wade-logo.png');
 }
 
-.portfolio__item--ergo--website {
+.portfolio__item__ergo--website {
 	background-image: url('../images/projects/ergo-support-website.jpg');
 }
 
-.portfolio__item--kolvw--website {
+.portfolio__item__kolvw--website {
 	background-image: url('../images/projects/kolvw-website.jpg');
 }
 
-.portfolio__item--sgsnbao--branding {
+.portfolio__item__sgsnbao--branding {
 	background-image: url('../images/projects/sgsnbaonoord.png');
 }
 
-.portfolio__item--baeck--logo {
+.portfolio__item__baeck--logo {
 	background-image: url('../images/projects/baeck-logo.png');
 }
 
-.portfolio__item--sloep--website {
+.portfolio__item__sloep--website {
 	background-image: url('../images/projects/sloeprent-website.jpg');
+}
+
+.spotlight__item__baeck--cammy {
+	background-image: url('../images/projects/baeck-cammi.jpg');
+}
+
+.spotlight__item__wade--logo {
+	background-image: url('../images/projects/wade-logo.png');
+}
+
+.spotlight__item__ergo--website {
+	background-image: url('../images/projects/ergo-support-website.jpg');
 }
 
 /* Custom Multiple Use CSS */
@@ -455,4 +516,23 @@ footer {
 
 .rounded-corners {
 	border-radius: 1rem;
+}
+
+.btn-main {
+	display: inline-block;
+	margin: auto;
+	padding: 1rem 2rem;
+	background-color: var(--secondary-color);
+}
+
+.btn-main div {
+	color: var(--primary-color);
+	font-family: 'Ubuntu';
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.5rem;
+}
+
+.btn-main:hover {
+	background-color: var(--secondary--darker);
 }
