@@ -275,6 +275,8 @@ video {
 .team__image {
 	border-radius: 50%;
 	width: 15rem;
+	max-width: 100%;
+	min-width: 8rem;
 	margin-bottom: 1rem;
 	filter: grayscale(100%);
 	transition: filter 0.4s ease-in-out;
