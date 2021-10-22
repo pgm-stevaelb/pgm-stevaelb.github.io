@@ -271,7 +271,6 @@ video {
 
 .team__member {
 	margin-bottom: 2rem;
-	padding: 1.5rem;
 }
 
 .team__image {
@@ -375,6 +374,8 @@ footer {
 	color: var(--secondary-color);
 	border-bottom: 0.25rem solid var(--secondary-color);
 }
+
+
 
 /* Custom Multiple Use CSS */
 
