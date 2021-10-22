@@ -37,30 +37,38 @@
 body {
 	background-color: var(--dark-color);
 	border: 0.5rem solid var(--light-color);
+	text-align: center;
+}
+
+h1,h2,h3 {
+	font-family: 'Ubuntu';
+	line-height: 1;
 }
 
 h1 {
-	font-family: 'Ubuntu';
 	font-size: 2.5rem;
 	text-align: center;
-	line-height: 1;
 	text-transform: uppercase;
 }
 
 h2 {
-	text-align: center;
-	font-family: 'Ubuntu';
+	display: inline-block;
 	font-style: italic;
 	font-size: 2rem;
-	margin-bottom: 2rem;
+	margin: 0 auto 2rem auto;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.25rem solid var(--secondary-color);
 }
 
 h3 {
-	font-family: 'Ubuntu';
 	font-style: italic;
 	font-weight: bold;
 	font-size: 1.4rem;
 	margin-bottom: 0.5rem;
+}
+
+a {
+	text-decoration: none;
 }
 
 hr {
@@ -69,17 +77,6 @@ hr {
 	display: block;
 	border: 0;
 	border-top: 0.125rem solid var(--secondary-color);
-}
-
-hr.section__divider {
-	margin: 10rem auto 5rem auto;
-}
-
-/* Custom Multiple Use CSS */
-
-.text--yellow {
-	color: var(--secondary-color);
-	font-size: 3rem;
 }
 
 /* Regular CSS */
@@ -119,6 +116,10 @@ header {
 	}
 }
 
+section.intro {
+	padding-bottom: 3rem;
+}
+
 .logo {
 	display: block;
 	width: 15rem;
@@ -134,13 +135,16 @@ header {
 	margin-bottom: 2rem;
 }
 
+.menu--other-page {
+	margin-bottom: 0;
+}
+
 li.menu__item {
 	list-style-type: none;
 	margin-bottom: 0.5rem;
 }
 
 li.menu__item a {
-	text-decoration: none;
 	font-family: 'Ubuntu';
 	font-weight: bold;
 	padding: 0.5rem 0.25rem;
@@ -159,8 +163,11 @@ li.menu__item a:hover {
 }
 
 .description {
-	text-align: center;
-	margin-bottom: 5rem;
+	margin-bottom: 4rem;
+}
+
+.description--intro {
+	margin-bottom: 0;
 }
 
 @media (min-width: 992px) {
@@ -177,12 +184,11 @@ li.menu__item a:hover {
 	}
 }
 
-.icon {
+.icon--down {
 	width: 4rem;
-	margin: auto;
 }
 
-.icon__link {
+.icon--down__link {
 	display: block;
 	margin: auto;
 }
@@ -199,7 +205,7 @@ main {
 }
 
 article {
-	margin: 4rem auto;
+	margin: 0 auto 4rem auto;
 }
 
 .services,
@@ -214,8 +220,6 @@ article {
 	padding: 1.5rem;
 	margin-bottom: 1rem;
 	border-radius: 1rem;
-	text-align: center;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .contact-info__card {
@@ -247,7 +251,6 @@ article {
 
 video {
 	display: block;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 	border-radius: 1rem;
 	width: 40rem;
 	max-width: 100%;
@@ -264,7 +267,6 @@ video {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	text-align: center;
 }
 
 .team__member {
@@ -280,7 +282,6 @@ video {
 	margin-bottom: 1rem;
 	filter: grayscale(100%);
 	transition: filter 0.4s ease-in-out;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .team__image:hover {
@@ -329,7 +330,6 @@ footer {
 	color: var(--dark-color);
 	font-size: 0.8rem;
 	font-weight: bold;
-	text-align: center;
 	margin-bottom: 1rem;
 }
 
@@ -337,21 +337,25 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	gap: 1rem;
 }
 
-.social-icon {
+.icon--social {
+	display: block;
+	margin: 0;
 	background-color: var(--primary-color);
-	margin: 0.5rem;
 	padding: 1rem;
 	border-radius: 50%;
 }
 
-.social-icon:hover {
+.icon--social:hover {
 	background-color: var(--primary-darker);
 }
 
-.social-icon img {
+.icon--social__image {
 	width: 1.5rem;
+	height: 1.5rem;
+	vertical-align: middle;
 }
 
 .google-map {
@@ -361,15 +365,24 @@ footer {
 	max-width: 100%;
 	height: 20rem;
 	border-radius: 1rem;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .contact-info__link {
-	text-decoration: none;
 	word-wrap: break-word;
 }
 
 .contact-info__link:hover {
 	color: var(--secondary-color);
 	border-bottom: 0.25rem solid var(--secondary-color);
+}
+
+/* Custom Multiple Use CSS */
+
+.text--yellow {
+	color: var(--secondary-color);
+	font-size: 3rem;
+}
+
+.box-shadow {
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }

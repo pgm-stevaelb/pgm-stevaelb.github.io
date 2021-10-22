@@ -23,15 +23,17 @@
 				<li class="menu__item"><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
+
 		<section class="intro">
 			<h1 class="h1--alt">Website <span class="text--yellow">&</span> Branding Design</h1>
 			<hr>
-			<p class="description">
+			<p class="description description--intro">
 				We are a <strong>web development and branding design agency based in Ghent, Belgium</strong>! We are proud to
 				show off our work and can't wait to work with you!
 			</p>
 		</section>
-		<a href="#main-section" class="icon__link"><img src="images/icons/down-arrow.svg" alt="Down Arrow" class="icon"></a>
+
+		<a href="#main-section" class="icon--down__link"><img src="images/icons/down-arrow.svg" alt="Down Arrow" class="icon--down"></a>
 	</header>
 
 	<main>
@@ -43,17 +45,17 @@
 					course
 					taking out the trash... That's all on you.</p>
 				<div class="services">
-					<div class="service__card">
+					<div class="service__card box-shadow">
 						<img src="images/icons/internet.svg" alt="Web Design" class="service__image">
 						<h3>{ web-design }</h3>
 						<p>As if this wasn't clear, we are very proud of what we do!</p>
 					</div>
-					<div class="service__card">
+					<div class="service__card box-shadow">
 						<img src="images/icons/layout.svg" alt="UI / UI Design" class="service__image">
 						<h3>{ ui-ux-design }</h3>
 						<p>Trouble getting an app to work for your audience? Need some different interface? We got you!</p>
 					</div>
-					<div class="service__card">
+					<div class="service__card box-shadow">
 						<img src="images/icons/logo.svg" alt="Branding Design" class="service__image">
 						<h3>{ branding-design }</h3>
 						<p>Logos, complete branding, designing your company card, presentation, and so much more.</p>
@@ -62,10 +64,12 @@
 			</article>
 		</section>
 
-		<video controls>
-			<source src="media/Office.mp4" type="video/mp4">
-			Sorry, your browser doesn't support embedded videos.
-		</video>
+		<section id="company-video">
+			<video controls class="box-shadow">
+				<source src="media/Office.mp4" type="video/mp4">
+				Sorry, your browser doesn't support embedded videos.
+			</video>
+		</section>
 
 		<section id="our-team">
 			<article>
@@ -92,8 +96,6 @@
 			</article>
 		</section>
 
-		<hr class="section__divider">
-
 		<section id="in-the-spotlight">
 			<article>
 				<h2><span class="text--yellow">.</span>in-the-spotlight</h2>
@@ -111,9 +113,9 @@
 			We are in love with our clients! I mean, well you know... Not like love love, but love!
 		</p>
 		<div class="socials">
-			<a href="#" class="social-icon"><img src="images/icons/email.svg" alt="E-mail"></a>
-			<a href="#" class="social-icon"><img src="images/icons/facebook.svg" alt="Facebook"></a>
-			<a href="#" class="social-icon"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+			<a href="#" class="icon--social"><img src="images/icons/email.svg" alt="E-mail" class="icon--social__image"></a>
+			<a href="#" class="icon--social"><img src="images/icons/facebook.svg" alt="Facebook" class="icon--social__image"></a>
+			<a href="#" class="icon--social"><img src="images/icons/instagram.svg" alt="Instagram" class="icon--social__image"></a>
 		</div>
 	</footer>
 </body>
