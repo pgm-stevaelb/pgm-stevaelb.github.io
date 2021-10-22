@@ -40,7 +40,9 @@ body {
 	text-align: center;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
 	font-family: 'Ubuntu';
 	line-height: 1;
 }
@@ -219,7 +221,6 @@ article {
 	background-color: var(--darker-color);
 	padding: 1.5rem;
 	margin-bottom: 1rem;
-	border-radius: 1rem;
 }
 
 .contact-info__card {
@@ -251,7 +252,6 @@ article {
 
 video {
 	display: block;
-	border-radius: 1rem;
 	width: 40rem;
 	max-width: 100%;
 	margin: 5rem auto;
@@ -363,7 +363,6 @@ footer {
 	width: 60rem;
 	max-width: 100%;
 	height: 20rem;
-	border-radius: 1rem;
 }
 
 .contact-info__link {
@@ -375,7 +374,73 @@ footer {
 	border-bottom: 0.25rem solid var(--secondary-color);
 }
 
+/* Portfolio */
 
+.portfolio__item {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--dark-color);
+	background-blend-mode: exclusion;
+	height: 20rem;
+	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.portfolio__item__tag {
+	font-weight: bold;
+}
+
+@media (min-width: 768px) {
+	.portfolio__item {
+		height: 30rem;
+		margin: 4rem 5rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.portfolio__item {
+		width: 60%;
+		margin: 5rem auto;
+	}
+}
+
+@media (min-width: 1400px) {
+	.portfolio__item {
+		height: 40rem;
+	}
+}
+
+.portfolio__item--baeck--cammy {
+	background-image: url('../images/projects/baeck-cammi.jpg');
+}
+
+.portfolio__item--wade--logo {
+	background-image: url('../images/projects/wade-logo.png');
+}
+
+.portfolio__item--ergo--website {
+	background-image: url('../images/projects/ergo-support-website.jpg');
+}
+
+.portfolio__item--kolvw--website {
+	background-image: url('../images/projects/kolvw-website.jpg');
+}
+
+.portfolio__item--sgsnbao--branding {
+	background-image: url('../images/projects/sgsnbaonoord.png');
+}
+
+.portfolio__item--baeck--logo {
+	background-image: url('../images/projects/baeck-logo.png');
+}
+
+.portfolio__item--sloep--website {
+	background-image: url('../images/projects/sloeprent-website.jpg');
+}
 
 /* Custom Multiple Use CSS */
 
@@ -386,4 +451,8 @@ footer {
 
 .box-shadow {
 	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.rounded-corners {
+	border-radius: 1rem;
 }
