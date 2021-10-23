@@ -420,7 +420,8 @@ h3.portfolio__item__title {
 	}
 }
 
-.portfolio__item:hover, .portfolio__item--spotlight:hover {
+.portfolio__item:hover,
+.portfolio__item--spotlight:hover {
 	cursor: crosshair;
 }
 
@@ -518,7 +519,8 @@ div.newsletter {
 	width: 90%;
 	color: var(--dark-color);
 	text-align: center;
-	margin: 0 1rem 1rem 0;
+	margin-bottom: 1rem;
+	font-size: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -563,6 +565,7 @@ div.newsletter {
 	padding: 1rem 2rem;
 	background-color: var(--primary-color);
 	border: none;
+	font-size: 1rem;
 }
 
 button.btn-alt {
