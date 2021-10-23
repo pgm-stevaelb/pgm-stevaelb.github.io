@@ -503,6 +503,30 @@ h3.portfolio__item__title {
 	background-image: url('../images/projects/ergo-support-website.jpg');
 }
 
+div.newsletter {
+	margin-bottom: 4rem;
+}
+
+.newsletter__text {
+	color: var(--dark-color);
+	margin-bottom: 1rem;
+}
+
+.newsletter__input {
+	padding: 1rem 2rem;
+	border: none;
+	width: 90%;
+	color: var(--dark-color);
+	text-align: center;
+	margin: 0 1rem 1rem 0;
+}
+
+@media (min-width: 768px) {
+	.newsletter__input {
+		width: 50%;
+	}
+}
+
 /* Custom Multiple Use CSS */
 
 .text--yellow {
@@ -533,6 +557,26 @@ h3.portfolio__item__title {
 	font-size: 1.5rem;
 }
 
+.btn-alt {
+	display: inline-block;
+	margin: auto;
+	padding: 1rem 2rem;
+	background-color: var(--primary-color);
+	border: none;
+}
+
+button.btn-alt {
+	color: var(--light-color);
+	font-family: 'Ubuntu';
+	font-weight: bold;
+	font-style: italic;
+	cursor: pointer;
+}
+
 .btn-main:hover {
 	background-color: var(--secondary--darker);
+}
+
+.btn-alt:hover {
+	background-color: var(--primary-darker);
 }
