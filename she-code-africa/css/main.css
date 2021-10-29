@@ -1,7 +1,19 @@
 @import url('../fonts/fonts.css');
 
+:root {
+	--purple: hsl(325, 96%, 22%);
+	--pink: hsl(326, 98%, 36%);
+	--light-pink: hsl(329, 26%, 54%);
+	--blue: hsl(209, 100%, 42%);
+	--dark-blue: hsl(209, 99%, 30%);
+	--orange: hsl(18, 99%, 41%);
+	--gray: hsl(0, 0%, 87%);
+	--dark-gray: hsl(0, 0%, 54%);
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	font-family: 'Open-Sans';
 }
+
