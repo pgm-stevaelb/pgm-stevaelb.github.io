@@ -10,7 +10,7 @@
 	--secondary-color-alt: hsl(0, 0%, 12%);
 	--text-color: hsl(0, 0%, 20%);
 	--text-color-light: hsl(0, 0%, 100%);
-	--bg-color-light: hsl(0, 0%, 100%);
+	--bg-color-light: hsl(0, 0%, 87%);
 	--bg-color-dark: hsl(0, 0%, 20%);
 
 	/* FONTS */
@@ -64,4 +64,16 @@ a {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+/* Layout CSS */
+
+.container {
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.section {
+	padding: 2rem;
+	background-color: var(--text-color);
 }
