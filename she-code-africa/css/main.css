@@ -36,16 +36,88 @@ header {
 	margin: 1rem auto 0 auto;
 }
 
-nav {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	text-align: center;
+li {
+	list-style-type: none;
 }
 
-a.menu__logo {
-	width: 4rem;
+ul.menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: center;
+}
+
+li.menu__item {
+	width: 100%;
+	text-align: center;
+	order: 2;
+	border-bottom: 0.25rem solid white;
+}
+
+.menu__item a {
+	display: block;
+	font-family: 'Otomanopee-One';
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--black);
+	padding: 1rem 0;
+	width: 100%;
+}
+
+.menu__item a:hover {
+	color: var(--light-pink);
+}
+
+li.menu__logo {
+	max-width: 3rem;
 	padding: 1rem;
+	box-sizing: content-box;
+	order: 1;
+}
+
+@media (min-width: 20rem) {
+	ul.menu {
+		flex-direction: row;
+		align-items: flex-end;
+	}
+
+	.menu__item {
+		margin: 0 0.25rem;
+	}
+
+	li.menu__item:hover {
+		border-bottom: 0.25rem solid var(--light-pink);
+	}
+
+	li.menu__item--1 {
+		order: 1;
+		text-align: end;
+	}
+
+	li.menu__logo {
+		order: 2;
+	}
+
+	li.menu__item--3 {
+		order: 3;
+		text-align: start;
+	}
+}
+
+@media (min-width: 24rem) {
+	li.menu__logo {
+		order: 1;
+	}
+
+	li.menu__item--1 {
+		order: 2;
+		text-align: end;
+	}
+
+	li.menu__item--3 {
+		order: 3;
+		text-align: end;
+	}
 }
 
 img.logo {
@@ -57,30 +129,7 @@ img.logo:hover {
 	opacity: 0.5;
 }
 
-ul.menu {
-	align-self: stretch;
-	display: flex;
-	flex-direction: column;
-}
 
-li.menu__item {
-	display: block;
-	list-style-type: none;
-}
-
-.menu__item a {
-	display: block;
-	font-family: 'Otomanopee-One';
-	text-decoration: none;
-	text-transform: uppercase;
-	color: var(--black);
-	width: 100%;
-	padding: 1rem 0;
-}
-
-.menu__item a:hover {
-	color: var(--light-pink);
-}
 
 /* General small classes */
 
@@ -107,7 +156,12 @@ img.footer__logo {
 	position: relative;
 }
 
-/* This works on before te image shrinks */
+.s-full-width {
+	max-width: 100%;
+}
+
+
+/* This works on before the image shrinks */
 marquee {
 	position: absolute;
 	background-color: var(--pink);
