@@ -104,7 +104,7 @@ p {
 	width: 1rem;
 }
 
-.btn--main:hover > .btn__arrow {
+.btn--main:hover>.btn__arrow {
 	margin-left: 1rem;
 	display: inline-block;
 }
@@ -252,7 +252,8 @@ img.logo:hover {
 		gap: 2rem;
 	}
 
-	.intro__img, .intro__content {
+	.intro__img,
+	.intro__content {
 		width: 50%;
 	}
 }
@@ -418,15 +419,19 @@ p.team__text--function {
 	0% {
 		transform: rotateZ(0deg);
 	}
+
 	25% {
 		transform: rotateZ(135deg);
 	}
+
 	50% {
 		transform: rotateZ(250deg);
 	}
+
 	75% {
 		transform: rotateZ(320deg);
 	}
+
 	100% {
 		transform: rotateZ(0deg);
 	}
@@ -484,6 +489,15 @@ blockquote p {
 
 video {
 	max-width: 100%;
+	margin-bottom: 4rem;
+}
+
+.gradient-bg {
+	background: rgb(70, 88, 208);
+	background: linear-gradient(135deg, rgba(70, 88, 208, 1) 0%, rgba(129, 85, 200, 1) 25%, rgba(203, 88, 187, 1) 50%, rgba(228, 145, 153, 1) 75%, rgba(254, 202, 113, 1) 100%);
+	background-attachment: fixed;
+	background-size: cover;
+	height: 1rem;
 	margin-bottom: 4rem;
 }
 
