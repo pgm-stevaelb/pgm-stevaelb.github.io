@@ -76,6 +76,10 @@ h3 {
 	line-height: 1;
 }
 
+p {
+	margin-bottom: 1rem;
+}
+
 .btn--main {
 	display: inline-block;
 	position: relative;
@@ -235,11 +239,7 @@ img.logo:hover {
 	opacity: 0.5;
 }
 
-/* MAIN */
-
-p.intro__text {
-	margin-bottom: 1rem;
-}
+/* MAIN > HOME */
 
 .intro-block {
 	display: flex;
@@ -301,13 +301,6 @@ img.card__img {
 	padding: 1rem;
 }
 
-/* .card__title {
-	display: flex;
-	justify-content: flex-start;
-	margin-bottom: 1rem;
-
-} */
-
 .card__title {
 	margin-bottom: 1rem;
 }
@@ -345,6 +338,47 @@ div.prog--2 {
 
 div.prog--3 {
 	width: 90%;
+}
+
+/* MAIN > ABOUT */
+
+.bg-image--scroll {
+	height: 60vh;
+	background-image: url('../images/meeting-photo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.team {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.team__member {
+	text-align: center;
+}
+
+img.team__img {
+	border-radius: 50%;
+	width: 7rem;
+	height: 7rem;
+	object-fit: cover;
+	object-position: center;
+	border: 0.25rem solid white;
+	outline: 0.25rem solid var(--team--orange);
+	margin-bottom: 0.5rem;
+}
+
+p.team__text--name {
+	font-weight: bold;
+	margin: 0;
+}
+
+p.team__text--function {
+	font-size: 0.8rem;
 }
 
 /* FOOTER */
@@ -388,6 +422,10 @@ img.footer__logo {
 	color: var(--dark-gray);
 }
 
+.text--underline {
+	font-family: inherit;
+	text-decoration: underline;
+}
 
 /* This works on before the image shrinks */
 marquee {
