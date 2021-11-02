@@ -477,6 +477,20 @@ figure {
 	margin-top: 4rem;
 }
 
+@media (min-width: 30rem) {
+	figure {
+		padding: 1rem 3rem;
+	}
+}
+
+@media (min-width: 50rem) {
+	figure {
+		width: 38rem;
+		margin: auto;
+		margin-top: 4rem;
+	}
+}
+
 figcaption {
 	color: var(--purple);
 }
@@ -492,6 +506,14 @@ video {
 	margin-bottom: 4rem;
 }
 
+@media (min-width: 50rem) {
+	.video-section {
+		width: 50rem;
+		max-width: 100%;
+		margin: auto;
+	}
+}
+
 .gradient-bg {
 	background: rgb(70, 88, 208);
 	background: linear-gradient(135deg, rgba(70, 88, 208, 1) 0%, rgba(129, 85, 200, 1) 25%, rgba(203, 88, 187, 1) 50%, rgba(228, 145, 153, 1) 75%, rgba(254, 202, 113, 1) 100%);
@@ -499,6 +521,13 @@ video {
 	background-size: cover;
 	height: 1rem;
 	margin-bottom: 4rem;
+}
+
+@media (min-width: 30rem) {
+	.animation {
+		float: left;
+		margin: 1rem;
+	}
 }
 
 /* FOOTER */
