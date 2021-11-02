@@ -547,6 +547,22 @@ img.footer__logo {
 	position: relative;
 }
 
+/* This works on before the image shrinks */
+marquee {
+	position: absolute;
+	background-color: var(--pink);
+	color: white;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	max-height: 100%;
+	left: 55%;
+	width: 68%;
+	height: 1.6rem;
+	transform: rotateZ(51deg) translateY(8rem);
+}
+
+
+
 /* General small classes */
 
 .s-transition {
@@ -578,18 +594,4 @@ img.footer__logo {
 
 .text--shadow {
 	text-shadow: 0 0 5px var(--black);
-}
-
-/* This works on before the image shrinks */
-marquee {
-	position: absolute;
-	background-color: var(--pink);
-	color: white;
-	font-size: 1.2rem;
-	text-transform: uppercase;
-	max-height: 100%;
-	left: 50%;
-	width: 50vw;
-	height: 1.6rem;
-	transform: rotateZ(51deg) translateY(8rem);
 }
