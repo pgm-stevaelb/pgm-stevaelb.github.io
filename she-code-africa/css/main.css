@@ -99,31 +99,23 @@ p {
 
 .btn--animated {
 	display: inline-block;
-  position: relative;
-  text-decoration: none;
-	background-color: var(--blue);
+	position: relative;
+	text-decoration: none;
+	font-weight: bold;
+	background: var(--blue) url('../images/arrow--right.svg') no-repeat 10rem;
+	background-size: 50% 50%;
 	color: white;
-	border-radius: 1rem;
-  overflow: hidden;
-	padding: 1rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	padding: 0.5rem 1rem;
+	transition: all .5s ease;
 }
 
-.btn--animated::before {
-	content: 'he';
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	right: 0;
-	top: 0;
-	opacity: 0;
-	height: 100%;
-	width: 40px;
-}
-
-.arrow {
-	width: 1rem;
-	margin-left: 1rem;
+.btn--animated:hover {
+	border-radius: 0.5rem 1rem 1rem 0.5rem;
+	padding-right: 3rem;
+	background: var(--dark-blue) url('../images/arrow--right.svg') no-repeat right;
+	background-size: 50% 50%;
 }
 
 /* .btn__arrow {
@@ -144,6 +136,7 @@ p {
 
 header {
 	background-color: white;
+	z-index: 999;
 }
 
 @media (min-width: 50rem) {
