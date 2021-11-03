@@ -20,6 +20,7 @@
 	--gray: hsl(0, 0%, 87%);
 	--dark-gray: hsl(0, 0%, 54%);
 	--black: hsl(0, 0%, 13%);
+	--black-trsp: hsla(0, 0%, 13%, 0.2);
 }
 
 * {
@@ -295,7 +296,6 @@ img.logo:hover {
 .support-card {
 	background-color: white;
 	border-radius: 1rem;
-	box-shadow: 0 5px 10px var(--dark-gray);
 }
 
 @media (min-width: 22rem) {
@@ -604,7 +604,7 @@ marquee {
 }
 
 .s-box-shadow {
-	box-shadow: 0px 5px 10px var(--gray);
+	box-shadow: 0px 5px 10px var(--black-trsp);
 }
 
 .s-full-width {
