@@ -439,23 +439,23 @@ p.team__text--function {
 
 @keyframes triangle {
 	0% {
-		transform: rotateZ(0deg);
+		transform: rotate(60deg);
 	}
 
 	25% {
-		transform: rotateZ(135deg);
+		transform: rotate(135deg);
 	}
 
 	50% {
-		transform: rotateZ(250deg);
+		transform: rotate(250deg);
 	}
 
 	75% {
-		transform: rotateZ(320deg);
+		transform: rotate(320deg);
 	}
 
 	100% {
-		transform: rotateZ(0deg);
+		transform: rotate(60deg);
 	}
 }
 
@@ -464,6 +464,7 @@ div.support-animation {
 	background-image: url('../images/triangle.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
+	transform: rotate(60deg);
 	width: 7rem;
 	height: 7rem;
 	animation-name: triangle;
@@ -481,11 +482,13 @@ div.animation {
 div.text-on-animation {
 	background-color: white;
 	border-radius: 50%;
-	padding: 2rem;
+	padding: 0.5rem;
 	position: absolute;
-	top: 10%;
-	left: 50%;
+	top: 15%;
+	left: 30%;
 	transform: translateX(-50%);
+	width: 6rem;
+	
 }
 
 .text-on-animation p {
