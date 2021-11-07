@@ -575,7 +575,6 @@ img.footer__logo {
 	margin: auto;
 }
 
-/* This works on before the image shrinks */
 marquee {
 	position: absolute;
 	background-color: var(--pink);
