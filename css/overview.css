@@ -1,0 +1,13 @@
+:root {
+	/* COLORS Preferable in HSL */
+	--code: hsl(160, 100%, 75%);
+	--web: hsl(39, 100%, 60%);
+}
+
+.pgm-code {
+	background-color: var(--code);
+}
+
+.pgm-web {
+	background-color: var(--web);
+}
