@@ -591,13 +591,46 @@ marquee {
 	border-radius: 0.25rem;
 }
 
+.marquee {
+	position: absolute;
+	background-color: var(--pink);
+	color: white;
+	left: -14%;
+	top: 8%;
+	width: 65%;
+	height: 11vw;
+	max-height: 4rem;
+	transform: rotate(51deg) translate(50%);
+	border-radius: 0.25rem;
+	white-space: nowrap; /* https://developer.mozilla.org/en-US/docs/Web/CSS/white-space */
+	overflow: hidden;
+}
+
+.marquee p {
+	display: inline-block;
+	font-size: 10vw;
+	line-height: 1;
+	padding-left: 100%;
+	text-transform: uppercase;
+	animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
 @media (min-width: 34rem) {
-	marquee {
+	.marquee p {
 		height: 4rem;
 		font-size: 4rem;
 	}
 }
-
 
 
 /* General small classes */
