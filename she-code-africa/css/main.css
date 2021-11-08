@@ -575,7 +575,7 @@ img.footer__logo {
 	margin: auto;
 }
 
-marquee {
+/* marquee {
 	position: absolute;
 	background-color: var(--pink);
 	color: white;
@@ -589,7 +589,7 @@ marquee {
 	max-height: 4rem;
 	transform: rotate(51deg) translate(50%);
 	border-radius: 0.25rem;
-}
+} */
 
 .marquee {
 	position: absolute;
@@ -612,7 +612,7 @@ marquee {
 	line-height: 1;
 	padding-left: 100%;
 	text-transform: uppercase;
-	animation: marquee 10s linear infinite;
+	animation: marquee 20s linear infinite;
 }
 
 @keyframes marquee {
