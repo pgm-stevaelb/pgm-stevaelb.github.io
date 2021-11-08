@@ -63,7 +63,7 @@ const dataLineUp = [{ // Faith No More
 			},
 			'media': {
 				'type': 'youtube', // image or youtube
-				'sourceId': 'https://youtu.be/ZG_k5CSYKhg'
+				'sourceId': 'https://www.youtube.com/embed/ZG_k5CSYKhg'
 			},
 		},
 		'place': {
@@ -92,7 +92,7 @@ const dataLineUp = [{ // Faith No More
 			},
 			'media': {
 				'type': 'youtube', // image or youtube
-				'sourceId': 'https://youtu.be/Y2NkuFIlLEo'
+				'sourceId': 'https://www.youtube.com/embed/Y2NkuFIlLEo'
 			},
 		},
 		'place': {
@@ -121,7 +121,7 @@ const dataLineUp = [{ // Faith No More
 			},
 			'media': {
 				'type': 'youtube', // image or youtube
-				'sourceId': 'https://youtu.be/Q0oIoR9mLwc'
+				'sourceId': 'https://www.youtube.com/embed/Q0oIoR9mLwc'
 			},
 		},
 		'place': {
@@ -150,7 +150,7 @@ const dataLineUp = [{ // Faith No More
 			},
 			'media': {
 				'type': 'youtube', // image or youtube
-				'sourceId': 'https://youtu.be/2sBRnnnZyFw'
+				'sourceId': 'https://www.youtube.com/embed/2sBRnnnZyFw'
 			},
 		},
 		'place': {
@@ -179,7 +179,7 @@ const dataLineUp = [{ // Faith No More
 			},
 			'media': {
 				'type': 'youtube', // image or youtube
-				'sourceId': 'https://youtu.be/qM0zINtulhM'
+				'sourceId': 'https://www.youtube.com/embed/qM0zINtulhM'
 			},
 		},
 		'place': {

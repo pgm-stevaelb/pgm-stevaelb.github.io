@@ -83,7 +83,7 @@
 					</div>
 					<p class="details__artist--synopsis">${artist.artist.synopsis}</p>
 					<div class="details__artist--synopsis">
-					<iframe src="${artist.artist.media.sourceId}" frameborder="0" allowfullscreen></iframe>
+					<iframe src="${artist.artist.media.sourceId}" frameborder="0" controls allowfullscreen></iframe>
 					</div>
 					<h3 class="">KNOW MORE?</h3>
 					<p><a href="${artist.artist.social.website}">${artist.artist.social.website}</a></p>
@@ -109,18 +109,18 @@
 				btnOpen.addEventListener('click',
 					() => {
 						if (changeCSS.style.display === 'none') {
-							return changeCSS.style.display = 'block';
+							return changeCSS.style.display = 'block', document.body.style.overflow = 'hidden';
 						} else {
-							return changeCSS.style.display = 'none';
+							return changeCSS.style.display = 'none', document.body.style.overflow = 'auto';
 						}
 					},
 					false);
 				btnClose.addEventListener('click',
 					() => {
 						if (changeCSS.style.display !== 'none') {
-							return changeCSS.style.display = 'none';
+							return changeCSS.style.display = 'none', document.body.style.overflow = 'auto';
 						} else {
-							return changeCSS.style.display = 'block';
+							return changeCSS.style.display = 'block', document.body.style.overflow = 'hidden';
 						}
 					},
 					false);

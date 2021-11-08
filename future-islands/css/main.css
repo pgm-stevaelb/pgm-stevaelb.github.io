@@ -11,6 +11,10 @@ html {
 	position: relative;
 }
 
+body {
+	overflow: auto;
+}
+
 .container {
 	max-width: 100%;
 	margin: auto;
@@ -205,7 +209,7 @@ img.lineup__img {
 .lineup__text--artist {
 	display: block;
 	width: fit-content;
-	padding: 0.5rem;
+	padding: 0 0.5rem;
 	background-image: linear-gradient(270deg, cyan 0%, #643cfa 50%, #ff690a 100%);
 	color: white;
 	font-family: 'Open Sans Condensed';
@@ -271,10 +275,12 @@ img.lineup__img {
 	width: 100%;
 	height: 100%;
 	background-color: hsla(0, 0%, 0%, 0.8);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 50;
+	overflow: scroll;
+	overflow-x: hidden;
 }
 
 img.details__img {
@@ -297,7 +303,7 @@ img.details__img {
 	img.details__img {
 		width: 70%;
 	}
-	
+
 	.details__text {
 		width: 70%;
 	}
@@ -307,7 +313,7 @@ img.details__img {
 	img.details__img {
 		width: 50%;
 	}
-	
+
 	.details__text {
 		width: 50%;
 	}
@@ -358,9 +364,12 @@ img.details__img {
 	margin-bottom: 1rem;
 }
 
-/* .details__artist--video iframe {
-  width: 50rem;
-} */
+iframe {
+	width: 50rem !important;
+	max-width: 100% !important;
+	width: auto !important;
+	height: auto !important;
+}
 
 /* Countdown Timer */
 
