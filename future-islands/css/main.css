@@ -269,6 +269,16 @@ img.lineup__img {
 	background-color: hsl(240, 100%, 30%);
 }
 
+/* Filtering */
+
+.filter--hide {
+	display: none !important;
+}
+
+.filter--show {
+	display: block !important;
+}
+
 /* Details */
 
 .concert__details {
@@ -283,9 +293,20 @@ img.lineup__img {
 	overflow-x: hidden;
 }
 
+.details--hide {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 500ms, opacity 1s;
+}
+
+.details--show {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s linear 0s, opacity 1s;
+}
+
 img.details__img {
 	display: block;
-	transition: all 0.2s linear;
 	object-fit: cover;
 	width: 90%;
 	margin-left: auto;

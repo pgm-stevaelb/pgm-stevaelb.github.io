@@ -1,7 +1,7 @@
 /*
 		Topic: Assignment 2 - Digital Agency - Future Island - Main JS
 		Author: Steven Aelbrecht
-		Modified: 2021-11-05
+		Modified: 2021-11-09
 */
 
 (() => {
@@ -30,7 +30,7 @@
 			this.$lineUpElements.innerHTML = this.createLineUp();
 
 			this.openCloseDetails();
-			// this.filterView(); // is not working like I want it to...
+			this.filterView();
 
 			setInterval(() => {
 				this.ticking();
@@ -60,7 +60,7 @@
 
 				let lineUpOutput = '';
 
-				lineUpOutput = `<div class="lineup__info filter-day__${this.getDayStr(dayOfPlay)}" id="${cssBtnOpen}" style="display: block;">
+				lineUpOutput = `<div class="lineup__info filter--show filter-day__${this.getDayStr(dayOfPlay)}" id="${cssBtnOpen}">
 					<img src="${artist.artist.picture.small}" alt="${artist.artist.name}" class="lineup__img">
 					<div class="lineup__text">
 					<p>
@@ -70,7 +70,7 @@
 					<p class="lineup__text--artist">${artist.artist.name}</p>
 					</div>
 					</div>
-					<div class="concert__details" id="${cssId}" style="display: none;">
+					<div class="concert__details details--hide" id="${cssId}" ">
 					<img src="images/icons/png/close.png" alt="close" class="btn--close" id="${cssBtnClose}">
 					<img src="${artist.artist.picture.large}" alt="${artist.artist.name}" class="details__img">
 					<div class="details__text">
@@ -106,24 +106,49 @@
 				let changeCSS = this.$idElement;
 				let btnOpen = this.$btnOpen;
 				let btnClose = this.$btnClose;
+				let detailsVisible = false;
 				btnOpen.addEventListener('click',
 					() => {
-						if (changeCSS.style.display === 'none') {
-							return changeCSS.style.display = 'block', document.body.style.overflow = 'hidden';
+						detailsVisible = !detailsVisible;
+						// console.log(detailsVisible);
+						if (detailsVisible) {
+							return changeCSS.classList.replace('details--hide', 'details--show'), document.body.style.overflow = 'hidden';
 						} else {
-							return changeCSS.style.display = 'none', document.body.style.overflow = 'auto';
+							return changeCSS.classList.replace('details--show', 'details--hide'), document.body.style.overflow = 'auto';
 						}
 					},
 					false);
 				btnClose.addEventListener('click',
 					() => {
-						if (changeCSS.style.display !== 'none') {
-							return changeCSS.style.display = 'none', document.body.style.overflow = 'auto';
+						detailsVisible = false;
+						// console.log(detailsVisible);
+						if (!detailsVisible) {
+							return changeCSS.classList.replace('details--show', 'details--hide'), document.body.style.overflow = 'auto';
 						} else {
-							return changeCSS.style.display = 'block', document.body.style.overflow = 'hidden';
+							return changeCSS.classList.replace('details--hide', 'details--show'), document.body.style.overflow = 'hidden';
 						}
 					},
 					false);
+
+				// This code was what I had before I knew classList existed... > with this I had to inline css display:none in my generated code from createLineUp()
+				// btnOpen.addEventListener('click',
+				// 	() => {
+				// 		if (changeCSS.style.display === 'none') {
+				// 			return changeCSS.style.display = 'block', document.body.style.overflow = 'hidden';
+				// 		} else {
+				// 			return changeCSS.style.display = 'none', document.body.style.overflow = 'auto';
+				// 		}
+				// 	},
+				// 	false);
+				// btnClose.addEventListener('click',
+				// 	() => {
+				// 		if (changeCSS.style.display !== 'none') {
+				// 			return changeCSS.style.display = 'none', document.body.style.overflow = 'auto';
+				// 		} else {
+				// 			return changeCSS.style.display = 'block', document.body.style.overflow = 'hidden';
+				// 		}
+				// 	},
+				// 	false);
 			}).join('');
 
 		},
@@ -133,48 +158,33 @@
 			let filterSaturday = document.getElementById(`saturday`);
 			let filterSunday = document.getElementById(`sunday`);
 
-			dataLineUp.map((day) => {
-				let thursday = document.querySelector(`.filter-day__Thursday`);
-				let friday = document.querySelector(`.filter-day__Friday`);
-				let saturday = document.querySelector(`.filter-day__Saturday`);
-				let sunday = document.querySelector(`.filter-day__Sunday`);
+			filterThursday.addEventListener('click',
+				() => {
+					// if (thursday.classList.contains('filter--show')) {
+					// 	return thursday.classList.replace('filter--show', 'filter--hide');
+					// } else {
+					// 	return thursday.classList.replace('filter--hide', 'filter--show');
+					// }
+					this.filterDay('Friday') + this.filterDay('Saturday') + this.filterDay('Sunday');
+				},
+				false);
 
-				filterThursday.addEventListener('click',
-					() => {
-						if (thursday.style.display === 'block') {
-							return saturday.style.display = 'none';
-						}
-					},
-					false);
-				filterFriday.addEventListener('click',
-					() => {
-						if (friday.style.display !== 'none') {
-							return friday.style.display = 'none';
-						} else {
-							return friday.style.display = 'block';
-						}
-					},
-					false);
-				filterSaturday.addEventListener('click',
-					() => {
-						if (saturday.style.display !== 'none') {
-							return saturday.style.display = 'none';
-						} else {
-							return saturday.style.display = 'block';
-						}
-					},
-					false);
-				filterSunday.addEventListener('click',
-					() => {
-						if (sunday.style.display !== 'none') {
-							return sunday.style.display = 'none';
-						} else {
-							return sunday.style.display = 'block';
-						}
-					},
-					false);
-			});
+			filterFriday.addEventListener('click', () => this.filterDay('Thursday') + this.filterDay('Saturday') + this.filterDay('Sunday'), false);
+			filterSaturday.addEventListener('click', () => this.filterDay('Thursday') + this.filterDay('Friday') + this.filterDay('Sunday'), false);
+			filterSunday.addEventListener('click', () => this.filterDay('Thursday') + this.filterDay('Saturday') + this.filterDay('Friday'), false);
+		},
+		filterDay(day) {
+			let elem = document.querySelectorAll(`.filter-day__${day}`);
 
+			for (let i = 0; i < elem.length; i++) {
+				if (elem[i].classList.contains('filter--show')) {
+					elem[i].classList.replace('filter--show', 'filter--hide');
+				} else {
+					elem[i].classList.replace('filter--hide', 'filter--show');
+				}
+			}
+
+			// console.log(day);
 		},
 		getDayStr(day) {
 			let output = '';
@@ -215,13 +225,13 @@
 			hours = hours % 24;
 			days = days % 365;
 
-			let outputStr = `<p>${days} Dagen ${hours}H ${mins}M ${secs}S</p>`;
+			let outputStr = `<p>${this.toAmountOfDigits(days)} Dagen ${this.toAmountOfDigits(hours)}H ${this.toAmountOfDigits(mins)}M ${this.toAmountOfDigits(secs)}S</p>`;
 			return outputStr;
 		},
 		toAmountOfDigits(number) {
 			let newNumber = '';
 			newNumber = (number < 10) ? newNumber = '0' + number : number;
-			return String(newNumber);
+			return newNumber;
 		},
 		ticking() {
 			this.$countdownTimer.innerHTML = this.createCountdownTimer();
