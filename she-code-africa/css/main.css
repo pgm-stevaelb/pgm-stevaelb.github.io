@@ -6,8 +6,6 @@
 	Large: 50rem
 */
 
-/* DON'T FORGET TO OPTIMIZE IMAGES!!! */
-
 /* Global classes */
 
 :root {
@@ -118,18 +116,6 @@ p {
 	background: var(--dark-blue) url('../images/arrow--right.svg') no-repeat right;
 	background-size: 50% 50%;
 }
-
-/* .btn__arrow {
-	display: none;
-	position: absolute;
-	top: 25%;
-	width: 1rem;
-}
-
-.btn--main:hover>.btn__arrow {
-	margin-left: 1rem;
-	display: inline-block;
-} */
 
 /* Layout classes */
 
@@ -553,8 +539,6 @@ video {
 	height: 1rem;
 	margin-bottom: 4rem;
 }
-
-
 
 /* FOOTER */
 
