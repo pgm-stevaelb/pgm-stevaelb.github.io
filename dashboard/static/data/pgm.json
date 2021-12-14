@@ -1,0 +1,15 @@
+{
+	"pgm-users": {
+		"firstName": "Steven",
+		"lastName": "Aelbrecht",
+		"email": "stevaelb@student.arteveldehs.be",
+		"thumbnail": "",
+		"motto": "Let's Go!",
+		"portfolio": {
+			"github-username": "pgm-stevaelb",
+			"linkedin-username": "steven-aelbrecht"
+		},
+		"lecturer": false,
+		"dateOfBirth": 679528800000
+	}
+}
