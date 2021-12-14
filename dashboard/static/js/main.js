@@ -25,7 +25,7 @@
 			this.getUsers()
 		},
 		async getWeather() {
-			const APIURL = 'http://api.weatherapi.com/v1/current.json?key=28a557deaa8c407489e153714211412&q=$Ghent';
+			const APIURL = 'https://api.weatherapi.com/v1/current.json?key=28a557deaa8c407489e153714211412&q=$Ghent';
 			try {
 				const response = await fetch(APIURL);
 				const data = await response.json();
@@ -45,7 +45,7 @@
 			}
 		},
 		async getUsers() {
-			const allUsers = JSON.stringify('pgm.json');
+			const allUsers = JSON.parse('pgm.json');
 			console.log(allUsers);
 		}
 	};
