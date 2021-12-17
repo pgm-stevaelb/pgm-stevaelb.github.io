@@ -97,23 +97,23 @@
 		},
 		async showGithubUsers(input) {
 			const APIURL = 'https://api.github.com/search/users?sort=desc&page=1&per_page=50&q=' + input;
-			console.log(APIURL);
+
 			try {
 				const response = await fetch(APIURL, {
 					headers: {
 						'Authorization': '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'
 					}
 				});
-				const data = response.json();
-				this.$githubUsers = data.items.map((user, index) => {
+				const data = await response.json();
+				this.$githubUsers.innerHTML = data.items.map(user => {
 					return `
 						<div class="search-result">
-							<img src="${user.items[index].avatar_url}" alt="${user.items[index].login}" class="search-result__img">
-							<p>${user.items[index].login}</p>
+							<img src="${user.avatar_url}" alt="${user.login}" class="search-result__img">
+							<p>${user.login}</p>
 						</div>`
 				}).join('');
 			} catch (e) {
-				console.error('error');
+				console.error(e);
 			}
 		}
 	};
