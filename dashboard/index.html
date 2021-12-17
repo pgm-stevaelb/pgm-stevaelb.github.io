@@ -24,7 +24,7 @@
 
 <body>
 	<header>
-		<nav class="top-nav">
+		<nav class="container container--info">
 			<img src="static/media/images/logos/glasses/Glasses-Light.svg" alt="Steven Aelbrecht Glasses Logo" class="logo-img">
 			<div id="some-numbers" class="nav-numbers">
 				<div id="covid">
@@ -39,26 +39,36 @@
 	</header>
 
 	<main class="main-content">
-		<section id="pgm-team" class="container side-container">
+		<section id="pgm-team" class="container container--side">
 			<h2>PGM Team</h2>
-			<p>This is text</p>
+			<p class="section-description">A list of all current PGM teachers and students.</p>
+			<div id="pgm-team__list"></div>
 		</section>
 
 		<section id="repositories" class="container">
 			<h2>Repositories</h2>
-			<p>This is text</p>
+			<p class="section-description">A list of all current PGM teachers and students.</p>
+			<div id="active-user__details"></div>
 		</section>
 
-		<section id="github-users" class="container side-container">
+		<section id="github-users" class="container container--side">
 			<h2>Github Users</h2>
-			<p>This is text</p>
+			<p class="section-description">Search all the users from Github.</p>
+			<div id="search-all-github">
+				<input type="text" name="search-box" id="search-box" class="search-box__input" placeholder="Search..">
+				<button type="submit" id="search-box__btn"><img src="static/media/images/other/search.svg" class="search-icon"></button>
+			</div>
+			<div id="github-users__list">The list of users of Github.</div>
 		</section>
 	</main>
 
-	<footer></footer>
+	<footer class="container container--info">
+		<div id="copyright">&copy; 2021 - pgm-stevaelb</div>
+		<div id="copyright"><img src="static/media/images/logos/artevelde-png.png" alt="Arteveldehogeschool Logo" class="logo-img"></div>
+	</footer>
 
-	<script src="static/data/pgm.json"></script>
-	<script src="static/js/main.js"></script>
+	<script type="text/javascript" src="static/data/pgm.json"></script>
+	<script type="text/javascript" src="static/js/main.js"></script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 :root {
 	/* Colors */
 	--primary-color: #58a6ff;
+	--primary-color-alt: #3D98FF;
 	--secondary-color: #238636;
 	--color-light: #8b949e;
 	--color-lighter: #c9d1d9;
@@ -36,6 +37,20 @@ body {
 	color: var(--color-lightest);
 }
 
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #58a6ff;
+	border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #3D98FF;
+}
+
 img {
 	display: inline-block;
 	max-width: 100%;
@@ -46,26 +61,66 @@ ul {
 	list-style-type: none;
 }
 
-/* HEADER */
+/* 100vh */
 
-/* NAV */
+header {
+	height: 8vh;
+}
 
-.top-nav {
+main {
+	height: 84vh;
+}
+
+footer {
+	height: 8vh;
+}
+
+
+/* Text-edits */
+
+.text-m {
+	font-size: var(--text-m);
+}
+
+.text--bold {
+	font-weight: bold;
+}
+
+/* Custom used classes */
+
+.rounded-corners {
+	border-radius: .5rem;
+}
+
+.section-description {
+	margin-bottom: 2rem;
+}
+
+/* Containers */
+
+.container {
+	padding: 2rem;
+	overflow-y: scroll;
+}
+
+.container--side {
+	background-color: var(--color-darker);
+}
+
+.container--info {
 	background-color: var(--color-dark);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem;
+	padding-block: 0;
 }
 
-@media (min-width: 25rem) {
-	.top-nav {
-		padding: 1rem 2rem;
-	}
-}
+/* HEADER */
 
-.logo-img {
-	width: 2rem;
+/* NAV */
+
+nav {
+	height: 100%;
 }
 
 .nav-numbers {
@@ -97,13 +152,82 @@ ul {
 }
 
 .main-content>section:not(:last-child) {
-	border-right: solid .125rem var(--color-dark);;
+	border-right: solid .25rem var(--color-dark);
+	;
 }
 
-.container {
-	padding: 1rem 2rem;
+/* Left Pane - LIST USERS */
+
+#pgm-team__list>div {
+	padding: 1rem;
 }
 
-.side-container {
-	background-color: var(--color-darker);
+.pgm-team__user {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+}
+
+.pgm-team__user:nth-child(odd) {
+	background-color: var(--color-dark);
+}
+
+.pgm-team__user:hover {
+	background-color: var(--primary-color);
+	cursor: pointer;
+}
+
+.pgm-team__user__img {
+	border-radius: 50%;
+}
+
+/* Right Pane - SEARCH REPOS */
+
+#search-all-github {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+input {
+	padding: .5rem;
+	background-color: var(--color-lightest);
+	border: none;
+	flex-grow: 1;
+}
+
+button {
+	padding: .5rem;
+	background-color: var(--primary-color);
+	border: none;
+	height: 2rem;
+	width: 2rem;
+	cursor: pointer;
+}
+
+#github-users__list {
+	border: solid .125rem var(--color-dark);
+}
+
+.search-result {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	padding: .5rem;
+}
+
+.search-result:hover {
+	background-color: var(--primary-color);
+	cursor: pointer;
+}
+
+.search-result__img {
+	width: 2rem;
+}
+
+/* FOOTER */
+
+.logo-img {
+	height: 2rem;
 }

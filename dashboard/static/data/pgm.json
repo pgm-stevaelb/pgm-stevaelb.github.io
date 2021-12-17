@@ -1,15 +1,153 @@
 {
-	"pgm-users": {
-		"firstName": "Steven",
-		"lastName": "Aelbrecht",
-		"email": "stevaelb@student.arteveldehs.be",
-		"thumbnail": "",
-		"motto": "Let's Go!",
-		"portfolio": {
-			"github-username": "pgm-stevaelb",
-			"linkedin-username": "steven-aelbrecht"
+	"users": [{
+			"name": {
+				"first": "Milo",
+				"last": "Yip"
+			},
+			"email": "milo.yip@example.com",
+			"dateOfBirth": -397948573000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/56.jpg",
+			"portfolio": {
+				"github": "miloyip",
+				"linkedin": "lll"
+			},
+			"teacher": true,
+			"motto": "Art, science, truth"
 		},
-		"lecturer": false,
-		"dateOfBirth": 679528800000
-	}
+		{
+			"name": {
+				"first": "Marcos",
+				"last": "Vidal"
+			},
+			"email": "Marcos.Vidal@example.com",
+			"dateOfBirth": -110471641000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/76.jpg",
+			"portfolio": {
+				"github": "marcosvidal",
+				"linkedin": "lll"
+			},
+			"teacher": true,
+			"motto": "In ancestral footsteps we tread"
+		},
+		{
+			"name": {
+				"first": "Steven",
+				"last": "Aelbrecht"
+			},
+			"email": "steven.aelbrecht@example.com",
+			"dateOfBirth": 786351445000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/58.jpg",
+			"portfolio": {
+				"github": "pgm-stevaelb",
+				"linkedin": "steven-aelbrecht"
+			},
+			"teacher": false,
+			"motto": "Of the sea, the land and the sky"
+		},
+		{
+			"name": {
+				"first": "Wes",
+				"last": "Bos"
+			},
+			"email": "Wes.Bos@example.com",
+			"dateOfBirth": 628906729000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/21.jpg",
+			"portfolio": {
+				"github": "wesbos",
+				"linkedin": "lll"
+			},
+			"teacher": false,
+			"motto": "Light and law"
+		},
+		{
+			"name": {
+				"first": "Hamza",
+				"last": "Zia"
+			},
+			"email": "Hamza.Zia@example.com",
+			"dateOfBirth": 140366735000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/81.jpg",
+			"portfolio": {
+				"github": "ziahamza",
+				"linkedin": "lll"
+			},
+			"teacher": false,
+			"motto": "Prepared for all"
+		},
+		{
+			"name": {
+				"first": "Andrei",
+				"last": "Kashcha"
+			},
+			"email": "Andrei.Kashcha@example.com",
+			"dateOfBirth": -327750364000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/43.jpg",
+			"portfolio": {
+				"github": "anvaka",
+				"linkedin": "lll"
+			},
+			"teacher": true,
+			"motto": "Power, progress, peace"
+		},
+		{
+			"name": {
+				"first": "Dave",
+				"last": "Stewart"
+			},
+			"email": "Dave.Stewart@example.com",
+			"dateOfBirth": 861696218000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/15.jpg",
+			"portfolio": {
+				"github": "davestewart",
+				"linkedin": "lll"
+			},
+			"teacher": false,
+			"motto": "Approach with care"
+		},
+		{
+			"name": {
+				"first": "Mathias",
+				"last": "Buus"
+			},
+			"email": "Mathias.Buus@example.com",
+			"dateOfBirth": 462129943000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/85.jpg",
+			"portfolio": {
+				"github": "mafintosh",
+				"linkedin": "lll"
+			},
+			"teacher": false,
+			"motto": "Justice, honesty, integrity"
+		},
+		{
+			"name": {
+				"first": "James",
+				"last": "Halliday"
+			},
+			"email": "James.Halliday@example.com",
+			"dateOfBirth": -362464083000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/75.jpg",
+			"portfolio": {
+				"github": "substack",
+				"linkedin": "lll"
+			},
+			"teacher": true,
+			"motto": "Beacon of the North"
+		},
+		{
+			"name": {
+				"first": "Alex",
+				"last": "Wolfe"
+			},
+			"email": "Alex.Wolfe@example.com",
+			"dateOfBirth": 547402309000,
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/84.jpg",
+			"portfolio": {
+				"github": "alexwolfe",
+				"linkedin": "lll"
+			},
+			"teacher": true,
+			"motto": "Bold and righteous"
+		}
+	]
 }
