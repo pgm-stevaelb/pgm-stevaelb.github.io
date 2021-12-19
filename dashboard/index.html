@@ -45,10 +45,23 @@
 			<div id="pgm-team__list"></div>
 		</section>
 
-		<section id="repositories" class="container">
-			<h2>Repositories</h2>
-			<p class="section-description">A list of all current PGM teachers and students.</p>
-			<div id="active-user__details"></div>
+		<section id="github-details" class="container">
+			<article id="github-details__user" class="margin-b-2r">
+				<div id="github-details__details"></div>
+			</article>
+			<article id="github-details__repos" class="margin-b-2r">
+				<h2 class="github-details__repos__title margin-b-2r">Repositories</h2>
+				<div id="github-details__repos__list"></div>
+			</article>
+			<article id="github-details__followers">
+				<h2 class="github-details__repos__title margin-b-2r">Followers</h2>
+				<div id="github-details__followers__list"></div>
+			</article>
+			<div id="to-top">
+				<a href=#github-details__user>
+					<img src="static/media/images/icons/up-arrow.svg">
+				</a>
+			</div>
 		</section>
 
 		<section id="github-users" class="container container--side">
@@ -67,6 +80,7 @@
 		<div id="copyright"><img src="static/media/images/logos/artevelde-png.png" alt="Arteveldehogeschool Logo" class="logo-img"></div>
 	</footer>
 
+	<script type="text/javascript" src="static/data/icons.js"></script>
 	<script type="text/javascript" src="static/data/pgm.json"></script>
 	<script type="text/javascript" src="static/js/main.js"></script>
 </body>

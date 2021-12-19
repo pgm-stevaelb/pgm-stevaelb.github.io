@@ -3,7 +3,7 @@
 :root {
 	/* Colors */
 	--primary-color: #58a6ff;
-	--primary-color-alt: #3D98FF;
+	--primary-color-alt: #1c86ff;
 	--secondary-color: #238636;
 	--color-light: #8b949e;
 	--color-lighter: #c9d1d9;
@@ -11,6 +11,7 @@
 	--color-dark: #161b22;
 	--color-darker: #0d1117;
 	--color-darkest: #010409;
+	--color-darkest-80p: #010409cc;
 
 	/* Font-Sizes */
 	--text-xs: .7rem;
@@ -61,6 +62,16 @@ ul {
 	list-style-type: none;
 }
 
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: var(--primary-color-alt);
+}
+
 /* 100vh */
 
 header {
@@ -74,7 +85,6 @@ main {
 footer {
 	height: 8vh;
 }
-
 
 /* Text-edits */
 
@@ -96,6 +106,22 @@ footer {
 	margin-bottom: 2rem;
 }
 
+.no-pointer-event {
+	pointer-events: none;
+}
+
+.margin-b-1r {
+	margin-bottom: 1rem;
+}
+
+.margin-b-2r {
+	margin-bottom: 2rem;
+}
+
+.margin-r-0 {
+	margin-right: .5rem;
+}
+
 /* Containers */
 
 .container {
@@ -113,6 +139,11 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding-block: 0;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
 }
 
 /* HEADER */
@@ -153,7 +184,6 @@ nav {
 
 .main-content>section:not(:last-child) {
 	border-right: solid .25rem var(--color-dark);
-	;
 }
 
 /* Left Pane - LIST USERS */
@@ -180,6 +210,109 @@ nav {
 
 .pgm-team__user__img {
 	border-radius: 50%;
+}
+
+/* Center Pane - DETAILS */
+
+#github-details {
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+#to-top {
+	position: sticky;
+	bottom: 0;
+	z-index: 20;
+	text-align: right;
+}
+
+.user-details {
+	display: flex;
+	flex-flow: row nowrap;
+	margin-bottom: 2rem;
+	gap: 2rem;
+	align-items: center;
+}
+
+.user-details__img {
+	border-radius: 50%;
+	height: 8rem;
+	border: solid .25rem var(--primary-color);
+}
+
+.user-details__quote {
+	margin-left: auto;
+	color: var(--color-dark);
+	font-weight: bold;
+	font-size: 3rem;
+	line-height: 1;
+	border-radius: .5rem;
+	text-align: right;
+}
+
+.user-nav {
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+}
+
+/* Center Pane - REPOS */
+
+.repo__single {
+	border: solid .0625rem var(--color-dark);
+	padding: 1rem;
+	background-color: var(--color-darker);
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+}
+
+#github-details__repos__list > div:first-child {
+	border-top-left-radius: .5rem;
+	border-top-right-radius: .5rem;
+}
+
+#github-details__repos__list > div:last-child {
+	border-bottom-left-radius: .5rem;
+	border-bottom-right-radius: .5rem;
+}
+
+.repo__single__description {
+	color: var(--color-light);
+}
+
+.repo__single__details {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.last-item {
+	margin-left: auto;
+}
+
+/* Center Pane - FOLLOWERS */
+
+#github-details__followers__list {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 2rem;
+}
+
+.github-details__followers__list__wrapper {
+	position: relative;
+}
+
+.github-details__followers__list__login {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: .5rem;
+	background-color: var(--color-darkest-80p);
+	z-index: 10;
 }
 
 /* Right Pane - SEARCH REPOS */
