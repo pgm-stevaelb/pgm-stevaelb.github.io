@@ -1,18 +1,6 @@
 /* GLOBAL CSS */
 
 :root {
-	/* Colors */
-	--primary-color: #58a6ff;
-	--primary-color-alt: #1c86ff;
-	--secondary-color: #238636;
-	--color-light: #8b949e;
-	--color-lighter: #c9d1d9;
-	--color-lightest: #f0f6fc;
-	--color-dark: #161b22;
-	--color-darker: #0d1117;
-	--color-darkest: #010409;
-	--color-darkest-80p: #010409cc;
-
 	/* Font-Sizes */
 	--text-xs: .7rem;
 	--text-s: .9rem;
@@ -32,10 +20,35 @@ html {
 }
 
 body {
+	/* Colors */
+	--primary-color: #58a6ff;
+	--primary-color-alt: #1c86ff;
+	--secondary-color: #238636;
+	--color-light: #8b949e;
+	--color-lighter: #c9d1d9;
+	--color-lightest: #f0f6fc;
+	--color-dark: #161b22;
+	--color-darker: #0d1117;
+	--color-darkest: #010409;
+	--color-darkest-80p: #010409cc;
+
 	font-family: 'Segoe', sans-serif;
 	font-size: var(--text-s);
 	background-color: var(--color-darkest);
 	color: var(--color-lightest);
+}
+
+body.dark-mode {
+	--primary-color: #58a6ff;
+	--primary-color-alt: #1c86ff;
+	--secondary-color: #238636;
+	--color-light: #010409;
+	--color-lighter: #0d1117;
+	--color-lightest: #161b22;
+	--color-dark: #d1d3d4;
+	--color-darker: #e1e3e6;
+	--color-darkest: #f0f6fc;
+	--color-darkest-80p: #8b949ecc;
 }
 
 ::-webkit-scrollbar {
@@ -122,11 +135,21 @@ footer {
 	margin-right: .5rem;
 }
 
+.margin-r-2r {
+	margin-right: 2rem;
+}
+
 /* Containers */
 
 .container {
-	padding: 2rem;
+	padding: 1rem;
 	overflow-y: scroll;
+}
+
+@media (min-width: 75rem) {
+	.container {
+		padding: 2rem;
+	}
 }
 
 .container--side {
@@ -162,7 +185,13 @@ nav {
 	align-items: center;
 }
 
-#weather,
+.current-location {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 2rem;
+}
+
+#clock-and-weather,
 #covid {
 	display: flex;
 	gap: .5rem;
@@ -171,18 +200,22 @@ nav {
 
 .weather__icon {
 	width: 2rem;
-	border-left: solid .125rem var(--color-lightest);
-	padding-left: .5rem;
 }
 
 /* MAIN */
 
-.main-content {
+#main-content {
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
 }
 
-.main-content>section:not(:last-child) {
+@media (min-width: 95rem) {
+	#main-content {
+		grid-template-columns: 1fr 3fr 1fr;
+	}
+}
+
+#main-content>section:not(:last-child) {
 	border-right: solid .25rem var(--color-dark);
 }
 
@@ -217,6 +250,8 @@ nav {
 #github-details {
 	position: relative;
 	scroll-behavior: smooth;
+	padding-top: 0;
+	margin-top: 2rem;
 }
 
 #to-top {
@@ -228,15 +263,27 @@ nav {
 
 .user-details {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	margin-bottom: 2rem;
 	gap: 2rem;
 	align-items: center;
 }
 
+@media (min-width: 60rem) {
+	.user-details {
+		justify-content: flex-start;
+	}
+}
+
+@media (min-width: 95rem) {
+	.user-details {
+		flex-flow: row nowrap;
+	}
+}
+
 .user-details__img {
 	border-radius: 50%;
-	height: 8rem;
+	height: 12rem;
 	border: solid .25rem var(--primary-color);
 }
 
@@ -247,7 +294,12 @@ nav {
 	font-size: 3rem;
 	line-height: 1;
 	border-radius: .5rem;
-	text-align: right;
+}
+
+@media (min-width: 95rem) {
+	.user-details__quote {
+		text-align: right;
+	}
 }
 
 .user-nav {
@@ -267,12 +319,12 @@ nav {
 	gap: .25rem;
 }
 
-#github-details__repos__list > div:first-child {
+#github-details__repos__list>div:first-child {
 	border-top-left-radius: .5rem;
 	border-top-right-radius: .5rem;
 }
 
-#github-details__repos__list > div:last-child {
+#github-details__repos__list>div:last-child {
 	border-bottom-left-radius: .5rem;
 	border-bottom-right-radius: .5rem;
 }
@@ -303,6 +355,11 @@ nav {
 	position: relative;
 }
 
+.github-details__followers__list__wrapper:hover {
+	border: solid .25rem var(--primary-color);
+	cursor: pointer;
+}
+
 .github-details__followers__list__login {
 	position: absolute;
 	bottom: 0;
@@ -325,7 +382,7 @@ nav {
 
 input {
 	padding: .5rem;
-	background-color: var(--color-lightest);
+	background-color: #f0f6fc;
 	border: none;
 	flex-grow: 1;
 }

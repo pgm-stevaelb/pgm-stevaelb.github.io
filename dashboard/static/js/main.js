@@ -28,8 +28,11 @@
 		},
 		cacheElem() {
 			console.log('2. Cache the elements.');
-			this.$weatherDiv = document.getElementById('weather');
+			// this.$weatherDiv = document.getElementById('weather');
+			// this.$clockContainer = document.getElementById('clock');
 			this.$covidDiv = document.getElementById('covid');
+			this.$weatherAndClockDiv = document.getElementById('clock-and-weather');
+			this.$searchRegion = document.getElementById('location-box__input');
 
 			this.$listUsers = document.getElementById('pgm-team__list');
 
@@ -40,26 +43,65 @@
 			this.$userDetails = document.getElementById('github-details__details');
 			this.$repoList = document.getElementById('github-details__repos__list');
 			this.$followList = document.getElementById('github-details__followers__list');
+
+			this.$scrollPage = document.getElementById('github-details__user');
 		},
 		buildUI() {
 			console.log('3. Build the UI');
-			this.getWeather();
+
+			this.getWeatherAndTime('Ghent');
+			this.updateWeatherAndTime();
+			this.switchDarkLightMode();
+
 			this.getCovid();
 			this.getPGMUsers();
 			this.getSearchResults();
-			// this.getUser();
-			this.showUserDetails('pgmgent');
+
+			this.showSearchResultDetails('pgmgent');
 			this.showUserRepositories('pgmgent');
+			this.showUserFollowers('pgmgent');
 		},
-		async getWeather() {
-			const APIURL = 'https://api.weatherapi.com/v1/current.json?key=28a557deaa8c407489e153714211412&q=$Ghent';
+		switchDarkLightMode() {
+			const switchBtn = document.getElementById('mode-switch');
+			switchBtn.innerHTML = repoIcons.sun;
+			switchBtn.addEventListener('click', () => {
+				document.body.classList.toggle('dark-mode');
+				if (switchBtn.classList.contains('sun')) {
+					switchBtn.innerHTML = repoIcons.moon;
+					switchBtn.classList.replace('sun', 'moon');
+				} else {
+					switchBtn.innerHTML = repoIcons.sun;
+					switchBtn.classList.replace('moon', 'sun');
+				}
+			});
+		},
+		async getWeatherAndTime(city) {
+			const APIURL = `https://api.weatherapi.com/v1/current.json?key=28a557deaa8c407489e153714211412&q=$${city}`;
 			try {
 				const response = await fetch(APIURL);
 				const data = await response.json();
-				this.$weatherDiv.innerHTML = `<img src="${data.current.condition.icon}" alt="${data.current.condition.text}" class="weather__icon"><span>${data.current.temp_c}°C</span>`;
+				this.$weatherAndClockDiv.innerHTML = `
+				<span>${repoIcons.clock + data.location.name + ', ' + data.location.localtime}</span>
+				<img src="${data.current.condition.icon}" alt="${data.current.condition.text}" class="weather__icon">
+				<span class="margin-r-2r">${data.current.temp_c}°C</span>`;
 			} catch (e) {
 				console.error(e.message);
+				this.$weatherAndClockDiv.innerHTML = 'City not found...';
 			}
+		},
+		updateWeatherAndTime() {
+			this.$searchRegion.addEventListener('keyup', (event) => {
+				event.preventDefault();
+				if (event.keyCode === 13) {
+					if (this.$searchRegion.value === '') {
+						this.getWeatherAndTime('Ghent');
+						console.log(this.$searchRegion.value);
+					} else {
+						this.getWeatherAndTime(this.$searchRegion.value);
+						console.log(this.$searchRegion.value);
+					}
+				}
+			}, false);
 		},
 		async getCovid() {
 			const APIURL = 'https://data.stad.gent/api/records/1.0/search/?dataset=dataset-of-cumulative-number-of-confirmed-cases-by-municipality';
@@ -127,15 +169,21 @@
 			} catch (e) {
 				console.error(e);
 			}
+
+			this.getUser();
 		},
 		getUser() {
-			// classlist targets separate elements in the div, if I pick the image it shows the img classes etc.
-			// Need to make it select only the div classes
-			const allUsers = document.querySelectorAll('.pgm-team__user', '.search-result');
+			const allUsers = document.querySelectorAll('.pgm-team__user, .search-result, .github-details__followers__list__wrapper');
+
 			allUsers.forEach(single => {
 				single.addEventListener('click', user => {
+					this.$scrollPage.scrollIntoView();
 					const theUser = user.target.classList[1];
-					this.showUserDetails(theUser);
+					if (user.target.classList[0] === 'pgm-team__user') {
+						this.showUserDetails(theUser);
+					} else {
+						this.showSearchResultDetails(theUser);
+					}
 					this.showUserRepositories(theUser);
 					this.showUserFollowers(theUser);
 				}, false)
@@ -156,8 +204,9 @@
 						<div class="user-details">
 							<img src="${user.thumbnail}" alt="${name}" class="user-details__img">
 							<div class="user-details__details">
-								<h3 class="text--bold">${name}</h3>
+								<h3 class="text--bold margin-b-1r">${name}</h3>
 								<p class="flex-center">${repoIcons.user + (user.teacher ? 'Teacher' : 'Student')}</p>
+								<p class="flex-center margin-b-1r">${repoIcons.birthday + this.getDateOfBirth(user.dateOfBirth)}</p>
 								<a href="https://github.com/${user.portfolio.github}" class="flex-center">${repoIcons.github + user.portfolio.github}</a>
 								<a href="mailto:${user.email}" class="flex-center margin-b-1r">${repoIcons.mail + user.email}</a>
 								<ul class="user-nav">
@@ -173,10 +222,44 @@
 					this.$userDetails.innerHTML = userDetails;
 				});
 		},
+		async showSearchResultDetails(name) {
+			const apiURL = `https://api.github.com/users/${name}`;
+
+			await fetch(apiURL, {
+					headers: {
+						'Authorization': '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'
+					}
+				})
+				.then(response => {
+					if (!response.ok) {
+						throw Error('Error, JSON not found.');
+					}
+					return response.json();
+				})
+				.then(data => {
+					this.$userDetails.innerHTML = `
+					<div class="user-details">
+						<img src="${data.avatar_url}" alt="${data.login}" class="user-details__img">
+						<div class="user-details__details">
+							<h3 class="text--bold margin-b-1r">${data.login} (${data.type})</h3>
+							<p class="flex-center">${repoIcons.user + (data.name !== null ? data.name : data.login)}</p>
+							<a href="https://github.com/${data.html_url}" class="flex-center margin-b-1r">${repoIcons.github} Go to their Github page.</a>
+							<ul class="user-nav">
+								<li><a href="#github-details__repos">Their repos</a></li>
+								<li><a href="#github-details__followers">Their followers</a></li>
+							</ul>
+						</div>
+					</div>`
+				});
+		},
 		async showUserRepositories(name) {
 			const repoURL = `https://api.github.com/users/${name}/repos?page=1&per_page=20`;
 
-			await fetch(repoURL)
+			await fetch(repoURL, {
+					headers: {
+						'Authorization': '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'
+					}
+				})
 				.then(response => {
 					if (!response.ok) {
 						throw Error('Error, JSON not found.');
@@ -214,7 +297,11 @@
 		async showUserFollowers(name) {
 			const followURL = `https://api.github.com/users/${name}/followers?page=1&per_page=100`;
 
-			await fetch(followURL)
+			await fetch(followURL, {
+					headers: {
+						'Authorization': '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'
+					}
+				})
 				.then(response => {
 					if (!response.ok) {
 						throw Error('Error, JSON not found.');
@@ -224,12 +311,27 @@
 				.then(data => {
 					this.$followList.innerHTML = data.map(follow => {
 						return `
-						<div class="github-details__followers__list__wrapper">
-							<img src="${follow.avatar_url} alt="${follow.login}" class="github-details__followers__list__img">
-							<p class="github-details__followers__list__login">${follow.login}</p>
+						<div class="github-details__followers__list__wrapper ${follow.login}">
+							<img src="${follow.avatar_url} alt="${follow.login}" class="github-details__followers__list__img no-pointer-event">
+							<p class="github-details__followers__list__login no-pointer-event">${follow.login}</p>
 						</div>`
 					}).join('');
 				});
+
+			this.getUser();
+		},
+		getDateOfBirth(epoch) {
+			let birthDate = new Date(epoch);
+			let dayOfBirth = this.doubleDigits(birthDate.getDay());
+			let monthOfBirth = this.doubleDigits(birthDate.getMonth() + 1);
+
+			let output = `${dayOfBirth}/${monthOfBirth}/${birthDate.getFullYear()}`;
+			return output;
+		},
+		doubleDigits(number) {
+			let newNumber = '';
+			newNumber = (number < 10) ? newNumber = '0' + number : number;
+			return String(newNumber);
 		}
 	};
 
