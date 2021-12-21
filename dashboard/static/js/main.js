@@ -22,14 +22,10 @@
 (() => {
 	const app = {
 		init() {
-			console.log('1. App Init.')
 			this.cacheElem();
 			this.buildUI();
 		},
 		cacheElem() {
-			console.log('2. Cache the elements.');
-			// this.$weatherDiv = document.getElementById('weather');
-			// this.$clockContainer = document.getElementById('clock');
 			this.$covidDiv = document.getElementById('covid');
 			this.$weatherAndClockDiv = document.getElementById('clock-and-weather');
 			this.$searchRegion = document.getElementById('location-box__input');
@@ -38,6 +34,7 @@
 
 			this.$searchBox = document.getElementById('search-box__input');
 			this.$searchButton = document.getElementById('search-box__btn');
+			this.$youtubeButton = document.getElementById('search-box__btn--youtube');
 			this.$githubUsers = document.getElementById('github-users__list');
 
 			this.$userDetails = document.getElementById('github-details__details');
@@ -47,8 +44,6 @@
 			this.$scrollPage = document.getElementById('github-details__user');
 		},
 		buildUI() {
-			console.log('3. Build the UI');
-
 			this.getWeatherAndTime('Ghent');
 			this.updateWeatherAndTime();
 			this.switchDarkLightMode();
@@ -142,11 +137,26 @@
 			this.$searchBox.addEventListener('keyup', (event) => {
 				event.preventDefault();
 				if (event.keyCode === 13) {
-					this.showGithubUsers(this.$searchBox.value);
+					if (this.$searchBox.value === '') {
+						this.$githubUsers.innerHTML = '<p>No results found.</p>'
+					} else {
+						this.showGithubUsers(this.$searchBox.value);
+					}
 				}
 			}, false);
 			this.$searchButton.addEventListener('click', () => {
-				this.showGithubUsers(this.$searchBox.value);
+				if (this.$searchBox.value === '') {
+					this.$githubUsers.innerHTML = '<p>No results found.</p>'
+				} else {
+					this.showGithubUsers(this.$searchBox.value);
+				}
+			}, false);
+			this.$youtubeButton.addEventListener('click', () => {
+				if (this.$searchBox.value === '') {
+					this.$githubUsers.innerHTML = '<p>No results found.</p>'
+				} else {
+					this.showYoutubeSearchResults(this.$searchBox.value);
+				}
 			}, false);
 		},
 		async showGithubUsers(input) {
@@ -171,6 +181,23 @@
 			}
 
 			this.getUser();
+		},
+		async showYoutubeSearchResults(param) {
+			const apiURL = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyAT6t630I5lO4BQcusK2Tpg4D_WzoADB1o&part=snippet&maxResults=20&q=${param}`;
+			console.log(apiURL);
+			try {
+				const response = await fetch(apiURL);
+				const data = await response.json();
+				this.$githubUsers.innerHTML = data.items.map(video => {
+					return `
+						<a href="https://www.youtube.com/watch?v=${video.id.videoId}" class="search-result youtube-video" target="_blank">
+							<img src="${video.snippet.thumbnails.default.url}" alt="${video.snippet.thumbnails.title}" class="youtube-result__img no-pointer-event">
+							<p class="no-pointer-event">${video.snippet.title}</p>
+						</a>`
+				}).join('');
+			} catch (e) {
+				console.error(e);
+			}
 		},
 		getUser() {
 			const allUsers = document.querySelectorAll('.pgm-team__user, .search-result, .github-details__followers__list__wrapper');
