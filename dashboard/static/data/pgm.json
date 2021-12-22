@@ -1,152 +1,152 @@
 {
 	"users": [{
 			"name": {
-				"first": "Milo",
-				"last": "Yip"
-			},
-			"email": "milo.yip@example.com",
-			"dateOfBirth": -397948573000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/56.jpg",
-			"portfolio": {
-				"github": "miloyip",
-				"linkedin": "lll"
-			},
-			"teacher": true,
-			"motto": "Art, science, truth"
-		},
-		{
-			"name": {
-				"first": "Marcos",
-				"last": "Vidal"
-			},
-			"email": "Marcos.Vidal@example.com",
-			"dateOfBirth": -110471641000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/76.jpg",
-			"portfolio": {
-				"github": "marcosvidal",
-				"linkedin": "lll"
-			},
-			"teacher": true,
-			"motto": "In ancestral footsteps we tread"
-		},
-		{
-			"name": {
 				"first": "Steven",
 				"last": "Aelbrecht"
 			},
-			"email": "steven.aelbrecht@example.com",
-			"dateOfBirth": 786351445000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/58.jpg",
+			"email": "stevaelb@student.arteveldehs.be",
+			"dateOfBirth": 679572000000,
+			"thumbnail": "stevaelb.jpg",
 			"portfolio": {
 				"github": "pgm-stevaelb",
 				"linkedin": "steven-aelbrecht"
 			},
 			"teacher": false,
+			"motto": "Art, science, truth"
+		},
+		{
+			"name": {
+				"first": "Michiel",
+				"last": "Willems"
+			},
+			"email": "michielwillems@student.arteveldehs.be",
+			"dateOfBirth": 865936800000,
+			"thumbnail": "michielwillems.jpg",
+			"portfolio": {
+				"github": "pgm-michielwillems",
+				"linkedin": "michiel-willems-221113221"
+			},
+			"teacher": false,
+			"motto": "In ancestral footsteps we tread"
+		},
+		{
+			"name": {
+				"first": "Philippe",
+				"last": "De Pauw - Waterschoot"
+			},
+			"email": "drdynscript@arteveldehs.be",
+			"dateOfBirth": 786351445000,
+			"thumbnail": "drdynscript.png",
+			"portfolio": {
+				"github": "drdynscript",
+				"linkedin": "philippe-de-pauw"
+			},
+			"teacher": true,
 			"motto": "Of the sea, the land and the sky"
 		},
 		{
 			"name": {
-				"first": "Wes",
-				"last": "Bos"
+				"first": "Michael",
+				"last": "Vanderpoorten"
 			},
-			"email": "Wes.Bos@example.com",
+			"email": "michael.vanderpoorten@arteveldehs.be",
 			"dateOfBirth": 628906729000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/21.jpg",
+			"thumbnail": "michael.jpg",
 			"portfolio": {
-				"github": "wesbos",
-				"linkedin": "lll"
+				"github": "yungpanda",
+				"linkedin": "michaelvanderpoorten"
 			},
-			"teacher": false,
+			"teacher": true,
 			"motto": "Light and law"
 		},
 		{
 			"name": {
-				"first": "Hamza",
-				"last": "Zia"
+				"first": "Mathieu",
+				"last": "Spillebeen"
 			},
-			"email": "Hamza.Zia@example.com",
+			"email": "mathieu.spillebeen@arteveldehs.be",
 			"dateOfBirth": 140366735000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/81.jpg",
+			"thumbnail": "mathieu.jpg",
 			"portfolio": {
-				"github": "ziahamza",
-				"linkedin": "lll"
+				"github": "mathieuspil",
+				"linkedin": "mathieuspil"
 			},
-			"teacher": false,
+			"teacher": true,
 			"motto": "Prepared for all"
 		},
 		{
 			"name": {
-				"first": "Andrei",
-				"last": "Kashcha"
+				"first": "Killian",
+				"last": "De Bock"
 			},
-			"email": "Andrei.Kashcha@example.com",
-			"dateOfBirth": -327750364000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/43.jpg",
+			"email": "killian.debock@student.arteveldehs.be",
+			"dateOfBirth": 976532400000,
+			"thumbnail": "killian.gif",
 			"portfolio": {
-				"github": "anvaka",
-				"linkedin": "lll"
+				"github": "Stualyttle",
+				"linkedin": "kilian-de-bock"
 			},
-			"teacher": true,
+			"teacher": false,
 			"motto": "Power, progress, peace"
 		},
 		{
 			"name": {
-				"first": "Dave",
-				"last": "Stewart"
+				"first": "Helena",
+				"last": "Yankson"
 			},
-			"email": "Dave.Stewart@example.com",
-			"dateOfBirth": 861696218000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/15.jpg",
+			"email": "helena.Yankson@student.arteveldehs.be",
+			"dateOfBirth": 780055200000,
+			"thumbnail": "helena.png",
 			"portfolio": {
-				"github": "davestewart",
-				"linkedin": "lll"
+				"github": "pgm-heleyank",
+				"linkedin": "helena-yankson"
 			},
 			"teacher": false,
 			"motto": "Approach with care"
 		},
 		{
 			"name": {
-				"first": "Mathias",
-				"last": "Buus"
+				"first": "Adriaan",
+				"last": "Glibert"
 			},
-			"email": "Mathias.Buus@example.com",
+			"email": "adriaan.gilbert@arteveldehs.be",
 			"dateOfBirth": 462129943000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/85.jpg",
+			"thumbnail": "adriaan.jpg",
 			"portfolio": {
-				"github": "mafintosh",
-				"linkedin": "lll"
+				"github": "adriaanglibert",
+				"linkedin": "adriaanglibert"
 			},
-			"teacher": false,
+			"teacher": true,
 			"motto": "Justice, honesty, integrity"
 		},
 		{
 			"name": {
-				"first": "James",
-				"last": "Halliday"
+				"first": "Beber",
+				"last": "Geens"
 			},
-			"email": "James.Halliday@example.com",
+			"email": "beber.geens@student.arteveldehs.be",
 			"dateOfBirth": -362464083000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/75.jpg",
+			"thumbnail": "beber.png",
 			"portfolio": {
-				"github": "substack",
-				"linkedin": "lll"
+				"github": "pgm-bebegeen",
+				"linkedin": "beber-geens"
 			},
-			"teacher": true,
+			"teacher": false,
 			"motto": "Beacon of the North"
 		},
 		{
 			"name": {
-				"first": "Alex",
-				"last": "Wolfe"
+				"first": "Kimberly",
+				"last": "Sabbe"
 			},
-			"email": "Alex.Wolfe@example.com",
-			"dateOfBirth": 547402309000,
-			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/84.jpg",
+			"email": "kimberly.sabbe@student.arteveldehs.be",
+			"dateOfBirth": 1064440800000,
+			"thumbnail": "kim.jpg",
 			"portfolio": {
-				"github": "alexwolfe",
-				"linkedin": "lll"
+				"github": "pgm-kim",
+				"linkedin": "kim-sabbe-538760220"
 			},
-			"teacher": true,
+			"teacher": false,
 			"motto": "Bold and righteous"
 		}
 	]

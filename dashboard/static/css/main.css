@@ -185,6 +185,10 @@ nav {
 	align-items: center;
 }
 
+.mode-btn {
+	margin: 0;
+}
+
 .current-location {
 	display: flex;
 	flex-flow: row nowrap;
@@ -243,6 +247,7 @@ nav {
 
 .pgm-team__user__img {
 	border-radius: 50%;
+	width: 3rem;
 }
 
 /* Center Pane - DETAILS */
@@ -405,6 +410,10 @@ button {
 	cursor: pointer;
 	color: var(--color-lightest);
 	font-weight: bold;
+}
+
+button:hover {
+	background-color: var(--primary-color-alt);
 }
 
 #github-users__list {

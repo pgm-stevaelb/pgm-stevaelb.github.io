@@ -121,7 +121,7 @@
 						const name = user.name.first + ' ' + user.name.last;
 						return `
 						<div class="pgm-team__user ${user.portfolio.github}">
-							<img src="${user.thumbnail}" alt="${name}" class="pgm-team__user__img no-pointer-event">
+							<img src="static/media/images/pgm/${user.thumbnail}" alt="${name}" class="pgm-team__user__img no-pointer-event">
 							<div class="pgm-team__user__details no-pointer-event">
 								<p class="text-m text--bold">${name}</p>
 								<p>${user.portfolio.github}</p>
@@ -203,17 +203,20 @@
 			const allUsers = document.querySelectorAll('.pgm-team__user, .search-result, .github-details__followers__list__wrapper');
 
 			allUsers.forEach(single => {
-				single.addEventListener('click', user => {
-					this.$scrollPage.scrollIntoView();
-					const theUser = user.target.classList[1];
-					if (user.target.classList[0] === 'pgm-team__user') {
-						this.showUserDetails(theUser);
-					} else {
-						this.showSearchResultDetails(theUser);
-					}
-					this.showUserRepositories(theUser);
-					this.showUserFollowers(theUser);
-				}, false)
+				if (single.dataset.listener !== 'true') {
+					single.dataset.listener = "true";
+					single.addEventListener('click', user => {
+						this.$scrollPage.scrollIntoView();
+						const theUser = user.target.classList[1];
+						if (user.target.classList[0] === 'pgm-team__user') {
+							this.showUserDetails(theUser);
+						} else {
+							this.showSearchResultDetails(theUser);
+						}
+						this.showUserRepositories(theUser);
+						this.showUserFollowers(theUser);
+					}, false)
+				}
 			});
 		},
 		async showUserDetails(name) {
@@ -229,12 +232,13 @@
 						const name = user.name.first + ' ' + user.name.last;
 						return `
 						<div class="user-details">
-							<img src="${user.thumbnail}" alt="${name}" class="user-details__img">
+							<img src="static/media/images/pgm/${user.thumbnail}" alt="${name}" class="user-details__img">
 							<div class="user-details__details">
 								<h3 class="text--bold margin-b-1r">${name}</h3>
 								<p class="flex-center">${repoIcons.user + (user.teacher ? 'Teacher' : 'Student')}</p>
 								<p class="flex-center margin-b-1r">${repoIcons.birthday + this.getDateOfBirth(user.dateOfBirth)}</p>
-								<a href="https://github.com/${user.portfolio.github}" class="flex-center">${repoIcons.github + user.portfolio.github}</a>
+								<a href="https://github.com/${user.portfolio.github}" class="flex-center" target="_blank">${repoIcons.github + user.portfolio.github}</a>
+								<a href="https://www.linkedin.com/in/${user.portfolio.linkedin}" class="flex-center" target="_blank">${repoIcons.linkedin}Go to their LinkedIn</a>
 								<a href="mailto:${user.email}" class="flex-center margin-b-1r">${repoIcons.mail + user.email}</a>
 								<ul class="user-nav">
 									<li><a href="#github-details__repos">Their repos</a></li>
@@ -270,7 +274,7 @@
 						<div class="user-details__details">
 							<h3 class="text--bold margin-b-1r">${data.login} (${data.type})</h3>
 							<p class="flex-center">${repoIcons.user + (data.name !== null ? data.name : data.login)}</p>
-							<a href="https://github.com/${data.html_url}" class="flex-center margin-b-1r">${repoIcons.github} Go to their Github page.</a>
+							<a href="https://github.com/${data.html_url}" class="flex-center margin-b-1r" target="_blank">${repoIcons.github} Go to their Github page.</a>
 							<ul class="user-nav">
 								<li><a href="#github-details__repos">Their repos</a></li>
 								<li><a href="#github-details__followers">Their followers</a></li>
@@ -294,8 +298,11 @@
 					return response.json();
 				})
 				.then(data => {
-					this.$repoList.innerHTML = data.map(repo => {
-						return `
+					if (data.length === 0) {
+						this.$repoList.innerHTML = '<p>No repos to show...</p>';
+					} else {
+						this.$repoList.innerHTML = data.map(repo => {
+							return `
 						<div class="repo__single">
 							<a href="${repo.html_url}" class="repo__single__title" target="_blank">${repo.owner.login}/${repo.name}</a>
 							<p class="repo__single__description">${(repo.description !== null) ? repo.description : ''}</p>
@@ -311,7 +318,8 @@
 							</div>
 						</div>
 						`
-					}).join('');
+						}).join('');
+					}
 				});
 		},
 		calculateSize(size) {
@@ -336,20 +344,24 @@
 					return response.json();
 				})
 				.then(data => {
-					this.$followList.innerHTML = data.map(follow => {
-						return `
+					if (data.length === 0) {
+						this.$followList.innerHTML = '<p>No followers so far...</p>';
+					} else {
+						this.$followList.innerHTML = data.map(follow => {
+							return `
 						<div class="github-details__followers__list__wrapper ${follow.login}">
 							<img src="${follow.avatar_url} alt="${follow.login}" class="github-details__followers__list__img no-pointer-event">
 							<p class="github-details__followers__list__login no-pointer-event">${follow.login}</p>
 						</div>`
-					}).join('');
+						}).join('');
+					}
 				});
 
 			this.getUser();
 		},
 		getDateOfBirth(epoch) {
 			let birthDate = new Date(epoch);
-			let dayOfBirth = this.doubleDigits(birthDate.getDay());
+			let dayOfBirth = this.doubleDigits(birthDate.getDate());
 			let monthOfBirth = this.doubleDigits(birthDate.getMonth() + 1);
 
 			let output = `${dayOfBirth}/${monthOfBirth}/${birthDate.getFullYear()}`;
