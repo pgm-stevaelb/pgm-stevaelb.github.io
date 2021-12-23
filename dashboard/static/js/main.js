@@ -190,7 +190,7 @@
 				const data = await response.json();
 				this.$githubUsers.innerHTML = data.items.map(video => {
 					return `
-						<a href="https://www.youtube.com/watch?v=${video.id.videoId}" class="search-result youtube-video" target="_blank">
+						<a href="https://www.youtube.com/watch?v=${video.id.videoId}" class="youtube-video" target="_blank">
 							<img src="${video.snippet.thumbnails.default.url}" alt="${video.snippet.thumbnails.title}" class="youtube-result__img no-pointer-event">
 							<p class="no-pointer-event">${video.snippet.title}</p>
 						</a>`
@@ -304,8 +304,11 @@
 						this.$repoList.innerHTML = data.map(repo => {
 							return `
 						<div class="repo__single">
-							<a href="${repo.html_url}" class="repo__single__title" target="_blank">${repo.owner.login}/${repo.name}</a>
-							<p class="repo__single__description">${(repo.description !== null) ? repo.description : ''}</p>
+							<div class="repo__single__link-language"/>
+								<a href="${repo.html_url}" class="repo__single__title" target="_blank">${repo.owner.login}/${repo.name}</a>
+								${repo.language === null ? '' : '<p class="text-light"><span class="language-circle circle--' + repo.language + '"></span>' + repo.language + '</p>'}
+							</div>
+							<p class="text-light">${(repo.description !== null) ? repo.description : ''}</p>
 							<div class="repo__single__details">
 								<span class="flex-center">${this.calculateSize(repo.size)}</span>
 								<span class="flex-center">${repoIcons.branch}${repo.default_branch}</span>

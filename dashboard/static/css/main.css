@@ -109,6 +109,10 @@ footer {
 	font-weight: bold;
 }
 
+.text-light {
+	color: var(--color-light);
+}
+
 /* Custom used classes */
 
 .rounded-corners {
@@ -334,8 +338,52 @@ nav {
 	border-bottom-right-radius: .5rem;
 }
 
-.repo__single__description {
-	color: var(--color-light);
+.repo__single__link-language {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.language-circle {
+	position: relative;
+	top: .0625rem;
+	display: inline-block;
+	width: .75rem;
+	height: .75rem;
+	border-radius: 50%;
+	margin-right: .25rem;
+}
+
+.circle--CSS {
+	background-color: #563d7c;
+}
+
+.circle--JavaScript {
+	background-color: #f1e05a;
+}
+
+.circle--PHP {
+	background-color: #4F5D95;
+}
+
+.circle--Ruby {
+	background-color: #701516;
+}
+
+.circle--HTML {
+	background-color: #e34c26;
+}
+
+.circle--Puppet {
+	background-color: #302B6D;
+}
+
+.circle--TypeScript {
+	background-color: #2b7489;
+}
+
+.circle--Python {
+	background-color: #3572A5;
 }
 
 .repo__single__details {
@@ -421,6 +469,13 @@ button:hover {
 }
 
 .search-result {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	padding: .5rem;
+}
+
+.youtube-video {
 	display: flex;
 	gap: 1rem;
 	align-items: center;
