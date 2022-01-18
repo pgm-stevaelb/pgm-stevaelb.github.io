@@ -2,23 +2,21 @@
   const app = {
     init() {
       this.cacheElem();
-      this.buildUI();
 
       this.baseURL = 'https://www.pgm.gent/data/gentsefeesten/';
       this.news = null;
 
-      this.url = window.location.href;
+      this.path = window.location.pathname;
+
+      this.fetchNews();
     },
     cacheElem() {
       this.$newsItems = document.getElementById('latest-news');
     },
-    buildUI() {
-      this.fetchNews();
-    },
     async fetchNews() {
       this.news = new PartyAPI().getNewsFromUrl()
         .then(data => {
-          if (this.url.indexOf('news') === 104) {
+          if ((this.path.substring(this.path.lastIndexOf('/') + 1)) === 'news.html') {
             this.$newsItems.innerHTML = data.map(news => this.generateNewsItem(news)).join('');
           } else {
             this.$newsItems.innerHTML = data.slice(0,3).map(news => this.generateNewsItem(news)).join('');
