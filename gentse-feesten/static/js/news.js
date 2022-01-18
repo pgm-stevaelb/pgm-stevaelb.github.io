@@ -8,6 +8,7 @@
       this.news = null;
 
       this.url = window.location.href;
+      console.log(this.url.indexOf('index'))
     },
     cacheElem() {
       this.$newsItems = document.getElementById('latest-news');
