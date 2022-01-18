@@ -6,6 +6,9 @@
       this.partyAPI = new PartyAPI();
 
       this.arrayOfDates = null;
+      this.currentUrl = window.location.search;
+			this.currentDay = null;
+      
       this.fetchEvents();
 		},
 		cacheElem() {
@@ -21,9 +24,10 @@
           for (const day in days) {
             this.$nav.innerHTML += this.generateDays(days[day], day);
           }
-          
         })
       .catch(e => console.error('An error ocurred!', e.message));
+      
+      this.setActiveDay();
 		},
     generateDays(days, num) {
       return `
@@ -33,6 +37,16 @@
             <span class="day-link-item__date">${num} Jul</span>
           </a>
         </li>`
+    },
+    setActiveDay() {
+      this.$day = [...document.querySelectorAll('.day-link')];
+      const params = new URLSearchParams(this.currentUrl);
+			const currentDay = params.get('day');
+      this.$day.map(e => {
+        if (e.dataset.day === currentDay) {
+          e.classList.add('active-day');
+        }
+      });
     }
 	};
 
