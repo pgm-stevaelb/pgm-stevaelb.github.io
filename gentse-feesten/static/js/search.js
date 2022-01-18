@@ -64,7 +64,6 @@
 		},
     changeView() {
 			const element = document.getElementById('search-events');
-      console.log(element)
 
 			this.$gridBtn.addEventListener('click', () => {
 				if (this.$listBtn.classList.contains('view-icon__active')) {
