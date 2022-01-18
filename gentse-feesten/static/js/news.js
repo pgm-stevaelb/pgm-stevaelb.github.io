@@ -7,6 +7,7 @@
       this.news = null;
 
       this.path = window.location.pathname;
+      console.log(this.path)
 
       this.fetchNews();
     },
