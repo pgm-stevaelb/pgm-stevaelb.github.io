@@ -6,9 +6,6 @@
       this.baseURL = 'https://www.pgm.gent/data/gentsefeesten/';
       this.news = null;
 
-      this.path = window.location.pathname;
-      console.log(this.path)
-
       this.fetchNews();
     },
     cacheElem() {
@@ -17,10 +14,10 @@
     async fetchNews() {
       this.news = new PartyAPI().getNewsFromUrl()
         .then(data => {
-          if ((this.path.substring(this.path.lastIndexOf('/') + 1)) === 'news.html') {
-            this.$newsItems.innerHTML = data.map(news => this.generateNewsItem(news)).join('');
+          if (document.querySelector('.home-news')) {
+            this.$newsItems.innerHTML = data.slice(0, 3).map(news => this.generateNewsItem(news)).join('');
           } else {
-            this.$newsItems.innerHTML = data.slice(0,3).map(news => this.generateNewsItem(news)).join('');
+            this.$newsItems.innerHTML = data.map(news => this.generateNewsItem(news)).join('');
           }
         })
         .catch(e => console.error('An error ocurred!', e.message));
