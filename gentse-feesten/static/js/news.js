@@ -8,7 +8,7 @@
       this.news = null;
 
       this.url = window.location.href;
-      console.log(this.url.indexOf('index'))
+      console.log(this.url.indexOf('news'))
     },
     cacheElem() {
       this.$newsItems = document.getElementById('latest-news');
@@ -19,7 +19,7 @@
     async fetchNews() {
       this.news = new PartyAPI().getNewsFromUrl()
         .then(data => {
-          if (this.url.indexOf('index') === -1) {
+          if (this.url.indexOf('news') === 104) {
             this.$newsItems.innerHTML = data.map(news => this.generateNewsItem(news)).join('');
           } else {
             this.$newsItems.innerHTML = data.slice(0,3).map(news => this.generateNewsItem(news)).join('');
