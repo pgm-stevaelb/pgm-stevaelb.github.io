@@ -682,18 +682,40 @@ svg.wheelchair {
 	border: solid .125rem var(--dark-color);
 	line-height: 0;
 	transition: all 100ms ease;
+	font-size: var(--text-m);
 }
 
 .filter-icon:hover,
 .view-icon:hover {
 	background-color: var(--dark-color);
 	cursor: pointer;
+	color: var(--light-color);
+	text-decoration: none;
 }
 
 .filter-icon:hover>svg,
 .view-icon:hover>svg,
 .view-icon:hover>svg>g>g {
 	fill: var(--light-color);
+}
+
+.filter-icon__text {
+	display: none;
+}
+
+.filter-icon__checkbox {
+	margin-left: .25rem;
+}
+
+@media (min-width: 64rem) {
+	.filter-icon__text {
+		display: inline-block;
+	}
+
+	.filter-icon__checkbox {
+		font-size: var(--text-m);
+		margin-left: .5rem;
+	}
 }
 
 .view-icon__active {
