@@ -2,7 +2,14 @@
 
 :root {
   /* Colors */
-  --primary-color-100: #fff;
+  --clr-pri-400: #FF2957;
+
+  --clr-sec-400: #55BABE;
+
+  --clr-dark: #04212f;
+  --clr-dark-alt: #2e4756;
+
+  --clr-white: hsl(0, 0%, 100%);
 
   /* Font Families */
   --ff-default: 'Open Sans';
@@ -22,16 +29,20 @@
   --fw-bold: 700;
 
   /* Spacing */
-  --xs-space: .5rem;
-  --s-space: .75rem;
-  --m-space: 1rem;
-  --l-space: 1.25rem;
-  --xl-space: 1.5rem;
+  --xs-space: .75rem;
+  --s-space: 1rem;
+  --m-space: 1.5rem;
+  --l-space: 2.25rem;
+  --xl-space: 4rem;
 }
 
 body {
   font-family: var(--ff-default), sans-serif;
   font-size: var(--fs-m);
+  color: var(--clr-white);
+  background: var(--clr-dark);
+  background: linear-gradient(135deg, var(--clr-dark) 0%, var(--clr-dark-alt) 100%);
+  background-repeat: no-repeat;
 }
 
 /* Typography */
@@ -44,9 +55,26 @@ h1,h2,h3,h4 {
 
 
 /* Containers */
-.container {
-  width: 100%;
-  max-width: 75rem;
+.container-wrapper {
   height: auto;
-  margin-inline: auto;
+  width: 100%;
+}
+
+.container {
+  padding: var(--xl-space);
+  max-width: 50%;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+/* Display */
+.flex {
+  display: flex;
+}
+
+/* Homepage */
+.img-homepage {
+  height: 100%;
 }
