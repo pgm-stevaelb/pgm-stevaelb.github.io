@@ -1,3 +1,52 @@
+/* Global CSS */
+
+:root {
+  /* Colors */
+  --primary-color-100: #fff;
+
+  /* Font Families */
+  --ff-default: 'Open Sans';
+  --ff-display: 'Raleway';
+
+  /* Font Sizes */
+  --fs-xs: .5rem;
+  --fs-s: .75rem;
+  --fs-m: 1rem;
+  --fs-l: 1.25rem;
+  --fs-xl: 1.5rem;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-semi: 600; /* Semi-Bold */
+  --fw-bold: 700;
+
+  /* Spacing */
+  --xs-space: .5rem;
+  --s-space: .75rem;
+  --m-space: 1rem;
+  --l-space: 1.25rem;
+  --xl-space: 1.5rem;
+}
+
 body {
-  font-family: 'Open Sans', serif;
+  font-family: var(--ff-default), sans-serif;
+  font-size: var(--fs-m);
+}
+
+/* Typography */
+h1,h2,h3,h4 {
+  font-family: var(--ff-display), sans-serif;
+  font-weight: var(--fw-semi);
+}
+
+/* Spacing */
+
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: 75rem;
+  height: auto;
+  margin-inline: auto;
 }
