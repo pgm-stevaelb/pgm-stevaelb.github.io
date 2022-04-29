@@ -2,7 +2,8 @@
 
 :root {
   /* Colors */
-  --clr-pri-400: #FF2957;
+  --clr-pri-100: 347 100% 74%;
+  --clr-pri-400: 347 100% 58%;
 
   --clr-sec-400: #55BABE;
 
@@ -16,11 +17,12 @@
   --ff-display: 'Raleway';
 
   /* Font Sizes */
-  --fs-xs: .5rem;
-  --fs-s: .75rem;
-  --fs-m: 1rem;
-  --fs-l: 1.25rem;
-  --fs-xl: 1.5rem;
+  --fs-xs: .7rem;
+  --fs-s: .9rem;
+  --fs-m: 1.1rem;
+  --fs-l: 1.8rem;
+  --fs-xl: 2.5rem;
+  --fs-xxl: 3.25rem;
 
   /* Font Weights */
   --fw-light: 300;
@@ -36,13 +38,25 @@
   --xl-space: 4rem;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: var(--clr-white);
+  background: hsl(var(--clr-pri-400) / .5);
+}
+
+::selection {
+  color: var(--clr-white);
+  background: hsl(var(--clr-pri-400) / .5);
+}
+
 body {
   font-family: var(--ff-default), sans-serif;
-  font-size: var(--fs-m);
+  /* font-size: var(--fs-m); */
+  font-size: clamp(var(--fs-s), 5vw, var(--fs-m));;
   color: var(--clr-white);
   background: var(--clr-dark);
   background: linear-gradient(135deg, var(--clr-dark) 0%, var(--clr-dark-alt) 100%);
   background-repeat: no-repeat;
+  cursor: default;
 }
 
 /* Typography */
@@ -51,8 +65,34 @@ h1,h2,h3,h4 {
   font-weight: var(--fw-semi);
 }
 
-/* Spacing */
+h1 {
+  font-size: clamp(var(--fs-l), 5vw, var(--fs-xxl));
+}
 
+.bold {
+  font-weight: 700;
+}
+
+/* Spacing */
+.m-bot-0 {
+  margin-bottom: var(--xs-space);
+}
+
+.m-bot-1 {
+  margin-bottom: var(--s-space);
+}
+
+.m-bot-2 {
+  margin-bottom: var(--m-space);
+}
+
+.m-bot-3 {
+  margin-bottom: var(--l-space);
+}
+
+.m-bot-4 {
+  margin-bottom: var(--xl-space);
+}
 
 /* Containers */
 .container-wrapper {
@@ -61,8 +101,15 @@ h1,h2,h3,h4 {
 }
 
 .container {
-  padding: var(--xl-space);
-  max-width: 50%;
+  padding: var(--l-space);
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 40rem) {
+  .container {
+    padding: var(--xl-space);
+  }
 }
 
 .full-height {
@@ -74,7 +121,33 @@ h1,h2,h3,h4 {
   display: flex;
 }
 
+/* Other */
+.transition {
+  transition: all .4s ease;
+}
+
+.icon-s {
+  width: 1rem;
+  height: auto;
+}
+
+.text-underline {
+  box-shadow: inset 0 -1rem 0 hsl(var(--clr-pri-400) / .5);
+}
+
+.text-underline:hover {
+  box-shadow: inset 0 -1rem 0 hsl(var(--clr-pri-400));
+}
+
+/* PER PAGE CSS */
+
 /* Homepage */
-.img-homepage {
-  height: 100%;
+.intro__name {
+  color: hsl(var(--clr-pri-400));
+  text-transform: uppercase;
+  letter-spacing: .25ch;
+}
+
+.intro__text {
+  max-width: 50rem;
 }
