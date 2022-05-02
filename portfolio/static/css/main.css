@@ -3,14 +3,15 @@
 :root {
   /* Colors */
   --clr-pri-100: 347 100% 74%;
-  --clr-pri-400: 347 100% 58%;
+  --clr-pri-400: 347 100% 58%; /* #ff2957 */
 
-  --clr-sec-400: #55BABE;
+  --clr-sec-100: 182 45% 78%;
+  --clr-sec-400: 182 45% 54%; /* #55bebe */
 
   --clr-dark: #04212f;
   --clr-dark-alt: #2e4756;
 
-  --clr-white: hsl(0, 0%, 100%);
+  --clr-white: 0 0% 100%;
 
   /* Font Families */
   --ff-default: 'Open Sans';
@@ -25,10 +26,10 @@
   --fs-xxl: 3.25rem;
 
   /* Font Weights */
-  --fw-light: 300;
-  --fw-normal: 400;
-  --fw-semi: 600; /* Semi-Bold */
-  --fw-bold: 700;
+  --fw-light: 300; /* Display font: Raleway */
+  --fw-normal: 400; /* All fonts */
+  --fw-semi: 600; /* Display font: Raleway */
+  --fw-bold: 700; /* Default font: Open Sans */
 
   /* Spacing */
   --xs-space: .75rem;
@@ -39,12 +40,12 @@
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: var(--clr-white);
+  color: hsl(var(--clr-white));
   background: hsl(var(--clr-pri-400) / .5);
 }
 
 ::selection {
-  color: var(--clr-white);
+  color: hsl(var(--clr-white));
   background: hsl(var(--clr-pri-400) / .5);
 }
 
@@ -52,7 +53,7 @@ body {
   font-family: var(--ff-default), sans-serif;
   /* font-size: var(--fs-m); */
   font-size: clamp(var(--fs-s), 5vw, var(--fs-m));;
-  color: var(--clr-white);
+  color: hsl(var(--clr-white));
   background: var(--clr-dark);
   background: linear-gradient(135deg, var(--clr-dark) 0%, var(--clr-dark-alt) 100%);
   background-repeat: no-repeat;
@@ -71,6 +72,10 @@ h1 {
 
 .bold {
   font-weight: 700;
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
 }
 
 /* Spacing */
@@ -121,6 +126,11 @@ h1 {
   display: flex;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
 /* Other */
 .transition {
   transition: all .4s ease;
@@ -139,6 +149,51 @@ h1 {
   box-shadow: inset 0 -1rem 0 hsl(var(--clr-pri-400));
 }
 
+/* Navigation */
+nav {
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--xs-space);
+}
+
+.logo__img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px 0 var(--clr-dark);
+}
+
+.logo__text {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-semi);
+  color: var(--clr-sec-400);
+}
+
+.menu {
+  display: flex;
+  justify-content: end;
+  gap: var(--s-space);
+}
+
+.menu__item a {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-semi);
+  color: hsl(var(--clr-sec-400));
+  text-decoration: none;
+  box-shadow: inset 0 -.5rem 0 hsl(var(--clr-pri-400) / .25);
+}
+
+.menu__item a:hover {
+  color: hsl(var(--clr-sec-100));
+  box-shadow: inset 0 -.5rem 0 hsl(var(--clr-pri-400) / .5);
+}
+
 /* PER PAGE CSS */
 
 /* Homepage */
@@ -150,4 +205,8 @@ h1 {
 
 .intro__text {
   max-width: 50rem;
+}
+
+lottie-player {
+  text-align: end;
 }
