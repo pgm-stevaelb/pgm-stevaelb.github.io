@@ -24,22 +24,38 @@
 	<header>
 		<nav class="container flex-center">
 			<div class="logo">
-				<img src="static/media/images/Steven-683x1024.jpg" alt="Steven Aelbrecht" class="logo__img">
+				<img src="static/media/images/Steven-683x1024.jpg" alt="Steven Aelbrecht" class="logo__img box-shadow-s">
 				<p class="logo__text">Steven Aelbrecht</p>
 			</div>
-			<ul class="menu">
-				<li class="menu__item"><a href="#"><span class="text-white">01.</span> Home</a></li>
-				<li class="menu__item"><a href="#"><span class="text-white">02.</span> Portfolio</a></li>
-				<li class="menu__item"><a href="#"><span class="text-white">03.</span> Contact</a></li>
-			</ul>
+      
+      <div class="menu-mobile">
+        <img src="static/media/images/burger.svg" alt="It's a Burger Menu!" class="menu__burger box-shadow-s">
+        <!-- <ul class="menu">
+          <li class="menu__item"><a href="#"><span class="text-white">01.</span> Home</a></li>
+          <li class="menu__item"><a href="#"><span class="text-white">02.</span> Portfolio</a></li>
+          <li class="menu__item"><a href="#"><span class="text-white">03.</span> Contact</a></li>
+        </ul> -->
+      </div>
+
+      <div class="menu-desktop">
+        <ul class="menu">
+          <li class="menu__item"><a href="#"><span class="text-white">01.</span> Home</a></li>
+          <li class="menu__item"><a href="#"><span class="text-white">02.</span> Portfolio</a></li>
+          <li class="menu__item"><a href="#"><span class="text-white">03.</span> Contact</a></li>
+        </ul>
+      </div>
 		</nav>
 	</header>
 
-	<main class="container-wrapper full-height flex">
+	<main class="container-wrapper">
 		<section id="intro" class="intro container">
 			<p class="intro__name m-bot-0">Hi! My name is <span class="bold">Steven</span></p>
 			<h1 class="intro__text">I'm a <span class="text-underline transition">front-end web developer</span> from Sint-Niklaas, Belgium.</h1>
-      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_q4vifabc.json"  background="transparent"  speed=".5"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </section>
+
+    <section id="about-me" class="container">
+      <h2>About me</h2>
+      <p>Hi! My name is Steven Aelbrecht, a front-end web developer and designer from Sint-Niklaas, Belgium, who loves to create websites, web apps starting from the ground up.</p>
     </section>
 	</main>
 
