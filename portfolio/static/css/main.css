@@ -18,9 +18,9 @@
   --ff-display: 'Raleway';
 
   /* Font Sizes */
-  --fs-xs: .7rem;
-  --fs-s: .9rem;
-  --fs-m: 1.1rem;
+  --fs-xs: .6rem;
+  --fs-s: .8rem;
+  --fs-m: 1rem;
   --fs-l: 1.8rem;
   --fs-xl: 2.5rem;
   --fs-xxl: 3.25rem;
@@ -52,7 +52,8 @@
 body {
   font-family: var(--ff-default), sans-serif;
   /* font-size: var(--fs-m); */
-  font-size: clamp(var(--fs-s), 5vw, var(--fs-m));;
+  font-size: clamp(var(--fs-s), 2.5vw, var(--fs-m));;
+  line-height: 1.1;
   color: hsl(var(--clr-white));
   background: var(--clr-dark);
   background: linear-gradient(135deg, var(--clr-dark) 0%, var(--clr-dark-alt) 100%);
@@ -76,6 +77,11 @@ h2 {
   border-left: .125rem solid hsl(var(--clr-pri-400));
   padding-left: var(--m-space);
   margin-bottom: var(--l-space);
+}
+
+p {
+  margin-bottom: var(--xs-space);
+  line-height: 1.2;
 }
 
 .bold {
@@ -161,7 +167,20 @@ h2 {
   box-shadow: 0 .4rem 1.25rem 0 var(--clr-dark);
 }
 
-/* Navigation */
+/* Navigation & Footer */
+.nav-container {
+  padding: var(--l-space);
+  margin-inline: auto;
+}
+
+@media (min-width: 64rem) {
+  .nav-container {
+    padding: var(--l-space);
+    margin-inline: auto;
+    margin-right: var(--l-space);
+  }
+}
+
 nav {
   justify-content: space-between;
 }
@@ -247,6 +266,14 @@ nav {
   max-width: 50rem;
 }
 
-lottie-player {
-  text-align: end;
+.about {
+  gap: var(--xl-space);
+}
+
+.about__img {
+  max-width: 15rem;
+}
+
+.about__text {
+  max-width: 50rem;
 }
