@@ -1,0 +1,184 @@
+/* Global CSS */
+
+:root {
+	/* Colors */
+	/* #ff2957 - PINK*/
+	--clr-pri-100: 347 100% 74%;
+	--clr-pri-400: 347 100% 58%;
+
+	/* #55bebe - BLUE*/
+	--clr-sec-100: 182 45% 78%;
+	--clr-sec-400: 182 45% 54%;
+
+	/* #04212f - DARKER BLUE*/
+	--clr-dark: 200 84% 10%;
+  /* #2e4756 - ALT DARKER BLUE */
+	--clr-dark-alt: 203 30% 26%;
+  /* #ffffff - WHITE */
+	--clr-white: 0 0% 100%;
+
+	/* Font Families */
+	--ff-default: 'Open Sans';
+	--ff-display: 'Raleway';
+
+	/* Font Sizes */
+	--fs-xs: .6rem;
+	--fs-s: .8rem;
+	--fs-m: 1rem;
+	--fs-l: 1.5rem;
+	--fs-xl: 2.5rem;
+	--fs-xxl: 3.25rem;
+
+	/* Font Weights */
+	--fw-light: 300;
+	/* Display font: Raleway */
+	--fw-normal: 400;
+	/* All fonts */
+	--fw-semi: 600;
+	/* Display font: Raleway */
+	--fw-bold: 700;
+	/* Default font: Open Sans */
+
+	/* Spacing */
+	--xs-space: .75rem;
+	--s-space: 1rem;
+	--m-space: 1.5rem;
+	--l-space: 2.25rem;
+	--xl-space: 4rem;
+}
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+/* Selection CSS */
+::-moz-selection {
+	/* Code for Firefox */
+	color: hsl(var(--clr-white));
+	background: hsl(var(--clr-pri-400));
+}
+
+::selection {
+	color: hsl(var(--clr-white));
+	background: hsl(var(--clr-pri-400));
+}
+
+body {
+	font-family: var(--ff-default), sans-serif;
+	font-size: clamp(var(--fs-s), 2.5vw, var(--fs-m));
+	line-height: 1.1;
+	color: hsl(var(--clr-dark));
+	/* background: hsl(var(--clr-dark));
+	background: linear-gradient(135deg, hsl(var(--clr-dark)) 0%, hsl(var(--clr-dark-alt)) 100%); */
+	background-repeat: no-repeat;
+	cursor: default;
+}
+
+/* Typography */
+h1 {
+  font-family: var(--ff-display);
+  font-size: var(--fs-l);
+  font-weight: var(--fw-semi);
+}
+
+a {
+  color: hsl(var(--clr-dark-alt));
+  font-weight: var(--fw-bold);
+  transition: all 200ms ease;
+}
+
+a:hover {
+  color: hsl(var(--clr-sec-400));
+}
+
+a.active {
+  color: hsl(var(--clr-sec-400));
+}
+
+/* Spacing */
+
+
+/* Containers */
+.flex {
+  display: flex;
+}
+
+.v-center {
+  align-items: center;
+}
+
+/* Other */
+.transition {
+	transition: all .4s ease;
+}
+
+.box-shadow-s {
+	box-shadow: 0 .4rem 1.25rem 0 hsl(var(--clr-dark));
+}
+
+/* Aside Navigation */
+aside {
+  min-width: 25%;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--l-space);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding: var(--xl-space);
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+}
+
+.title {
+  gap: var(--s-space);
+}
+
+.profile-pic {
+  max-width: 4rem;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--xl-space);
+}
+
+.nav {
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--s-space);
+}
+
+.nav--link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+i {
+  width: 3rem;
+  text-align: center;
+  font-size: var(--fs-l);
+  padding: .5rem;
+}
+
+/* General containers */
+.main-content {
+  margin-left: 25%;
+  background-color: hsl(var(--clr-sec-100) / .1);
+  flex-grow: 1;
+  padding: var(--l-space);
+}
+
+/* HOMEPAGE */
