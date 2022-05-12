@@ -135,6 +135,7 @@ aside {
   padding: var(--xl-space);
   background-color: hsl(var(--clr-white));
   color: hsl(var(--clr-dark));
+  box-shadow: 0 .4rem 1.25rem 0 hsl(var(--clr-dark-alt) / .1);
 }
 
 .title {
