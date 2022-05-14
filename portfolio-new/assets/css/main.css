@@ -9,6 +9,7 @@
 	/* #55bebe - BLUE*/
 	--clr-sec-100: 182 45% 78%;
 	--clr-sec-400: 182 45% 54%;
+  --clr-sec-500: 182 45% 45%;
 
 	/* #04212f - DARKER BLUE*/
 	--clr-dark: 200 84% 10%;
@@ -152,6 +153,47 @@ a.active {
   align-items: center;
 }
 
+.gap-2 {
+  gap: var(--m-space);
+}
+
+.gap-3 {
+  gap: var(--l-space)
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-semi);
+  font-size: var(--fs-m);
+  border: none;
+  padding: var(--s-space) var(--m-space);
+  border-radius: .5rem;
+  transition: all 400ms ease;
+}
+
+.btn-pri {
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-sec-400));
+  box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .5);
+}
+
+.btn-pri:hover {
+  background-color: hsl(var(--clr-sec-500));
+}
+
+.btn-sec {
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white));
+  border: .1rem solid hsl(var(--clr-sec-400) / .5);
+  box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .5);
+}
+
+.btn-sec:hover {
+  background-color: hsl(var(--clr-sec-400) / .1);
+}
+
 /* Other */
 .transition {
 	transition: all .4s ease;
@@ -172,11 +214,16 @@ a.active {
 .mark-in-text {
 	box-shadow: inset 0 -.75rem 0 hsl(var(--clr-sec-400) / .5);
 	font-weight: var(--fw-bold);
+  transition: all 400ms ease;
 }
 
 .mark-in-text:hover {
 	box-shadow: inset 0 -.75rem 0 hsl(var(--clr-sec-400));
-	font-size: var(--fs-l);
+	/* font-size: var(--fs-l); */
+}
+
+.rounded {
+  border-radius: 1rem;
 }
 
 /* Aside Navigation */
@@ -289,12 +336,30 @@ main {
 	letter-spacing: .25ch;
 }
 
+.home__intro--sub {
+  font-size: var(--fs-l);
+}
+
 .home__about {
   max-width: 50rem;
 	gap: var(--xl-space);
 }
 
+.home__about p {
+  margin-bottom: var(--s-space);
+}
+
 .home__left {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.home__right {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+/* .home__left {
   max-width: 50rem;
   margin-right: var(--xl-space);
 }
@@ -305,6 +370,6 @@ main {
   background-position: center center;
   background-size: cover;
   min-width: 20rem;
-}
+} */
 
 /* Other CSS */
