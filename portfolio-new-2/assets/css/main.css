@@ -179,6 +179,13 @@ a.active {
 	display: flex;
 	padding: var(--xl-space);
   width: 100%;
+  transition: all 400ms ease;
+}
+
+@media (min-width: 80rem) {
+  .container {
+    padding: var(--xxl-space);
+  }
 }
 
 .full-width {

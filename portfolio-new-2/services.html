@@ -16,25 +16,25 @@
 <body>
 	<header class="container">
 		<div class="top-icons">
-      <img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon" id="burger">
-      <img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon"> <!-- TODO: Change the dark mode so that it keeps the mode saved. -->
+			<img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon" id="burger">
+			<img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon">
 		</div>
 	</header>
 
 	<nav id="nav-menu" class="off-canvas">
 		<ul class="nav">
 			<li><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></li>
-      <li><a href="index.html" class="nav--link active">Home</a></li>
+			<li><a href="index.html" class="nav--link">Home</a></li>
 			<li><a href="about.html" class="nav--link">About me</a></li>
-			<li><a href="services.html" class="nav--link">Services</a></li>
+			<li><a href="services.html" class="nav--link active">Services</a></li>
 			<li><a href="portfolio.html" class="nav--link">Portfolio</a></li>
 			<li><a href="contact.html" class="nav--link">Contact</a></li>
 		</ul>
 	</nav>
 
-	<main id="home" class="container content-box home">
+	<main id="services" class="container content-box services">
 		<section class="full-width">
-			<p class="home__name m-bot-s">Hiya! 👋</p>
+			<p class="home__name m-bot-s">Services! 👋</p>
 			<h1 class="home__intro m-bot-m">My name is <span class="text-underline transition">Steven</span></h1>
 			<div class="home__intro--sub m-bot-m">
 				<p class="m-bot-xs">I'm a <span class="mark-in-text" id="services"></span></p>
@@ -48,16 +48,6 @@
 	</main>
 
 	<script src="assets/js/main.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-	<script>
-		const typed = new Typed('#services', {
-			strings: ['web developer', 'WordPress builder', 'UI/UX designer', 'graphic designer', 'front end developer'],
-			typeSpeed: 60,
-			backSpeed: 30,
-			backDelay: 1200,
-			loop: true
-		});
-	</script>
 </body>
 
 </html>

@@ -4,8 +4,8 @@ header {
 }
 
 .top-icons {
-  display: flex;
-  gap: var(--m-space);
+	display: flex;
+	gap: var(--m-space);
 }
 
 .icon {
@@ -15,9 +15,12 @@ header {
 	cursor: pointer;
 }
 
+.icon-s {
+  width: 1.3rem;
+}
+
 .icon:hover {
-  /* box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .75); */
-  filter: drop-shadow(.4rem .4rem 0 hsl(var(--clr-sec-400) / .75));
+	filter: drop-shadow(.4rem .4rem 0 hsl(var(--clr-sec-400) / .75));
 }
 
 .off-canvas {
@@ -42,30 +45,36 @@ header {
 }
 
 a.nav--link {
-  font-family: var(--ff-display);
+	font-family: var(--ff-display);
 	font-size: var(--fs-xl);
-  font-weight: var(--fw-semi);
-  text-transform: uppercase;
+	font-weight: var(--fw-semi);
+	text-transform: uppercase;
 }
 
 @media (min-width: 64rem) {
-  a.nav--link {
-    font-size: var(--fs-l);
-  }
+	a.nav--link {
+		font-size: var(--fs-l);
+	}
+}
+
+/* All content pages */
+.content-box {
+	min-height: 100vh;
+	padding-top: calc(var(--xl-space) * 4);
+	transition: all 400ms ease;
 }
 
 /* HOMEPAGE */
 .home {
-	min-height: 100vh;
-	padding-top: calc(var(--xl-space) * 4);
 	background-image: url(../media/images/Steven-Back-LEFT.png);
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-size: contain;
-	transition: all 400ms ease;
 }
 
 .home__btns {
 	display: flex;
 	gap: var(--m-space);
 }
+
+/* SERVICES */
