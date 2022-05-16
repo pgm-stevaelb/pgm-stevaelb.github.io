@@ -177,7 +177,8 @@ a.active {
 /* Containers */
 .container {
 	display: flex;
-	padding: var(--l-space);
+	padding: var(--xl-space);
+  width: 100%;
 }
 
 .full-width {

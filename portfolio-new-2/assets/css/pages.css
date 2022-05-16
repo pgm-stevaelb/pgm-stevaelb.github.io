@@ -3,20 +3,21 @@ header {
 	position: fixed;
 }
 
-.menu__burger,
-.dark-mode {
+.top-icons {
+  display: flex;
+  gap: var(--m-space);
+}
+
+.icon {
 	width: 3rem;
 	height: 3rem;
-	padding: calc(var(--xs-space) / 1.5);
-	background-color: hsl(var(--clr-sec-400) / .5);
-	border-radius: 50%;
 	transition: all .4s ease;
 	cursor: pointer;
 }
 
-.menu__burger:hover,
-.dark-mode:hover {
-	background-color: hsl(var(--clr-sec-400));
+.icon:hover {
+  /* box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .75); */
+  filter: drop-shadow(.4rem .4rem 0 hsl(var(--clr-sec-400) / .75));
 }
 
 .off-canvas {
@@ -41,13 +42,21 @@ header {
 }
 
 a.nav--link {
+  font-family: var(--ff-display);
 	font-size: var(--fs-xl);
+  font-weight: var(--fw-semi);
+  text-transform: uppercase;
+}
+
+@media (min-width: 64rem) {
+  a.nav--link {
+    font-size: var(--fs-l);
+  }
 }
 
 /* HOMEPAGE */
 .home {
 	min-height: 100vh;
-	width: 100%;
 	padding-top: calc(var(--xl-space) * 4);
 	background-image: url(../media/images/Steven-Back-LEFT.png);
 	background-repeat: no-repeat;
