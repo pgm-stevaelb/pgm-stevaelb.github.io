@@ -5,7 +5,7 @@
       this.buildUI();
     },
     cacheElems() {
-      // this.$modeButton = document.getElementById('mode');
+      this.$darkMode = document.getElementById('dark-mode');
       this.$burgerButton = document.getElementById('burger');
       this.$eatenBurger = document.getElementById('eaten');
     },
@@ -13,7 +13,7 @@
       this.registerListeners();
     },
     registerListeners() {
-      // this.$modeButton.addEventListener('click', this.toggleDarkMode, false);
+      this.$darkMode.addEventListener('click', this.toggleDarkMode, false);
       this.$burgerButton.addEventListener('click', this.openBurgerNav, false);
       this.$eatenBurger.addEventListener('click', this.closeBurgerNav, false);
     },
@@ -22,17 +22,17 @@
     },
     closeBurgerNav() {
       document.getElementById('nav-menu').style.width = '0';
+    },
+    toggleDarkMode() {
+      document.body.classList.toggle('body-dark');
+      let path = document.getElementById('dark-mode').src;
+      let getLastItem = path.substring(path.lastIndexOf('/') + 1);
+      if (getLastItem === 'moon.svg') {
+        document.getElementById('dark-mode').src='assets/media/images/sun.svg';
+      } else {
+        document.getElementById('dark-mode').src='assets/media/images/moon.svg';
+      }
     }
-    // toggleDarkMode() {
-    //   document.body.classList.toggle('body-dark');
-    //   let path = document.getElementById('mode').src;
-    //   let getLastItem = path.substring(path.lastIndexOf('/') + 1);
-    //   if (getLastItem === 'sun.svg') {
-    //     document.getElementById('mode').src='static/media/images/moon.svg';
-    //   } else {
-    //     document.getElementById('mode').src='static/media/images/sun.svg';
-    //   }
-    // }
   }
   
   app.init()

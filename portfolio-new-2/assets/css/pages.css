@@ -1,9 +1,10 @@
 /* Navigation */
 header {
-  position: fixed;
+	position: fixed;
 }
 
-.menu__burger {
+.menu__burger,
+.dark-mode {
 	width: 3rem;
 	height: 3rem;
 	padding: calc(var(--xs-space) / 1.5);
@@ -13,33 +14,34 @@ header {
 	cursor: pointer;
 }
 
-.menu__burger:hover {
+.menu__burger:hover,
+.dark-mode:hover {
 	background-color: hsl(var(--clr-sec-400));
 }
 
 .off-canvas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 999;
-  background-color: hsl(var(--clr-sec-100) / .75);
-  backdrop-filter: blur(1rem);
-  overflow: hidden;
-  transition: all 400ms ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 999;
+	background-color: hsl(var(--clr-sec-100) / .75);
+	backdrop-filter: blur(1rem);
+	overflow: hidden;
+	transition: all 400ms ease;
 }
 
 .nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--m-space);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--m-space);
 }
 
 a.nav--link {
-  font-size: var(--fs-xl);
+	font-size: var(--fs-xl);
 }
 
 /* HOMEPAGE */
@@ -51,10 +53,10 @@ a.nav--link {
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-size: contain;
-  transition: all 400ms ease;
+	transition: all 400ms ease;
 }
 
 .home__btns {
-  display: flex;
-  gap: var(--m-space);
+	display: flex;
+	gap: var(--m-space);
 }
