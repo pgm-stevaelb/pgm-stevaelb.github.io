@@ -285,92 +285,35 @@ i {
   padding: .5rem;
 }
 
-.socials {
-  width: 100%;
-  padding: var(--s-space);
-  background-color: hsl(var(--clr-dark));
-  border-radius: .5rem;
-}
-
-.socials ul {
-  justify-content: space-between;
-}
-
-.socials a {
-  color: hsl(var(--clr-white));
-}
-
-.socials a:hover {
-  color: hsl(var(--clr-sec-400));
-}
-
 /* General containers */
-main {
+.container {
   display: flex;
   padding: var(--m-space);
   min-height: 100vh;
 }
 
 @media (min-width: 48rem) {
-  main {
+  .container {
     padding: var(--l-space);
   }
 }
 
 @media (min-width: 64rem) {
-  main {
+  .container {
     padding: var(--xl-space);
-    padding-left: 25rem;
   }
 }
 
 /* HOMEPAGE */
-.home {
-  align-items: center;
-}
 
-.home__name {
-	color: hsl(var(--clr-sec-400));
-  font-size: var(--fs-l);
-  font-weight: var(--fw-bold);
-	text-transform: uppercase;
-	letter-spacing: .25ch;
-}
 
-.home__intro--sub {
-  font-size: var(--fs-l);
+@media (min-width: 25rem) {
+  .home {
+    background-image: url(../media/images/Steven-Back-PNG.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+  }
 }
-
-.home__about {
-  max-width: 50rem;
-	gap: var(--xl-space);
-}
-
-.home__about p {
-  margin-bottom: var(--s-space);
-}
-
-.home__left {
-  flex: 0 0 60%;
-  max-width: 60%;
-}
-
-.home__right {
-  flex: 0 0 30%;
-  max-width: 30%;
-}
-
-/* .home__left {
-  max-width: 50rem;
-  margin-right: var(--xl-space);
-}
-
-.home__right {
-  background-image: url(../media/images/Steven-683x1024.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  min-width: 20rem;
-} */
 
 /* Other CSS */
