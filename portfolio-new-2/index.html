@@ -14,12 +14,23 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
-<body>
+<body id="shift">
 	<header class="container">
 		<nav>
-			<img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="menu__burger">
+			<img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="menu__burger" id="burger">
 		</nav>
 	</header>
+
+	<nav id="nav-menu" class="off-canvas">
+		<ul class="nav">
+      <li><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="menu__burger" id="eaten"></li>
+			<li><a href="#" class="nav--link active"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="#" class="nav--link"><i class="fa-solid fa-user"></i> About me</a></li>
+			<li><a href="#" class="nav--link"><i class="fa-solid fa-bars-staggered"></i> Services</a></li>
+			<li><a href="#" class="nav--link"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+			<li><a href="#" class="nav--link"><i class="fa-solid fa-comment-dots"></i> Contact</a></li>
+		</ul>
+	</nav>
 
 	<main id="home" class="container home">
 		<section class="full-width">
