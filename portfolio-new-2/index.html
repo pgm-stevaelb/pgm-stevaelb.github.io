@@ -16,16 +16,16 @@
 <body>
 	<header>
 		<div class="top-icons">
-      <a href="index.html"><img src="assets/media/images/house.svg" alt="Let's go to the start!" class="icon"></a>
-      <img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon" id="burger">
-      <img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon"> <!-- TODO: Change the dark mode so that it keeps the mode saved. -->
+			<a href="index.html"><img src="assets/media/images/house.svg" alt="Let's go to the start!" class="icon"></a>
+			<img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon" id="burger">
+			<img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon"> <!-- TODO: Change the dark mode so that it keeps the mode saved. -->
 		</div>
 	</header>
 
 	<nav id="nav-menu" class="off-canvas">
 		<ul class="nav">
 			<li><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></li>
-      <li><a href="index.html" class="nav--link active">Home</a></li>
+			<li><a href="index.html" class="nav--link active">Home</a></li>
 			<li><a href="about.html" class="nav--link">About me</a></li>
 			<li><a href="services.html" class="nav--link">Services</a></li>
 			<li><a href="portfolio.html" class="nav--link">Portfolio</a></li>
@@ -34,19 +34,20 @@
 	</nav>
 
 	<main id="home" class="container content-box home">
-		<section class="full-width">
+		<section class="full-width m-bot-xxl">
 			<p class="home__name m-bot-s">Hiya! 👋</p>
-			<h1 class="home__intro m-bot-m">My name is <span class="text-underline transition">Steven</span></h1>
+			<h1 class="home__intro m-bot-l">My name is <span class="text-underline transition">Steven</span></h1>
 			<div class="home__intro--sub m-bot-m">
 				<p class="m-bot-xs">I'm a <span class="mark-in-text" id="services"></span></p>
 				<p>located in <span class="mark-in-text">Sint-Niklaas, Belgium <img src="assets/media/images/be.svg" alt="Belgium baby!" class="icon-s"></span></p>
 			</div>
-			<div class="home__btns">
-				<button class="btn-pri"><a href="about.html">More about me</a></button>
-				<button class="btn-pri"><a href="services.html">What do I offer</a></button>
-				<button class="btn-pri"><a href="portfolio.html">Check my work</a></button>
-				<button class="btn-sec"><a href="contact.html">Get in contact</a></button>
-			</div>
+		</section>
+
+		<section id="bottom-nav" class="home__btns">
+			<a href="about.html" class="btn btn-pri">More about me</a>
+			<a href="services.html" class="btn btn-pri">What do I offer</a>
+			<a href="portfolio.html" class="btn btn-pri">Check my work</a>
+			<a href="contact.html" class="btn btn-sec">Get in contact</a>
 		</section>
 	</main>
 

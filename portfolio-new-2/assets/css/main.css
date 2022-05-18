@@ -178,9 +178,12 @@ a.active {
 	margin-bottom: var(--xl-space);
 }
 
+.m-bot-xxl {
+  margin-bottom: var(--xxl-space);
+}
+
 /* Containers */
 .container {
-	display: flex;
 	padding: var(--xl-space);
   width: 100%;
   transition: all 400ms ease;
@@ -197,7 +200,7 @@ a.active {
 }
 
 /* Buttons */
-button {
+.btn {
 	cursor: pointer;
 	font-family: var(--ff-display);
 	font-weight: var(--fw-semi);
