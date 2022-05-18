@@ -121,6 +121,7 @@ h3 {
 
 p {
 	line-height: 1.2;
+  margin-bottom: var(--xs-space);
 }
 
 a {
@@ -200,6 +201,7 @@ a.active {
 }
 
 /* Buttons */
+button,
 .btn {
 	cursor: pointer;
 	font-family: var(--ff-display);

@@ -146,3 +146,33 @@ a.nav--link:hover {
 		height: 5rem;
 	}
 }
+
+/* CONTACT */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  display: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: var(--xs-space);
+  margin-bottom: var(--m-space);
+	border: .2rem solid hsl(var(--clr-sec-400) / .5);
+  border-radius: .5rem;
+	box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .5);
+	transition: all .4s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+	border: .2rem solid hsl(var(--clr-sec-400) / .5);
+	box-shadow: none;
+  transform: translate(.4rem, .4rem);
+}
