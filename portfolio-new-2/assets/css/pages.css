@@ -91,6 +91,7 @@ a.nav--link:hover {
 
 .home__btns {
 	display: flex;
+  flex-flow: row wrap;
 	gap: var(--m-space);
 }
 

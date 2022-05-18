@@ -205,17 +205,17 @@ button {
 	padding: var(--s-space) var(--m-space);
 	border-radius: .5rem;
 	transition: all 400ms ease;
+	backdrop-filter: blur(.5rem);
 }
 
 .btn-pri {
 	color: hsl(var(--clr-dark));
-	background-color: hsl(var(--clr-sec-400) / .5);
+	background-color: hsl(var(--clr-sec-400) / .75);
 	border: .2rem solid hsl(var(--clr-sec-400) / .5);
 	box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .75);
 }
 
 .btn-pri:hover {
-	background-color: hsl(var(--clr-sec-400));
 	box-shadow: none;
   transform: translate(.4rem, .4rem);
 }
@@ -228,7 +228,6 @@ button {
 }
 
 .btn-sec:hover {
-	background-color: hsl(var(--clr-sec-400) / .1);
   box-shadow: none;
   transform: translate(.4rem, .4rem);
 }
