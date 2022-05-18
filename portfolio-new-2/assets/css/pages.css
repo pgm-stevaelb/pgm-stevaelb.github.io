@@ -65,7 +65,8 @@ a.nav--link {
 }
 
 a.nav--link:hover {
-  color: hsl(var(--clr-sec-400));
+  /* color: hsl(var(--clr-sec-400)); */
+	filter: drop-shadow(.3rem .3rem 0 hsl(var(--clr-sec-400) / .5));
 }
 
 @media (min-width: 64rem) {
@@ -90,6 +91,7 @@ a.nav--link:hover {
 }
 
 .home__btns {
+  max-width: 50rem;
 	display: flex;
   flex-flow: row wrap;
 	gap: var(--m-space);
@@ -147,10 +149,22 @@ a.nav--link:hover {
 	}
 }
 
+.services__list li {
+  position: relative;
+  margin-left: var(--l-space);
+}
+
+.services__list li::before {
+  content: '✔️';
+  position: absolute;
+  margin-left: calc(var(--l-space) * -1);
+}
+
 /* CONTACT */
 .contact-form {
   display: flex;
   flex-direction: column;
+  max-width: 50rem;
 }
 
 .contact-form label {
