@@ -137,6 +137,10 @@ a.active {
 	color: hsl(var(--clr-sec-400));
 }
 
+.text-bold {
+  font-weight: var(--fw-bold);
+}
+
 /* Spacing */
 .m-all-xs {
 	margin: var(--xs-space);
@@ -216,6 +220,8 @@ button {
 
 .btn-pri:hover {
 	background-color: hsl(var(--clr-sec-400));
+	box-shadow: none;
+  transform: translate(.4rem, .4rem);
 }
 
 .btn-sec {
@@ -227,6 +233,8 @@ button {
 
 .btn-sec:hover {
 	background-color: hsl(var(--clr-sec-400) / .1);
+  box-shadow: none;
+  transform: translate(.4rem, .4rem);
 }
 
 /* Other CSS */
@@ -243,7 +251,7 @@ button {
 }
 
 .rounded {
-	border-radius: 1rem;
+	border-radius: 1rem 1rem 5rem 1rem;
 }
 
 .text-underline {
