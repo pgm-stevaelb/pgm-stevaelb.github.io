@@ -129,10 +129,6 @@ a {
 	transition: all 200ms ease;
 }
 
-a:hover {
-	color: hsl(var(--clr-sec-400));
-}
-
 a.active {
 	color: hsl(var(--clr-sec-400));
 }

@@ -64,6 +64,10 @@ a.nav--link {
 	text-transform: uppercase;
 }
 
+a.nav--link:hover {
+  color: hsl(var(--clr-sec-400));
+}
+
 @media (min-width: 64rem) {
 	a.nav--link {
 		font-size: var(--fs-l);
