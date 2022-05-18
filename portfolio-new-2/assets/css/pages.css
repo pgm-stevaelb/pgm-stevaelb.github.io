@@ -78,3 +78,34 @@ a.nav--link {
 }
 
 /* SERVICES */
+.services-overview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--l-space);
+}
+
+@media (min-width: 48rem) {
+  .services-overview {
+    flex-flow: row wrap;
+  }  
+}
+
+.service__block {
+  flex: 0 0 40%;
+  max-width: 30rem;
+  padding: var(--m-space);
+  background-color: hsl(var(--clr-white));
+	border: .2rem solid hsl(var(--clr-sec-400) / .5);
+  transition: all 400ms ease;
+}
+@media (min-width: 48rem) {
+  .service__block:hover {
+    transform: translate(.5rem, .5rem);
+  }
+}
+
+@media (min-width: 80rem) {
+  .service__block {
+    flex: 1 0 30%;
+  }
+}

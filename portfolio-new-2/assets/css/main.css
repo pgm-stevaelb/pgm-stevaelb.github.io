@@ -108,11 +108,15 @@ h4 {
 }
 
 h1 {
-	font-size: clamp(var(--fs-l), 5vw, var(--fs-xxl));
+  font-size: var(--fs-xxl)
 }
 
 h2 {
-	font-size: clamp(var(--fs-m), 5vw, var(--fs-xl));
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-l);
 }
 
 p {
@@ -231,6 +235,10 @@ button {
 }
 
 .box-shadow-s {
+  box-shadow: .5rem .5rem 0 0 hsl(var(--clr-sec-400) / .5);
+}
+
+.box-shadow-m {
 	box-shadow: 1rem 1rem 0 0 hsl(var(--clr-sec-400) / .5);
 }
 
