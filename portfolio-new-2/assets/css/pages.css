@@ -98,6 +98,7 @@ a.nav--link {
 	border: .2rem solid hsl(var(--clr-sec-400) / .5);
   transition: all 400ms ease;
 }
+
 @media (min-width: 48rem) {
   .service__block:hover {
     transform: translate(.5rem, .5rem);
@@ -107,5 +108,19 @@ a.nav--link {
 @media (min-width: 80rem) {
   .service__block {
     flex: 1 0 30%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .service__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .service__icon {
+    width: 5rem;
+    height: 5rem;
   }
 }
