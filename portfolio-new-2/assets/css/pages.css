@@ -14,10 +14,17 @@
 }
 
 .home__btns {
-  max-width: 50rem;
 	display: flex;
   flex-flow: row wrap;
 	gap: var(--m-space);
+}
+
+/* ABOUT */
+.about__img {
+  max-width: 18rem;
+  border: .2rem solid hsl(var(--clr-sec-400) / .5);
+	box-shadow: .5rem .5rem 0 0 hsl(var(--clr-sec-400) / .5);
+  float: left;
 }
 
 /* SERVICES */
@@ -87,7 +94,6 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
 }
 
 .contact-form label {

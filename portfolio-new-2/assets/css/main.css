@@ -183,6 +183,18 @@ a.active {
 	margin-bottom: var(--xxl-space);
 }
 
+.m-right-m {
+	margin-right: var(--m-space);
+}
+
+.m-right-l {
+	margin-right: var(--l-space);
+}
+
+.m-right-xl {
+	margin-right: var(--xl-space);
+}
+
 /* Containers */
 .container {
 	padding: var(--xl-space);
@@ -198,6 +210,10 @@ a.active {
 
 .full-width {
 	width: 100%;
+}
+
+.max-50 {
+	max-width: 50rem;
 }
 
 /* Buttons */
@@ -356,7 +372,7 @@ a.nav--link:hover {
 
 [tooltip]::before,
 [tooltip]::after {
-  font-size: var(--fs-s);
+	font-size: var(--fs-s);
 	line-height: 1;
 	user-select: none;
 	pointer-events: none;
@@ -380,7 +396,7 @@ a.nav--link:hover {
 	padding: var(--s-space);
 	background: hsl(var(--clr-pri-400));
 	color: hsl(var(--clr-white));
-  margin-top: var(--xs-space);
+	margin-top: var(--xs-space);
 }
 
 [tooltip]:hover::before,
@@ -392,7 +408,7 @@ a.nav--link:hover {
 	top: 100%;
 	border-top-width: 0;
 	border-bottom-color: hsl(var(--clr-pri-400));
-  margin-top: var(--xs-space);
+	margin-top: var(--xs-space);
 }
 
 [tooltip]:not([flow])::after {
@@ -406,20 +422,20 @@ a.nav--link:hover {
 }
 
 [tooltip][flow^="up"]::before {
-  bottom: 100%;
-  border-bottom-width: 0;
+	bottom: 100%;
+	border-bottom-width: 0;
 	border-bottom-color: hsl(var(--clr-pri-400));
-  margin-top: var(--xs-space);
+	margin-top: var(--xs-space);
 }
 
 [tooltip][flow^="up"]::after {
-  bottom: calc(100% + 2.5rem);
+	bottom: calc(100% + 2.5rem);
 }
 
 [tooltip][flow^="up"]::before,
 [tooltip][flow^="up"]::after {
-    left: 50%;
-    transform: translate(-20%, -.5rem);
+	left: 50%;
+	transform: translate(-20%, -.5rem);
 }
 
 @keyframes tooltips-vert {
@@ -434,3 +450,5 @@ a.nav--link:hover {
 	animation:
 		tooltips-vert 400ms ease forwards;
 }
+
+/* Footer */
