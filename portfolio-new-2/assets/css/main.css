@@ -10,7 +10,7 @@ html {
 	--clr-pri-400: 347 100% 58%;
 
 	/* #55bebe - BLUE*/
-  --clr-sec-100: 182 45% 85%;
+	--clr-sec-100: 182 45% 85%;
 	--clr-sec-200: 182 45% 78%;
 	--clr-sec-400: 182 45% 54%;
 	--clr-sec-500: 182 45% 45%;
@@ -108,20 +108,20 @@ h4 {
 }
 
 h1 {
-  font-size: var(--fs-xxl)
+	font-size: var(--fs-xxl)
 }
 
 h2 {
-  font-size: var(--fs-xl);
+	font-size: var(--fs-xl);
 }
 
 h3 {
-  font-size: var(--fs-l);
+	font-size: var(--fs-l);
 }
 
 p {
 	line-height: 1.2;
-  margin-bottom: var(--xs-space);
+	margin-bottom: var(--xs-space);
 }
 
 a {
@@ -135,7 +135,7 @@ a.active {
 }
 
 .text-bold {
-  font-weight: var(--fw-bold);
+	font-weight: var(--fw-bold);
 }
 
 /* Spacing */
@@ -180,20 +180,20 @@ a.active {
 }
 
 .m-bot-xxl {
-  margin-bottom: var(--xxl-space);
+	margin-bottom: var(--xxl-space);
 }
 
 /* Containers */
 .container {
 	padding: var(--xl-space);
-  width: 100%;
-  transition: all 400ms ease;
+	width: 100%;
+	transition: all 400ms ease;
 }
 
 @media (min-width: 80rem) {
-  .container {
-    padding: var(--xxl-space);
-  }
+	.container {
+		padding: var(--xxl-space);
+	}
 }
 
 .full-width {
@@ -222,7 +222,7 @@ button,
 
 .btn-pri:hover {
 	box-shadow: none;
-  transform: translate(.4rem, .4rem);
+	transform: translate(.4rem, .4rem);
 }
 
 .btn-sec {
@@ -233,8 +233,8 @@ button,
 }
 
 .btn-sec:hover {
-  box-shadow: none;
-  transform: translate(.4rem, .4rem);
+	box-shadow: none;
+	transform: translate(.4rem, .4rem);
 }
 
 /* Other CSS */
@@ -243,7 +243,7 @@ button,
 }
 
 .box-shadow-s {
-  box-shadow: .5rem .5rem 0 0 hsl(var(--clr-sec-400) / .5);
+	box-shadow: .5rem .5rem 0 0 hsl(var(--clr-sec-400) / .5);
 }
 
 .box-shadow-m {
@@ -270,4 +270,167 @@ button,
 
 .mark-in-text:hover {
 	box-shadow: inset 0 -.75rem 0 hsl(var(--clr-sec-400));
+}
+
+/* Navigation */
+header {
+	width: 100vw;
+	padding: var(--xl-space);
+	position: fixed;
+	background-color: hsl(var(--clr-white) / .1);
+	backdrop-filter: blur(.5rem);
+	z-index: 900;
+	transition: all 400ms ease;
+}
+
+@media (min-width: 80rem) {
+	header {
+		padding-block: var(--xl-space);
+		padding-inline: var(--xxl-space);
+	}
+}
+
+.top-icons {
+	display: flex;
+	gap: var(--m-space);
+}
+
+.icon {
+	width: 3rem;
+	height: 3rem;
+	transition: all .4s ease;
+	cursor: pointer;
+}
+
+.icon-s {
+	width: 1.3rem;
+}
+
+.icon:hover {
+	filter: drop-shadow(.4rem .4rem 0 hsl(var(--clr-sec-400) / .75));
+}
+
+.off-canvas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 999;
+	background-color: hsl(var(--clr-sec-100) / .75);
+	backdrop-filter: blur(1rem);
+	overflow: hidden;
+	transition: all 400ms ease;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--m-space);
+}
+
+a.nav--link {
+	font-family: var(--ff-display);
+	font-size: var(--fs-xl);
+	font-weight: var(--fw-semi);
+	text-transform: uppercase;
+}
+
+a.nav--link:hover {
+	/* color: hsl(var(--clr-sec-400)); */
+	filter: drop-shadow(.3rem .3rem 0 hsl(var(--clr-sec-400) / .5));
+}
+
+@media (min-width: 64rem) {
+	a.nav--link {
+		font-size: var(--fs-l);
+	}
+}
+
+/* Tooltip in navigation */
+[tooltip] {
+	position: relative;
+}
+
+[tooltip]::before,
+[tooltip]::after {
+  font-size: var(--fs-s);
+	line-height: 1;
+	user-select: none;
+	pointer-events: none;
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+
+[tooltip]::before {
+	content: '';
+	z-index: 9002;
+	border: .5rem solid transparent;
+}
+
+[tooltip]::after {
+	content: attr(tooltip);
+	z-index: 9001;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: var(--s-space);
+	background: hsl(var(--clr-pri-400));
+	color: hsl(var(--clr-white));
+  margin-top: var(--xs-space);
+}
+
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+	display: block;
+}
+
+[tooltip]:not([flow])::before {
+	top: 100%;
+	border-top-width: 0;
+	border-bottom-color: hsl(var(--clr-pri-400));
+  margin-top: var(--xs-space);
+}
+
+[tooltip]:not([flow])::after {
+	top: calc(100% + .5rem);
+}
+
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after {
+	left: 50%;
+	transform: translate(-20%, .5rem);
+}
+
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+	border-bottom-color: hsl(var(--clr-pri-400));
+  margin-top: var(--xs-space);
+}
+
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 2.5rem);
+}
+
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+    left: 50%;
+    transform: translate(-20%, -.5rem);
+}
+
+@keyframes tooltips-vert {
+	to {
+		opacity: .9;
+		transform: translate(-20%, 0);
+	}
+}
+
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+	animation:
+		tooltips-vert 400ms ease forwards;
 }
