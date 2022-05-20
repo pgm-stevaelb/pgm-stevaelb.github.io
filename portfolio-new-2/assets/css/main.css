@@ -79,9 +79,10 @@ body {
 	background: hsl(var(--clr-sec-200));
 	background: linear-gradient(315deg, hsl(var(--clr-sec-200)) 0%, hsl(var(--clr-white)) 100%);
 	cursor: default;
+  overflow: overlay;
 }
 
-/* Selection CSS */
+/* Custom Selection */
 ::-moz-selection {
 	color: hsl(var(--clr-white));
 	background: hsl(var(--clr-pri-400));
@@ -130,6 +131,18 @@ body {
 		opacity: .5;
 	}
 }
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar
+{
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb
+{
+  background-color: hsl(var(--clr-pri-400));
+}
+
 
 .body-dark {
 	--clr-sec-100: 347 100% 74%;
