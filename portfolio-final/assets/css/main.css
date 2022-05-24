@@ -88,16 +88,13 @@ body {
 }
 
 /* Custom Scrollbar */
-body::-webkit-scrollbar
-{
-  width: 1rem;
+body::-webkit-scrollbar {
+	width: 1rem;
 }
 
-body::-webkit-scrollbar-thumb
-{
-  background-color: hsl(var(--clr-pri-400));
+body::-webkit-scrollbar-thumb {
+	background-color: hsl(var(--clr-pri-400));
 }
-
 
 .body-dark {
 	--clr-sec-100: 347 100% 74%;
