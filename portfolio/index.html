@@ -1,88 +1,80 @@
 <!DOCTYPE html>
-<html lang="nl-BE">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Steevn - Personal Portfolio</title>
-	<!-- FAVICON -->
-	<link rel="apple-touch-icon" sizes="180x180" href="static/media/images/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="static/media/images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="static/media/images/favicon/favicon-16x16.png">
-	<link rel="manifest" href="static/media/images/favicon/site.webmanifest">
-	<link rel="mask-icon" href="static/media/images/favicon/safari-pinned-tab.svg" color="#d55b5b">
-	<meta name="msapplication-TileColor" content="#b91d47">
-	<meta name="theme-color" content="#ffffff">
+	<title>Steven Aelbrecht - Portfolio</title>
 	<!-- CSS -->
-	<link rel="stylesheet" href="static/css/reset.css">
-	<link rel="stylesheet" href="static/css/fonts.css">
-	<link rel="stylesheet" href="static/css/main.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/fonts.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
-	<header>
-		<nav class="nav-container flex-center">
-			<div class="logo">
-				<img src="static/media/images/Steven-683x1024.jpg" alt="Steven Aelbrecht" class="logo__img box-shadow-s">
-				<h4 class="logo__text">Steven Aelbrecht</h4>
-			</div>
+	<header></header>
 
-			<div class="menu-mobile">
-				<img src="static/media/images/burger.svg" alt="It's a Burger Menu!" class="menu__burger box-shadow-s">
-				<!-- <ul class="menu">
-          <li class="menu__item"><a href="#"><span class="text-white">01.</span> Home</a></li>
-          <li class="menu__item"><a href="#"><span class="text-white">02.</span> Portfolio</a></li>
-          <li class="menu__item"><a href="#"><span class="text-white">03.</span> Contact</a></li>
-        </ul> -->
+	<div id="homepage">
+		<aside>
+			<div class="logo flex v-center">
+				<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="profile-pic">
+				<p class="logo">Steven<br>Aelbrecht</p>
 			</div>
-
-			<div class="menu-desktop">
-				<ul class="menu">
-					<li class="menu__item"><a href="#"><span class="text-white">01.</span> Home</a></li>
-					<li class="menu__item"><a href="#"><span class="text-white">02.</span> Portfolio</a></li>
-					<li class="menu__item"><a href="#"><span class="text-white">03.</span> Contact</a></li>
+			<nav>
+				<ul class="nav">
+					<li><a href="#" class="nav--link active"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#" class="nav--link"><i class="fa-solid fa-user"></i> About me</a></li>
+					<li><a href="#" class="nav--link"><i class="fa-solid fa-bars-staggered"></i> Services</a></li>
+					<li><a href="#" class="nav--link"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+					<li><a href="#" class="nav--link"><i class="fa-solid fa-comment-dots"></i> Contact</a></li>
 				</ul>
-			</div>
-      
-      <img src="static/media/images/sun.svg" alt="Switch to light or dark mode" id="mode" class="mode">
-		</nav>
-	</header>
+			</nav>
+		</aside>
 
-	<main class="container-wrapper">
-		<section id="intro" class="intro container">
-			<p class="intro__name m-bot-0">👋 Hi! My name is <span class="bold">Steven</span></p>
-			<h1 class="intro__text">I'm a <span class="text-underline transition">front-end web developer</span> and <span class="text-underline transition">graphic designer</span> from Sint-Niklaas, Belgium.</h1>
-		</section>
+		<main id="home" class="home content">
+			<section class="flex v-center gap-3">
+        <div class="home__left">
+          <p class="home__name m-bot-0">Hiya! 👋</p>
+          <h1 class="home__intro m-bot-3">My name is <span class="text-underline transition">Steven</span></h1>
+          <div class="home__intro--sub m-bot-4">
+            <p class="m-bot-0">I'm a <span class="mark-in-text" id="services"></span></p>
+            <p>located in <span class="mark-in-text">Sint-Niklaas, Belgium</span>.</p>
+          </div>
+          <!-- <div class="home__about">
+            <p>I've been a <span class="mark-in-text transition">graphic designer</span> since 2013, creating logos and brand identities for small companies. Back then I had a fairly simple background of HTML and CSS.</p>
+            <p>In 2015 I learned about <span class="mark-in-text transition">WordPress and started creating websites</span> using existing themes. This quickly changed when I started using theme builders like Elementor and WP Bakery. Elementor is something I still use today, but my main goto is Oxygen Builder to create stunning themes and carefully finished websites in WordPress. To this day, I still use WordPress to create basic websites.</p>
+            <p>Starting in 2021, I'm turning myself into an <span class="mark-in-text transition">actual web developer</span>. I extended my knowledge with learning <span class="mark-in-text transition">front-end</span> and a bit of <span class="mark-in-text transition">back-end</span> development.</p>
+            <p><span class="mark-in-text transition">I love making websites and apps</span>. And most of all, I love making people happy by helping them with what they want and need.</p>
+          </div> -->
+          <div class="home__btns flex gap-2">
+            <button class="btn-pri">More about me</button>
+            <button class="btn-sec">Get in contact</button>
+          </div>
+        </div>
+        <div class="home__right">
+          <img src="assets/media/images/Steven-683x1024.jpg" alt="Steven Aelbrecht" class="rounded box-shadow-s">
+        </div>
+			</section>
+		</main>
+	</div>
+	<!-- 
+	<footer>
+    &copy; 2022 Steven Aelbrecht
+  </footer> -->
 
-		<section id="about-me" class="about container">
-			<div class="about__text">
-				<p>I've been a <span class="mark-in-text transition">graphic designer</span> since 2013, creating logos and brand identities for small companies. Back then I had a fairly simple background of HTML and CSS.</p>
-				<p>In 2015 I learned about <span class="mark-in-text transition">WordPress and started creating websites</span> using existing themes. This quickly changed when I started using theme builders like Elementor and WP Bakery. Elementor is something I still use today, but my main goto is Oxygen Builder to create stunning themes and carefully finished websites in WordPress. To this day, I still use WordPress to create basic websites.</p>
-				<p>Starting in 2021, I'm turning myself into an <span class="mark-in-text transition">actual web developer</span>. I extended my knowledge with learning <span class="mark-in-text transition">front-end</span> and a bit of <span class="mark-in-text transition">back-end</span> development.</p>
-				<p><span class="mark-in-text transition">I love making websites and apps</span>. And most of all, I love making people happy by helping them with what they want and need.</p>
-			</div>
-		</section>
-
-    <section id="services" class="services container">
-
-    </section>
-	</main>
-
-	<footer class="nav-container">
-		<p>© 2022</p>
-		<div class="socials">
-
-		</div>
-		<div class="contact">
-
-		</div>
-		<div>
-
-		</div>
-	</footer>
-
-  <script src="static/js/main.js"></script>
+	<script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script>
+    const typed = new Typed('#services', {
+      strings: ['web developer', 'WordPress builder', 'UI/UX designer', 'graphic designer', 'front end developer'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1200,
+      loop: true
+    });
+  </script>
 </body>
 
 </html>
