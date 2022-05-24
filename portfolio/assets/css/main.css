@@ -341,7 +341,7 @@ main {
 	display: flex;
 	padding: var(--m-space);
 	min-height: 100vh;
-  padding-left: calc(20rem + var(--m-space));
+  /* padding-left: calc(20rem + var(--m-space)); */
 }
 
 /* .container {
