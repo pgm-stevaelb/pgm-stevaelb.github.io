@@ -58,12 +58,6 @@ html {
 	box-sizing: border-box;
 }
 
-@media (min-width: 48rem) {
-	* {
-		cursor: none;
-	}
-}
-
 ::before,
 ::after {
 	box-sizing: border-box;
@@ -79,7 +73,7 @@ body {
 	background: hsl(var(--clr-sec-200));
 	background: linear-gradient(315deg, hsl(var(--clr-sec-200)) 0%, hsl(var(--clr-white)) 100%);
 	cursor: default;
-  overflow: overlay;
+	overflow: overlay;
 }
 
 /* Custom Selection */
@@ -91,45 +85,6 @@ body {
 ::selection {
 	color: hsl(var(--clr-white));
 	background: hsl(var(--clr-pri-400));
-}
-
-/* Custom Cursor */
-@media (min-width: 48rem) {
-	.cursor {
-		z-index: 10000;
-		width: 3rem;
-		height: 3rem;
-		border-radius: 100%;
-		border: .125rem solid hsl(var(--clr-pri-400) / .8);
-		transition: all 150ms ease-out;
-		position: fixed;
-		pointer-events: none;
-		left: 0;
-		top: 0;
-		transform: translate(calc(-50% + 1rem), -50%);
-	}
-
-	.cursor2 {
-		z-index: 10000;
-		width: 1rem;
-		height: 1rem;
-		border-radius: 100%;
-		background-color: hsl(var(--clr-pri-400) / .5);
-		position: fixed;
-		transform: translate(-50%, -50%);
-		pointer-events: none;
-		transition: width .3s, height .3s, opacity .3s;
-	}
-
-	.hover {
-		background-color: hsl(var(--clr-pri-400) / .5);
-	}
-
-	.cursorinnerhover {
-		width: 5rem;
-		height: 5rem;
-		opacity: .5;
-	}
 }
 
 /* Custom Scrollbar */
@@ -287,26 +242,26 @@ button,
 	backdrop-filter: blur(.5rem);
 }
 
-.btn-pri {
+.btn-sec {
 	color: hsl(var(--clr-dark));
 	background-color: hsl(var(--clr-sec-400) / .75);
 	border: .2rem solid hsl(var(--clr-sec-400) / .5);
 	box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .75);
 }
 
-.btn-pri:hover {
+.btn-sec:hover {
 	box-shadow: none;
 	transform: translate(.4rem, .4rem);
 }
 
-.btn-sec {
+.btn-pri {
 	color: hsl(var(--clr-dark));
 	background-color: hsl(var(--clr-white) / .5);
 	border: .2rem solid hsl(var(--clr-sec-400) / .5);
 	box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .5);
 }
 
-.btn-sec:hover {
+.btn-pri:hover {
 	box-shadow: none;
 	transform: translate(.4rem, .4rem);
 }
@@ -330,20 +285,11 @@ button,
 
 .text-underline {
 	box-shadow: inset 0 -1rem 0 hsl(var(--clr-sec-400) / .5);
+	transition: all 400ms ease;
 }
 
 .text-underline:hover {
 	box-shadow: inset 0 -1rem 0 hsl(var(--clr-sec-400));
-}
-
-.mark-in-text {
-	box-shadow: inset 0 -.75rem 0 hsl(var(--clr-sec-400) / .5);
-	font-weight: var(--fw-bold);
-	transition: all 400ms ease;
-}
-
-.mark-in-text:hover {
-	box-shadow: inset 0 -.75rem 0 hsl(var(--clr-sec-400));
 }
 
 /* Navigation */
