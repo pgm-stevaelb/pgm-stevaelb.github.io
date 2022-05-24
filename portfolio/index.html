@@ -11,26 +11,49 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/fonts.css">
 	<link rel="stylesheet" href="assets/css/pages.css">
+  <!-- Tooltip CDN CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.min.css" />
 </head>
 
 <body>
-	<header></header>
+	<div class="mobile-nav">
+		<div class="logo">
+			<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="box-shadow-s">
+			<p>Steven<br>Aelbrecht</p>
+		</div>
 
-	<aside>
-		<div class="logo ">
+    <div class="mobile-nav__btns">
+      <span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right"><img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon burger-menu" id="burger"></span>
+      <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon"></span>
+    </div>
+	</div>
+
+  <nav id="nav-menu" class="off-canvas">
+    <ul class="nav">
+      <li class="m-bot-xl"><span aria-label="Close menu." data-cooltipz-dir="bottom"><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></span></li>
+      <li><a href="index.html" class="nav--link active">👋 Home</a></li>
+      <li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
+      <li><a href="services.html" class="nav--link">🖌️ Services</a></li>
+      <li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
+      <li><a href="contact.html" class="nav--link">☕ Contact</a></li>
+    </ul>
+  </nav>
+
+	<!-- <aside class="desktop-nav">
+		<div class="logo">
 			<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="profile-pic">
-			<p class="logo">Steven<br>Aelbrecht</p>
+			<p>Steven<br>Aelbrecht</p>
 		</div>
 		<nav>
 			<ul class="nav">
 				<li><a href="index.html" class="nav--link active">👋 Home</a></li>
-				<li><a href="about.html" class="nav--link">👨‍🍳 About me</a></li>
-				<li><a href="services.html" class="nav--link">🍽️ Services</a></li>
-				<li><a href="portfolio.html" class="nav--link">🍳 Portfolio</a></li>
-				<li><a href="contact.html" class="nav--link">🍨 Contact</a></li>
+				<li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
+				<li><a href="services.html" class="nav--link">🖌️ Services</a></li>
+				<li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
+				<li><a href="contact.html" class="nav--link">☕ Contact</a></li>
 			</ul>
 		</nav>
-	</aside>
+	</aside> -->
 
 	<main id="home" class="home">
 		<section class="full-width m-bot-xxl">
@@ -41,11 +64,14 @@
 				<p>located in <span class="text-bold">Sint-Niklaas, Belgium <img src="assets/media/images/be.svg" alt="Belgium baby!" class="icon-s"></span></p>
 			</div>
 		</section>
+
+		<section id="bottom-nav" class="nav__btns m-bot-xxl">
+			<a href="about.html" class="btn btn-pri">👨‍🎨 Get to know me</a>
+			<a href="services.html" class="btn btn-pri">🖌️ What do I offer</a>
+			<a href="portfolio.html" class="btn btn-pri">🖼️ Check my work</a>
+			<a href="contact.html" class="btn btn-sec">☕ Get in contact</a>
+		</section>
 	</main>
-	<!-- 
-	<footer>
-    &copy; 2022 Steven Aelbrecht
-  </footer> -->
 
 	<script src="assets/js/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>

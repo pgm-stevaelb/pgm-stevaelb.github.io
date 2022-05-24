@@ -128,6 +128,10 @@ a {
 	transition: all 200ms ease;
 }
 
+a:hover {
+  color: hsl(var(--clr-sec-400));
+}
+
 a.active {
 	color: hsl(var(--clr-sec-400));
 }
@@ -239,25 +243,75 @@ button,
 	transform: translate(.4rem, .4rem);
 }
 
-/* Other */
-.transition {
-	transition: all .4s ease;
+/* Navigation - General */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.box-shadow-s {
-	box-shadow: .5rem .5rem 0 0 hsl(var(--clr-sec-400) / .5);
+.logo img {
+	max-width: 3rem;
+	border-radius: 50%;
 }
 
-.box-shadow-m {
-	box-shadow: 1rem 1rem 0 0 hsl(var(--clr-sec-400) / .5);
+.logo p {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-semi);
 }
 
-.rounded {
-	border-radius: 1rem 1rem 5rem 1rem;
+/* Mobile Navigation */
+.mobile-nav {
+  padding: var(--xl-space);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+	background-color: hsl(var(--clr-white) / .1);
+	backdrop-filter: blur(.5rem);
+	z-index: 900;
 }
 
-/* Aside Navigation */
-aside {
+.mobile-nav__btns {
+  display: flex;
+  gap: .5rem;
+}
+
+.off-canvas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 999;
+	background-color: hsl(var(--clr-sec-100) / .75);
+	backdrop-filter: blur(1rem);
+	overflow: hidden;
+	transition: all 400ms ease;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--m-space);
+}
+
+a.nav--link {
+	font-family: var(--ff-display);
+	font-size: var(--fs-xl);
+	font-weight: var(--fw-semi);
+	text-transform: uppercase;
+}
+
+a.nav--link:hover {
+	/* color: hsl(var(--clr-sec-400)); */
+	filter: drop-shadow(.3rem .3rem 0 hsl(var(--clr-sec-400) / .4));
+}
+
+/* Desktop Navigation - Aside */
+/* aside {
 	display: none;
 }
 
@@ -280,15 +334,6 @@ aside {
 	}
 }
 
-.logo {
-	gap: var(--s-space);
-}
-
-.profile-pic {
-	max-width: 4rem;
-	border-radius: 50%;
-}
-
 nav {
 	width: 100%;
 	display: flex;
@@ -296,52 +341,13 @@ nav {
 	justify-content: space-between;
 	align-items: flex-end;
 	gap: var(--xl-space);
-}
+} */
 
-.nav {
-	display: flex;
-	flex-flow: column wrap;
-	gap: var(--s-space);
-}
-
-.nav--link {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-i {
-	width: 3rem;
-	text-align: center;
-	font-size: var(--fs-l);
-	padding: .5rem;
-}
-
-.socials {
-	width: 100%;
-	padding: var(--s-space);
-	background-color: hsl(var(--clr-dark));
-	border-radius: .5rem;
-}
-
-.socials ul {
-	justify-content: space-between;
-}
-
-.socials a {
-	color: hsl(var(--clr-white));
-}
-
-.socials a:hover {
-	color: hsl(var(--clr-sec-400));
-}
-
-/* containers */
+/* Containers */
 main {
-	display: flex;
-	padding: var(--m-space);
+	padding: var(--xl-space);
 	min-height: 100vh;
-  /* padding-left: calc(20rem + var(--m-space)); */
+  padding-top: calc(3rem + (var(--xl-space) * 4));
 }
 
 /* .container {
@@ -360,53 +366,36 @@ main {
 	width: 100%;
 }
 
-/* HOMEPAGE */
-.home {
-	align-items: center;
+/* Footer */
+.nav__btns {
+	display: flex;
+  flex-flow: row wrap;
+	gap: var(--m-space);
 }
-
-.home__name {
-	color: hsl(var(--clr-sec-400));
-	font-size: var(--fs-l);
-	font-weight: var(--fw-bold);
-	text-transform: uppercase;
-	letter-spacing: .25ch;
-}
-
-.home__intro--sub {
-	font-size: var(--fs-l);
-}
-
-.home__about {
-	max-width: 50rem;
-	gap: var(--xl-space);
-}
-
-.home__about p {
-	margin-bottom: var(--s-space);
-}
-
-.home__left {
-	flex: 0 0 60%;
-	max-width: 60%;
-}
-
-.home__right {
-	flex: 0 0 30%;
-	max-width: 30%;
-}
-
-/* .home__left {
-  max-width: 50rem;
-  margin-right: var(--xl-space);
-}
-
-.home__right {
-  background-image: url(../media/images/Steven-683x1024.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  min-width: 20rem;
-} */
 
 /* Other CSS */
+.transition {
+	transition: all .4s ease;
+}
+
+.box-shadow-s {
+	box-shadow: .3rem .3rem 0 0 hsl(var(--clr-sec-400) / .5);
+}
+
+.box-shadow-m {
+	box-shadow: 1rem 1rem 0 0 hsl(var(--clr-sec-400) / .5);
+}
+
+.rounded {
+	border-radius: 1rem 1rem 5rem 1rem;
+}
+
+.icon {
+	width: 3rem;
+	height: 3rem;
+	transition: all .4s ease;
+}
+
+.icon-s {
+	width: 1.3rem;
+}
