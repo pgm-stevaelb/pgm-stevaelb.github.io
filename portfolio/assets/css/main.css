@@ -89,7 +89,7 @@ body {
 
 /* Custom Scrollbar */
 body::-webkit-scrollbar {
-	width: 1rem;
+	width: var(--s-space);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -115,6 +115,7 @@ h2 {
 
 h3 {
 	font-size: var(--fs-l);
+  font-weight: var(--fw-bold);
 }
 
 p {
@@ -398,13 +399,14 @@ a.nav--link:hover {
 
 @media (min-width: 75rem) {
   .container {
-    padding-left: calc(20rem + (var(--xl-space)));
+    padding: var(--xxl-space);
+    padding-left: calc(20rem + (var(--xxl-space)));
   }
 }
 
 @media (min-width: 90rem) {
   .container {
-    padding-left: calc(25rem + (var(--xl-space)));
+    padding-left: calc(25rem + (var(--xxl-space)));
   }
 }
 
@@ -433,7 +435,7 @@ a.nav--link:hover {
 }
 
 .rounded {
-	border-radius: 1rem 1rem 5rem 1rem;
+	border-radius: var(--s-space);
 }
 
 .icon {
