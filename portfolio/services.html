@@ -11,39 +11,41 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/fonts.css">
 	<link rel="stylesheet" href="assets/css/pages.css">
-  <!-- Tooltip CDN CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.min.css" />
+	<!-- Tooltip CDN CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.min.css" />
 </head>
 
-<body mode="light">
+<body>
 	<div class="mobile-nav">
 		<a href="index.html" class="logo">
 			<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="profile-pic">
 			<p>Steven<br>Aelbrecht</p>
 		</a>
 
-    <div class="mobile-nav__btns">
-      <span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right"><img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon burger-menu" id="burger"></span>
-      <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon"></span>
-    </div>
+		<div class="mobile-nav__btns">
+			<span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right"><img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon burger-menu" id="burger"></span>
+			<span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span>
+		</div>
 	</div>
 
-  <nav id="nav-menu" class="off-canvas">
-    <ul class="nav">
-      <li class="m-bot-xl"><span aria-label="Close menu." data-cooltipz-dir="bottom"><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></span></li>
-      <li><a href="index.html" class="nav--link active">👋 Home</a></li>
-      <li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
-      <li><a href="services.html" class="nav--link">🖌️ Services</a></li>
-      <li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
-      <li><a href="contact.html" class="nav--link">☕ Contact</a></li>
-    </ul>
-  </nav>
+	<nav id="nav-menu" class="off-canvas">
+		<ul class="nav">
+			<li class="m-bot-xl"><span aria-label="Close menu." data-cooltipz-dir="bottom"><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></span></li>
+			<li><a href="index.html" class="nav--link active">👋 Home</a></li>
+			<li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
+			<li><a href="services.html" class="nav--link">🖌️ Services</a></li>
+			<li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
+			<li><a href="contact.html" class="nav--link">☕ Contact</a></li>
+		</ul>
+	</nav>
 
 	<aside class="desktop-nav">
 		<a href="index.html" class="logo">
 			<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="profile-pic">
 			<p>Steven<br>Aelbrecht</p>
 		</a>
+
+		<span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span>
 
 		<nav>
 			<ul class="nav">
@@ -62,10 +64,10 @@
 
 			<div class="services-overview">
 				<article class="service__block rounded">
-          <div class="service__block--title">
-            <img src="assets/media/images/services/wordpress.svg" alt="WordPress designer" class="service__icon">
-            <h3 class="text-underline">WordPress designer</h3>
-          </div>
+					<div class="service__block--title">
+						<img src="assets/media/images/services/wordpress.svg" alt="WordPress designer" class="service__icon">
+						<h3 class="text-underline">WordPress designer</h3>
+					</div>
 					<p class="m-bot-m">I create WordPress themes and build complete websites from scratch.</p>
 					<p class="text-bold">Plugins I use:</p>
 					<ul class="services__list">
@@ -76,10 +78,10 @@
 				</article>
 
 				<article class="service__block rounded">
-          <div class="service__block--title">
-            <img src="assets/media/images/services/front-end.svg" alt="Front-end developer" class="service__icon">
-            <h3 class="text-underline">Front-end developer</h3>
-          </div>
+					<div class="service__block--title">
+						<img src="assets/media/images/services/front-end.svg" alt="Front-end developer" class="service__icon">
+						<h3 class="text-underline">Front-end developer</h3>
+					</div>
 					<p class="m-bot-m">I love coding and making dreams come true for websites, apps, etc.</p>
 					<p class="text-bold">Languages I use:</p>
 					<ul class="services__list">
@@ -90,10 +92,10 @@
 				</article>
 
 				<article class="service__block rounded">
-          <div class="service__block--title">
-            <img src="assets/media/images/services/graphic-design.svg" alt="Graphic designer" class="service__icon">
-            <h3 class="text-underline">Graphic designer</h3>
-          </div>
+					<div class="service__block--title">
+						<img src="assets/media/images/services/graphic-design.svg" alt="Graphic designer" class="service__icon">
+						<h3 class="text-underline">Graphic designer</h3>
+					</div>
 					<p class="m-bot-m">I will make the perfect logo and branding for your company. Or use your current branding to create whatever you want or need.</p>
 					<p class="text-bold">Software I use:</p>
 					<ul class="services__list">
@@ -102,12 +104,12 @@
 						<li>InDesign</li>
 					</ul>
 				</article>
-        
+
 				<article class="service__block rounded">
-          <div class="service__block--title">
-            <img src="assets/media/images/services/front-end.svg" alt="Front-end developer" class="service__icon">
-            <h3 class="text-underline">And more</h3>
-          </div>
+					<div class="service__block--title">
+						<img src="assets/media/images/services/front-end.svg" alt="Front-end developer" class="service__icon">
+						<h3 class="text-underline">And more</h3>
+					</div>
 					<p class="m-bot-m">Just give me a ring or send me an email to find out what I can do for you.</p>
 					<p class="text-bold">Some more I do:</p>
 					<ul class="services__list">
@@ -126,7 +128,7 @@
 		</section>
 	</main>
 
-	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

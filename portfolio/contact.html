@@ -24,7 +24,7 @@
 
     <div class="mobile-nav__btns">
       <span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right"><img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon burger-menu" id="burger"></span>
-      <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon"></span>
+      <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span>
     </div>
 	</div>
 
@@ -44,6 +44,8 @@
 			<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="profile-pic">
 			<p>Steven<br>Aelbrecht</p>
 		</a>
+    
+    <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span>
 
 		<nav>
 			<ul class="nav">
@@ -58,8 +60,24 @@
 
 	<main id="contact" class="contact container">
 		<section class="full-width m-bot-xxl">
-      <h1 class="m-bot-l">☕ <span class="text-underline transition">Contact</span></h1>
+			<h1 class="m-bot-l">☕ <span class="text-underline transition">Contact</span> me</h1>
 
+			<div class="m-bot-m">
+				<p>Have a <span class="text-bold">question</span> or a specific <span class="text-bold">request</span>? Just want to say hello or go grab a coffee? ☕</p>
+				<p>Got an idea or project on which you would like to <span class="text-bold">collaborate</span>?</p>
+				<p>I'm always ready for new <span class="text-bold">opportunities</span> and <span class="text-bold">challenges</span>!</p>
+			</div>
+
+			<form class="contact-form rounded max-50">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="Your name">
+				<label for="subject">Subject</label>
+				<input type="text" name="subject" id="subject" placeholder="Subject">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+				<input type="submit" value="Send message" class="btn btn-sec">
+        <p class="text-bold">FORM DOES NOT YET WORK ;)...</p>
+			</form>
 		</section>
 
 		<section id="bottom-nav" class="nav__btns m-bot-xxl">
@@ -69,7 +87,7 @@
 		</section>
 	</main>
 
-	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

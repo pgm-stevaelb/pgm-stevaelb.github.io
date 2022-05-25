@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/fonts.css">
 	<link rel="stylesheet" href="assets/css/pages.css">
-  <!-- Tooltip CDN CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.min.css" />
+	<!-- Tooltip CDN CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.min.css" />
 </head>
 
 <body>
@@ -22,28 +22,30 @@
 			<p>Steven<br>Aelbrecht</p>
 		</a>
 
-    <div class="mobile-nav__btns">
-      <span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right"><img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon burger-menu" id="burger"></span>
-      <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="dark-mode" class="icon"></span>
-    </div>
+		<div class="mobile-nav__btns">
+			<span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right"><img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon burger-menu" id="burger"></span>
+			<span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span>
+		</div>
 	</div>
 
-  <nav id="nav-menu" class="off-canvas">
-    <ul class="nav">
-      <li class="m-bot-xl"><span aria-label="Close menu." data-cooltipz-dir="bottom"><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></span></li>
-      <li><a href="index.html" class="nav--link active">👋 Home</a></li>
-      <li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
-      <li><a href="services.html" class="nav--link">🖌️ Services</a></li>
-      <li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
-      <li><a href="contact.html" class="nav--link">☕ Contact</a></li>
-    </ul>
-  </nav>
+	<nav id="nav-menu" class="off-canvas">
+		<ul class="nav">
+			<li class="m-bot-xl"><span aria-label="Close menu." data-cooltipz-dir="bottom"><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></span></li>
+			<li><a href="index.html" class="nav--link active">👋 Home</a></li>
+			<li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
+			<li><a href="services.html" class="nav--link">🖌️ Services</a></li>
+			<li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
+			<li><a href="contact.html" class="nav--link">☕ Contact</a></li>
+		</ul>
+	</nav>
 
 	<aside class="desktop-nav">
 		<a href="index.html" class="logo">
 			<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="profile-pic">
 			<p>Steven<br>Aelbrecht</p>
 		</a>
+
+		<span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span>
 
 		<nav>
 			<ul class="nav">
@@ -58,8 +60,28 @@
 
 	<main id="about" class="about container">
 		<section class="full-width m-bot-xxl">
-			<h1 class="m-bot-l">👨‍🎨 <span class="text-underline transition">About me</span></h1>
-      
+			<h1 class="m-bot-xl">👨‍🎨 <span class="text-underline transition">About me</span></h1>
+      <h2 class="m-bot-s">In short</h2>
+      <p>I love designing, I love making websites. I'm constantly learning and evolving and becoming a better and stronger (and more capable) designer.</p>
+      <p class="m-bot-xl">Besides designing, I'm also a web developer, both front-end and backend developing are of my interest.</p>
+			<h2 class="m-bot-s">History</h2>
+			<article class="about__block rounded m-bot-s">
+				<h3><span class="text-underline">2013: </span>Graphic Design</h3>
+				<p>I learned myself how to use Photoshop and started making posters and flyers for small local companies.</p>
+        <p>In between the years, I also learned about Illustrator.</p>
+			</article>
+      <article class="about__block rounded m-bot-s">
+				<h3><span class="text-underline">2015: </span>WordPress</h3>
+				<p class="m-bot-m">I started making some small websites in WordPress using existing themes. I had a basic knowledge of HTML / CSS from school.</p>
+			</article>
+      <article class="about__block rounded m-bot-s">
+				<h3><span class="text-underline">2017: </span>Even more Graphic Design</h3>
+				<p class="m-bot-m">I create WordPress themes and build complete websites from scratch.</p>
+			</article>
+      <article class="about__block rounded m-bot-s">
+				<h3><span class="text-underline">2021: </span>Web Design</h3>
+				<p class="m-bot-m">I create WordPress themes and build complete websites from scratch.</p>
+			</article>
 		</section>
 
 		<section id="bottom-nav" class="nav__btns m-bot-xxl">
@@ -69,7 +91,7 @@
 		</section>
 	</main>
 
-	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
