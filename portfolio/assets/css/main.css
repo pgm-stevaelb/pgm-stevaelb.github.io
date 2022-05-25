@@ -207,7 +207,6 @@ a.active {
 }
 
 /* Buttons */
-button,
 .btn {
 	cursor: pointer;
 	font-family: var(--ff-display);
@@ -217,30 +216,48 @@ button,
 	border-radius: .5rem;
 	transition: all 400ms ease;
 	backdrop-filter: blur(.5rem);
-}
-
-.btn-sec {
-	color: hsl(var(--clr-dark));
-	background-color: hsl(var(--clr-sec-400) / .75);
 	border: .2rem solid hsl(var(--clr-sec-400) / .5);
-	box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .75);
+	box-shadow: .2rem .2rem 0 0 hsl(var(--clr-sec-400) / .5);
 }
 
-.btn-sec:hover {
-	box-shadow: none;
-	transform: translate(.4rem, .4rem);
+@media (min-width: 48rem) {
+  .btn {
+    box-shadow: .3rem .3rem 0 0 hsl(var(--clr-sec-400) / .5);
+  }
+}
+
+@media (min-width: 75rem) {
+  .btn {
+    box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .5);
+  }
 }
 
 .btn-pri {
 	color: hsl(var(--clr-dark));
 	background-color: hsl(var(--clr-white) / .5);
-	border: .2rem solid hsl(var(--clr-sec-400) / .5);
-	box-shadow: .4rem .4rem 0 0 hsl(var(--clr-sec-400) / .5);
 }
 
-.btn-pri:hover {
+.btn-sec {
+	color: hsl(var(--clr-dark));
+	background-color: hsl(var(--clr-sec-400) / .75);
+}
+
+.btn:hover {
+  color: hsl(var(--clr-dark));
 	box-shadow: none;
-	transform: translate(.4rem, .4rem);
+	transform: translate(.2rem, .2rem);
+}
+
+@media (min-width: 48rem) {
+  .btn:hover {
+    transform: translate(.3rem, .3rem);
+  }
+}
+
+@media (min-width: 75rem) {
+  .btn:hover {
+    transform: translate(.4rem, .4rem);
+  }
 }
 
 /* Navigation - General */
