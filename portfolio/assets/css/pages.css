@@ -25,7 +25,7 @@
 	max-width: 30rem;
 	padding: var(--m-space);
   padding-top: calc(3rem + var(--xs-space));
-	background-color: hsl(var(--clr-white) / .3);
+	background-color: hsl(var(--clr-bg) / .3);
 	border: .2rem solid hsl(var(--clr-pri-400) / .5);
 	box-shadow: .2rem .2rem 0 0 hsl(var(--clr-pri-400) / .5);
 	transition: all 400ms ease;
