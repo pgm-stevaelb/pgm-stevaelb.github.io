@@ -258,6 +258,7 @@ button,
 .logo p {
   font-family: var(--ff-display);
   font-weight: var(--fw-semi);
+  margin: 0;
 }
 
 /* Mobile Navigation */
@@ -270,6 +271,16 @@ button,
 	background-color: hsl(var(--clr-white) / .1);
 	backdrop-filter: blur(.5rem);
 	z-index: 900;
+}
+
+@media (min-width: 75rem) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+  }
 }
 
 .mobile-nav__btns {
@@ -311,12 +322,12 @@ a.nav--link:hover {
 }
 
 /* Desktop Navigation - Aside */
-/* aside {
+.desktop-nav {
 	display: none;
 }
 
-@media (min-width: 64rem) {
-	aside {
+@media (min-width: 75rem) {
+	.desktop-nav {
     min-width: 20rem;
 		display: flex;
 		flex-direction: column;
@@ -326,41 +337,59 @@ a.nav--link:hover {
 		height: 100vh;
 		position: fixed;
 		top: 0;
+    z-index: 900;
 		padding: var(--xl-space);
 		color: hsl(var(--clr-dark));
-		background-color: hsl(var(--clr-white) / .9);
+		background-color: hsl(var(--clr-white) / .7);
 		box-shadow: 0 .4rem 1.25rem 0 hsl(var(--clr-dark-alt) / .1);
     backdrop-filter: blur(.5rem);
 	}
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--m-space);
+  }
+  
+  a.nav--link {
+    font-family: var(--ff-display);
+    font-size: var(--fs-l);
+    font-weight: var(--fw-semi);
+    text-transform: uppercase;
+  }
+  
+  a.nav--link:hover {
+    /* color: hsl(var(--clr-sec-400)); */
+    filter: drop-shadow(.3rem .3rem 0 hsl(var(--clr-sec-400) / .4));
+  }
 }
 
-nav {
-	width: 100%;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-between;
-	align-items: flex-end;
-	gap: var(--xl-space);
-} */
+@media (min-width: 90rem) {
+  .desktop-nav {
+    min-width: 25rem;
+  }
+}
 
 /* Containers */
-main {
+.container {
 	padding: var(--xl-space);
 	min-height: 100vh;
   padding-top: calc(3rem + (var(--xl-space) * 4));
-}
-
-/* .container {
-	padding: var(--xl-space);
-	width: 100%;
 	transition: all 400ms ease;
 }
 
-@media (min-width: 80rem) {
-	.container {
-		padding: var(--xxl-space);
-	}
-} */
+@media (min-width: 75rem) {
+  .container {
+    padding-left: calc(20rem + (var(--xl-space)));
+  }
+}
+
+@media (min-width: 90rem) {
+  .container {
+    padding-left: calc(25rem + (var(--xl-space)));
+  }
+}
 
 .full-width {
 	width: 100%;
@@ -398,4 +427,8 @@ main {
 
 .icon-s {
 	width: 1.3rem;
+}
+
+.icon:hover {
+	filter: drop-shadow(.4rem .4rem 0 hsl(var(--clr-sec-400) / .75));
 }
