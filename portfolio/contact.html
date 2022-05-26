@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/fonts.css">
 	<link rel="stylesheet" href="assets/css/pages.css">
-  <!-- Tooltip CDN CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.min.css" />
+	<!-- Tooltip CDN CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.min.css" />
 </head>
 
 <body>
@@ -22,45 +22,46 @@
 			<p>Steven<br>Aelbrecht</p>
 		</a>
 
-    <div class="mobile-nav__btns">
-      <span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right"><img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon burger-menu" id="burger"></span>
-      <!-- <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span> -->
-    </div>
+		<span aria-label="Burger 'Menu'" data-cooltipz-dir="bottom-right" class="burger-menu">
+			<img src="assets/media/images/burger.svg" alt="It's a Burger Menu!" class="icon" id="burger">
+		</span>
 	</div>
 
-  <nav id="nav-menu" class="off-canvas">
-    <ul class="nav">
-      <li class="m-bot-xl"><span aria-label="Close menu." data-cooltipz-dir="bottom"><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></span></li>
-      <li><a href="index.html" class="nav--link active">👋 Home</a></li>
-      <li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
-      <li><a href="services.html" class="nav--link">🖌️ Services</a></li>
-      <li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
-      <li><a href="contact.html" class="nav--link">☕ Contact</a></li>
-    </ul>
-  </nav>
+	<nav id="nav-menu" class="off-canvas">
+		<ul class="nav">
+			<li class="m-bot-xl"><span aria-label="Close menu." data-cooltipz-dir="bottom"><img src="assets/media/images/burger-eaten.svg" alt="Yes, this closes the menu!" class="icon" id="eaten"></span></li>
+			<li><a href="index.html" class="nav--link">Home</a></li>
+			<li><a href="about.html" class="nav--link">About me</a></li>
+			<li><a href="services.html" class="nav--link">Services</a></li>
+			<li><a href="portfolio.html" class="nav--link">Portfolio</a></li>
+			<li><a href="contact.html" class="nav--link active">☕ Contact</a></li>
+		</ul>
+	</nav>
+
+	<span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right" class="mode-switch-span">
+		<img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch">
+	</span>
 
 	<aside class="desktop-nav">
 		<a href="index.html" class="logo">
 			<img src="assets/media/images/ik.jpg" alt="Steven Aelbrecht" class="profile-pic">
 			<p>Steven<br>Aelbrecht</p>
 		</a>
-    
-    <span aria-label="Dark or light mode?" data-cooltipz-dir="bottom-right"><img src="assets/media/images/moon.svg" alt="Switch to light or dark mode" id="mode-switch" class="icon mode-switch"></span>
 
 		<nav>
 			<ul class="nav">
-				<li><a href="index.html" class="nav--link">👋 Home</a></li>
-				<li><a href="about.html" class="nav--link">👨‍🎨 About me</a></li>
-				<li><a href="services.html" class="nav--link">🖌️ Services</a></li>
-				<li><a href="portfolio.html" class="nav--link">🖼️ Portfolio</a></li>
+				<li><a href="index.html" class="nav--link">Home</a></li>
+				<li><a href="about.html" class="nav--link">About me</a></li>
+				<li><a href="services.html" class="nav--link">Services</a></li>
+				<li><a href="portfolio.html" class="nav--link">Portfolio</a></li>
 				<li><a href="contact.html" class="nav--link active">☕ Contact</a></li>
 			</ul>
 		</nav>
 	</aside>
 
 	<main id="contact" class="contact container">
-		<section class="full-width m-bot-xxl">
-			<h1 class="m-bot-l">☕ <span class="text-underline transition">Contact</span> me</h1>
+		<section class="full-width">
+			<h1 class="m-bot-l text-underline transition">☕Contact</h1>
 
 			<div class="m-bot-m">
 				<p>Have a <span class="text-bold">question</span> or a specific <span class="text-bold">request</span>? Just want to say hello or go grab a coffee? ☕</p>
@@ -76,14 +77,8 @@
 				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
 				<input type="submit" value="Send message" class="btn btn-sec">
-        <p class="text-bold">FORM DOES NOT YET WORK ;)...</p>
+				<p class="text-bold">FORM DOES NOT YET WORK ;)...</p>
 			</form>
-		</section>
-
-		<section id="bottom-nav" class="nav__btns m-bot-xxl">
-			<a href="about.html" class="btn btn-pri">👨‍🎨 Get to know me</a>
-			<a href="services.html" class="btn btn-pri">🖌️ What do I offer</a>
-			<a href="portfolio.html" class="btn btn-pri">🖼️ Check my work</a>
 		</section>
 	</main>
 
