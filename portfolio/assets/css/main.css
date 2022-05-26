@@ -289,6 +289,17 @@ a.active {
 	margin: 0;
 }
 
+.mode-switch-span {
+  position: absolute !important;
+  z-index: 9500;
+  top: var(--xl-space);
+  right: var(--xl-space);
+}
+
+.burger-menu {
+  margin-right: 4rem;
+}
+
 /* Mobile Navigation */
 .mobile-nav {
 	padding: var(--xl-space);
@@ -309,11 +320,6 @@ a.active {
 	.desktop-nav {
 		display: flex;
 	}
-}
-
-.mobile-nav__btns {
-	display: flex;
-	gap: .5rem;
 }
 
 .off-canvas {
