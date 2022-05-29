@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Moderat';
+    src: url('Moderat-Regular.woff2') format('woff2'),
+        url('Moderat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moderat';
+    src: url('Moderat-Light.woff2') format('woff2'),
+        url('Moderat-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
