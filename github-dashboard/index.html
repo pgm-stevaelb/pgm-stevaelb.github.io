@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Github Dashboard</title>
+	<!-- Fonts -->
+	<link rel="stylesheet" href="static/fonts/fonts.css"> <!-- Segoe -->
+	<!-- CSS -->
+	<link rel="stylesheet" href="static/css/main.css">
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/media/images/logos/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/media/images/logos/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/media/images/logos/favicon/favicon-16x16.png">
+	<!-- <link rel="manifest" href="/static/media/images/logos/favicon/site.webmanifest"> -->
+	<link rel="mask-icon" href="/static/media/images/logos/favicon/safari-pinned-tab.svg" color="#333333">
+	<link rel="shortcut icon" href="/static/media/images/logos/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/static/media/images/logos/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#333333">
+</head>
+
+<body class="">
+	<header>
+		<nav class="container container--info">
+			<img src="static/media/images/logos/glasses/Glasses-Light.svg" alt="Steven Aelbrecht Glasses Logo" class="logo-img">
+			<div class="current-location nav-numbers">
+				<div id="choose-location">
+					<input type="text" name="location-box" id="location-box__input" class="location-box__input" placeholder="Your location... ENTER">
+				</div>
+				<div id="clock-and-weather"></div>
+			</div>
+			<div id="some-numbers" class="nav-numbers">
+				<div id="covid" class="margin-r-2r"></div>
+				<button id="mode-switch" class="sun"></button>
+			</div>
+		</nav>
+	</header>
+
+	<main id="main-content">
+		<section id="pgm-team" class="container container--side">
+			<h2>PGM Team</h2>
+			<p class="section-description">A list of all current PGM teachers and students.</p>
+			<div id="pgm-team__list"></div>
+		</section>
+
+		<section id="github-details" class="container">
+			<article id="github-details__user" class="margin-b-2r">
+				<div id="github-details__details"></div>
+			</article>
+			<article id="github-details__repos" class="margin-b-2r">
+				<h2 class="github-details__repos__title margin-b-2r">Repositories</h2>
+				<div id="github-details__repos__list"></div>
+			</article>
+			<article id="github-details__followers">
+				<h2 class="github-details__repos__title margin-b-2r">Followers</h2>
+				<div id="github-details__followers__list"></div>
+			</article>
+			<div id="to-top">
+				<a href=#github-details__user>
+					<img src="static/media/images/icons/up-arrow.svg">
+				</a>
+			</div>
+		</section>
+
+		<section id="github-users" class="container container--side">
+			<h2>Github Users</h2>
+			<p class="section-description">Search all the users from Github.</p>
+			<div id="search-all-github">
+				<input type="text" name="search-box" id="search-box__input" class="search-box__input" placeholder="Search..">
+				<div class="search-buttons">
+					<button type="submit" id="search-box__btn" class="search-box__btn flex-center"><img src="static/media/images/icons/search.svg" class="margin-r-0">GH Search</button>
+					<button type="submit" id="search-box__btn--youtube" class="search-box__btn flex-center"><img src="static/media/images/icons/youtube.svg" class="margin-r-0">YT Search</button>
+				</div>
+				</div>
+			<div id="github-users__list">The list of users of Github.</div>
+		</section>
+	</main>
+
+	<footer class="container container--info">
+		<div id="copyright">&copy; 2021 - pgm-stevaelb</div>
+		<div id="copyright"><img src="static/media/images/logos/artevelde-png.png" alt="Arteveldehogeschool Logo" class="logo-img"></div>
+	</footer>
+
+	<script type="text/javascript" src="static/js/services.js"></script>
+	<script type="text/javascript" src="static/data/icons.js"></script>
+	<script type="text/javascript" src="static/data/pgm.json"></script>
+	<script type="text/javascript" src="static/js/main.js"></script>
+</body>
+
+</html>
