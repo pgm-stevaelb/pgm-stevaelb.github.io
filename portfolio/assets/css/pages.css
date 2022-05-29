@@ -117,10 +117,24 @@
 .portfolio__block {
   position: relative;
   padding: var(--m-space);
+  max-width: 75rem;
 	background-color: hsl(var(--clr-bg) / .3);
 	border: .2rem solid hsl(var(--clr-pri-400) / .5);
 	box-shadow: .2rem .2rem 0 0 hsl(var(--clr-pri-400) / .5);
 	transition: all 400ms ease;
+}
+
+.portfolio__img {
+  background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+  padding: calc(var(--l-space) + 5rem);
+}
+
+@media (min-width: 36rem) {
+  .portfolio__img {
+    padding: calc(var(--xxl-space) + 4rem);
+  }
 }
 
 /* CONTACT */

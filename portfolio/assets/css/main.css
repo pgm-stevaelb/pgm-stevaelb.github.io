@@ -292,7 +292,7 @@ a.active {
 }
 
 .mode-switch-span {
-  position: absolute !important;
+  position: fixed !important;
   z-index: 950;
   top: var(--xl-space);
   right: var(--xl-space);
