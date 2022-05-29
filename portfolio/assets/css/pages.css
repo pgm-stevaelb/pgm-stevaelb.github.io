@@ -88,7 +88,40 @@
 }
 
 /* PORTFOLIO */
+.portfolio {
+	padding: var(--xl-space);
+	min-height: 100vh;
+	padding-top: calc(3rem + (var(--xl-space) * 4));
+	transition: all 400ms ease;
+}
 
+@media (min-width: 75rem) {
+	.portfolio {
+		padding: var(--xxl-space);
+		padding-left: calc(20rem + (var(--xxl-space)));
+	}
+}
+
+@media (min-width: 90rem) {
+	.portfolio {
+		padding-left: calc(25rem + (var(--xxl-space)));
+	}
+}
+
+.portfolio-overview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--xl-space);
+}
+
+.portfolio__block {
+  position: relative;
+  padding: var(--m-space);
+	background-color: hsl(var(--clr-bg) / .3);
+	border: .2rem solid hsl(var(--clr-pri-400) / .5);
+	box-shadow: .2rem .2rem 0 0 hsl(var(--clr-pri-400) / .5);
+	transition: all 400ms ease;
+}
 
 /* CONTACT */
 .contact-form {

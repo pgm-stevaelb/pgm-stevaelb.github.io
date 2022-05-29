@@ -82,6 +82,7 @@ body {
 	color: hsl(var(--clr-text));
 	background: hsl(var(--clr-pri-200));
 	background: linear-gradient(315deg, hsl(var(--clr-bg-alt)) 0%, hsl(var(--clr-bg)) 100%);
+  background-attachment: fixed;
 	cursor: default;
 	overflow: overlay;
 }
@@ -121,7 +122,7 @@ h1 {
 }
 
 h2 {
-	font-size: var(--fs-xl);
+	font-size: var(--fs-l);
 }
 
 h3 {
