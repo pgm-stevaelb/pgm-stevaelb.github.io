@@ -8,6 +8,8 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
 
       this.allCategories = null;
       this.showCategories();
+
+      this.filterItems();
     },
     cacheElems() {
       this.portfolio = portfolioJSON;
@@ -21,7 +23,7 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
       this.$projects.innerHTML = this.portfolio.map((e) => this.generateHTMLForProjects(e)).join('');
     },
     generateHTMLForProjects(project) {
-      return `<article class="portfolio__block rounded ${project.category}" data-id="${project.id}">
+      return `<article class="portfolio__block rounded ${project.category}" data-filter="${project.category}">
                 <div class="portfolio__img rounded m-bot-m box-shadow-s" style="background-image: url(assets/media/images/portfolio/${project.slug}/${project.img.full});"></div>
                 <div class="portfolio__details">
                   <h2 class="m-bot-s">${project.title}</h2>
@@ -46,7 +48,32 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
     showCategories() {
       const allCats = this.portfolio.map(e => e.category).join(',');
       const uniqueCats = [...new Set(allCats.split(','))]
-      this.$categories.innerHTML = uniqueCats.map(e => `<button class="btn btn-" id="${e}">${e}</button>`).join('')
+      this.$categories.innerHTML += uniqueCats.map(e => `<span class="btn btn-cat" data-filter="${e}">${e}</span>`).join('')
+    },
+    filterItems() {
+      const filters = document.querySelectorAll('.btn-cat');
+      filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+          let selectedFilter = filter.getAttribute('data-filter');
+          let itemsToHide = document.querySelectorAll(`.portfolio-overview .portfolio__block:not([data-filter='${selectedFilter}'])`);
+          let itemsToShow = document.querySelectorAll(`.portfolio-overview [data-filter='${selectedFilter}']`);
+
+          if (selectedFilter == 'all') {
+            itemsToHide = [];
+            itemsToShow = document.querySelectorAll('.portfolio-overview [data-filter]');
+          }
+
+          itemsToHide.forEach(e => {
+            e.classList.add('hide');
+            e.classList.remove('show');
+          });
+
+          itemsToShow.forEach(e => {
+            e.classList.remove('hide');
+            e.classList.add('show');
+          });
+        });
+      });
     }
   };
 
