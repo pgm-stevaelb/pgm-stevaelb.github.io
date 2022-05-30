@@ -6,13 +6,13 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
       this.cacheElems();
 			this.buildUI();
 
-      // this.allCategories = null;
-      // this.getAllCategories();
+      this.allCategories = null;
+      this.showCategories();
     },
     cacheElems() {
       this.portfolio = portfolioJSON;
       this.$projects = document.querySelector('.portfolio-overview');
-      // this.$categories = document.querySelector('.category-list');
+      this.$categories = document.querySelector('.portfolio__categories');
     },
     buildUI() {
       this.splitPortfolioForHTML();
@@ -42,6 +42,11 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
 				output += `<li class="technology ${e}">${e}</li>`
 			}).join('');
 			return output;
+    },
+    showCategories() {
+      const allCats = this.portfolio.map(e => e.category).join(',');
+      const uniqueCats = [...new Set(allCats.split(','))]
+      this.$categories.innerHTML = uniqueCats.map(e => `<button class="btn btn-" id="${e}">${e}</button>`).join('')
     }
   };
 
