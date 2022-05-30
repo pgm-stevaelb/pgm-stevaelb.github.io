@@ -184,6 +184,16 @@
 }
 
 /* CONTACT */
+.contact-direct {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m-space);
+}
+
+.contact-direct a {
+  font-size: var(--fs-l);
+}
+
 .contact-form {
 	display: flex;
 	flex-direction: column;
