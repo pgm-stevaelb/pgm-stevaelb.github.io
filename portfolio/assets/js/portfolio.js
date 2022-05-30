@@ -1,4 +1,4 @@
-import portfolio from '../data/portfolio.json' assert { type: "json" }; //https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules/
+import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules/
 
 (() => {
   const app = {
@@ -7,7 +7,7 @@ import portfolio from '../data/portfolio.json' assert { type: "json" }; //https:
 			this.buildUI();
     },
     cacheElems() {
-      this.portfolio = portfolio;
+      this.portfolio = portfolioJSON;
       this.$projects = document.querySelector('.portfolio-overview');
     },
     buildUI() {

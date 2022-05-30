@@ -1,4 +1,4 @@
-import services from '../data/services.json' assert { type: "json" };
+import servicesJSON from '../data/services.json' assert { type: "json" };
 
 (() => {
   const app = {
@@ -7,7 +7,7 @@ import services from '../data/services.json' assert { type: "json" };
       this.buildUI();
     },
     cacheElems() {
-      this.allServices = services;
+      this.allServices = servicesJSON;
       this.$services = document.querySelector('.services-overview');
     },
     buildUI() {

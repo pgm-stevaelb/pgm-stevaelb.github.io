@@ -1,0 +1,54 @@
+[
+	{
+		"year": 2013,
+		"title": "Graphic Design",
+		"story": "<p>I learned how to use Photoshop by myself watching a lot of YouTube and started making posters and flyers for small local companies.</p><p>In between the years, I also learned about Illustrator, also by watching a lot of YouTube...</p>",
+		"icons": [
+			"photoshop.png",
+			"illustrator.png"
+		]
+	},
+	{
+		"year": 2015,
+		"title": "WordPress",
+		"story": "<p>I started making some small websites in WordPress using existing themes. I had a basic knowledge of HTML / CSS from school.</p>",
+		"icons": [
+			"html.png",
+			"css.png",
+			"wordpress.png"
+		]
+	},
+	{
+		"year": 2016,
+		"title": "WordPress Theme Building",
+		"story": "<p>After getting experience using WordPress, I quickly started creating my own theme using tools like Elementor.</p>",
+		"icons": [
+			"elementor.png"
+		]
+	},
+	{
+		"year": 2017,
+		"title": "WordPress Advanced Theme Building",
+		"story": "<p>Elementor wasn't enough and lacked in getting more creative in the design. So I started using Oxygen Builder, which is more barebone HTML and CSS with capabilities of adding some extra scripts.</p>",
+		"icons": [
+			"oxygen.png"
+		]
+	},
+	{
+		"year": 2018,
+		"title": "Even more Graphic Design",
+		"story": "<p>I got a bit of a creative block, so I quit everything I did before and went to evening school for 2 years learning more about graphic design. This is where I really grew a lot and got very advanced in Photoshop, Illustrator and InDesign (Btw, I LOVE InDesign!)</p>",
+		"icons": [
+			"indesign.png"
+		]
+	},
+	{
+		"year": 2021,
+		"title": "Web Development",
+		"story": "<p>I wanted to become a more advanced web developer and started a graduate at Artevelde Hogeschool, in which I learned more advanced frameworks, database use etc.</p>",
+		"icons": [
+			"js.png",
+			"node.png"
+		]
+	}
+]

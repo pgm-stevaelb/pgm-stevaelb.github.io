@@ -13,6 +13,11 @@
 	}
 }
 
+.about__icons {
+  display: flex;
+  gap: var(--s-space);
+}
+
 /* SERVICES */
 .services-overview {
 	display: flex;
@@ -61,6 +66,10 @@
 	position: absolute;
 	top: -1.5rem;
 	left: -.5rem;
+}
+
+.service__block--title h2 {
+	font-size: var(--fs-l);
 }
 
 .service__icon {
