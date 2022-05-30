@@ -61,7 +61,7 @@ html {
 
 .light-mode {
 	--clr-text: 200 84% 10%;
-	--clr-text-alt: 203 30% 26%;
+	--clr-text-alt: 0 0% 100%;
 	--clr-bg: 0 0% 100%;
 	--clr-bg-alt: 182 45% 78%;
 }
@@ -136,7 +136,7 @@ p {
 }
 
 a {
-	color: hsl(var(--clr-text-alt));
+	color: hsl(var(--clr-text));
 	font-weight: var(--fw-bold);
 	transition: all 200ms ease;
 }

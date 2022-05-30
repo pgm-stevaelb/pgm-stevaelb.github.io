@@ -137,6 +137,43 @@
   }
 }
 
+.portfolio__categories {
+  display: flex;
+  gap: var(--s-space);
+}
+
+/* .portfolio__categories li {
+  padding: var(--xs-space);
+	border: .2rem solid hsl(var(--clr-pri-400) / .5);
+  border-radius: .5rem;
+} */
+
+.technology {
+  color: hsl(var(--clr-text-alt));
+  font-weight: var(--fw-bold);
+  padding: var(--xs-space) var(--s-space);
+	box-shadow: .2rem .2rem 0 0 hsl(var(--clr-pri-400) / .5);
+  border-radius: .5rem;
+}
+
+.technology.html {
+  background-color: hsl(12, 78%, 52%);
+}
+
+.technology.css {
+  background-color: hsl(228, 78%, 52%);
+}
+
+.technology.js {
+  background-color: hsl(50, 81%, 55%);
+  color: hsl(var(--clr-text));
+}
+
+.portfolio__links {
+  display: flex;
+  gap: var(--xl-space);
+}
+
 /* CONTACT */
 .contact-form {
 	display: flex;
