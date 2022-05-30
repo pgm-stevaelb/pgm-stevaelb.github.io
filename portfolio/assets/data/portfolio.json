@@ -11,9 +11,9 @@
 			"Front-End"
 		],
 		"technology": [
-			"html",
-			"css",
-			"js"
+			"HTML",
+			"CSS",
+			"JS"
 		],
 		"img": {
 			"full": "github-dashboard-full.jpg",
@@ -33,9 +33,9 @@
 			"Dashboard"
 		],
 		"technology": [
-			"html",
-			"css",
-			"js"
+			"HTML",
+			"CSS",
+			"JS"
 		],
 		"img": {
 			"full": "arne-quinze-clone-full.jpg",
@@ -43,5 +43,71 @@
 		},
 		"url": "https://pgm-stevaelb.github.io/arne-quinze-clone/",
 		"slug": "arne-quinze-clone"
+	},
+	{
+		"id": 3,
+		"title": "Websites Broederscholen Sint-Niklaas",
+		"description": {
+			"short": "Creation of all websites for the Broederscholen in Sint-Niklaas, Belgium.",
+			"long": "I created the new website for every school from the Broederscholen in Sint-Niklaas. I set up all of them in WordPress using Oxygen Builder to create the theme. I also use Meta Box for dynamic content like blog posts and classes."
+		},
+		"category": [
+			"WordPress"
+		],
+		"technology": [
+			"WordPress",
+			"OxygenBuilder",
+			"MetaBox"
+		],
+		"img": {
+			"full": "broederscholen.jpg",
+			"thumb": ""
+		},
+		"url": "https://broeders.be/",
+		"slug": "broederscholen"
+	},
+	{
+		"id": 4,
+		"title": "Katholiek Onderwijs Land van Waas",
+		"description": {
+			"short": "Website for Katholiek Onderwijs Land van Waas, school group from Sint-Niklaas, Belgium.",
+			"long": "Katholiek Onderwijs Land van Waas is the general school group that combines primary and secondary education. It's a general website with information and documents that can be downloaded. I created the website entirely in WordPress using Oxygen Builder to create the theme and using Meta Box to add dynamic content like the different schools and the documents that can be downloaded."
+		},
+		"category": [
+			"WordPress"
+		],
+		"technology": [
+			"WordPress",
+			"OxygenBuilder",
+			"MetaBox"
+		],
+		"img": {
+			"full": "kolvw.jpg",
+			"thumb": ""
+		},
+		"url": "https://kolvw.be/",
+		"slug": "kolvw"
+	},
+	{
+		"id": 5,
+		"title": "Sloep-Rent",
+		"description": {
+			"short": "Website for Sloep-Rent, a boat rental company based in Temse, Belgium.",
+			"long": "Sloep-Rent is a boat rental company based in Temse, Belgium. They rent out boats for a specific time during the day to sail over the Schelde (a nice river running through the beautiful nature of Belgium). I created this website in WordPress, using Elementor Pro to create the theme and using WooCommerce to create the module to rent the boats."
+		},
+		"category": [
+			"WordPress"
+		],
+		"technology": [
+			"WordPress",
+			"Elementor",
+			"WooCommerce"
+		],
+		"img": {
+			"full": "sloep-rent.jpg",
+			"thumb": ""
+		},
+		"url": "https://sloep-rent.be/",
+		"slug": "sloep-rent"
 	}
 ]

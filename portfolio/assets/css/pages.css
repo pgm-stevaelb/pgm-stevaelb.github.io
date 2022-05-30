@@ -159,17 +159,37 @@
   border-radius: .5rem;
 }
 
-.technology.html {
+.technology.HTML {
   background-color: hsl(12, 78%, 52%);
 }
 
-.technology.css {
+.technology.CSS {
   background-color: hsl(228, 78%, 52%);
 }
 
-.technology.js {
+.technology.JS {
   background-color: hsl(50, 81%, 55%);
   color: hsl(var(--clr-text));
+}
+
+.technology.WordPress {
+  background-color: hsl(199, 65%, 37%);
+}
+
+.technology.OxygenBuilder {
+  background-color: hsl(250, 80%, 67%);
+}
+
+.technology.MetaBox {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.technology.Elementor {
+  background-color:	hsl(336, 100%, 29%);
+}
+
+.technology.WooCommerce {
+  background-color: hsl(268, 39%, 52%);
 }
 
 .portfolio__links {
