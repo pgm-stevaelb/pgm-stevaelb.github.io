@@ -16,6 +16,11 @@
 			"full": "github-dashboard-full.jpg",
 			"thumb": ""
 		},
+		"gallery": [
+			"github-dashboard-full.jpg",
+			"github-dashboard-2.jpg",
+			"github-dashboard-3.jpg"
+		],
 		"url": "https://pgm-stevaelb.github.io/github-dashboard/",
 		"slug": "github-dashboard"
 	},
@@ -36,6 +41,11 @@
 			"full": "arne-quinze-clone-full.jpg",
 			"thumb": ""
 		},
+		"gallery": [
+			"arne-quinze-clone-full.jpg",
+			"arne-quinze-clone-2.jpg",
+			"arne-quinze-clone-3.jpg"
+		],
 		"url": "https://pgm-stevaelb.github.io/arne-quinze-clone/",
 		"slug": "arne-quinze-clone"
 	},
@@ -56,6 +66,13 @@
 			"full": "broederscholen.jpg",
 			"thumb": ""
 		},
+		"gallery": [
+			"broederscholen.jpg",
+			"broederscholen-2.jpg",
+			"broederscholen-3.jpg",
+			"broederscholen-4.jpg",
+			"broederscholen-5.jpg"
+		],
 		"url": "https://broeders.be/",
 		"slug": "broederscholen"
 	},
@@ -76,6 +93,11 @@
 			"full": "kolvw.jpg",
 			"thumb": ""
 		},
+		"gallery": [
+			"kolvw.jpg",
+			"kolvw-2.jpg",
+			"kolvw-3.jpg"
+		],
 		"url": "https://kolvw.be/",
 		"slug": "kolvw"
 	},
@@ -96,6 +118,13 @@
 			"full": "sloep-rent.jpg",
 			"thumb": ""
 		},
+		"gallery": [
+			"sloep-rent.jpg",
+			"sloep-rent-2.jpg",
+			"sloep-rent-3.jpg",
+			"sloep-rent-4.jpg",
+			"sloep-rent-5.jpg"
+		],
 		"url": "https://sloep-rent.be/",
 		"slug": "sloep-rent"
 	}

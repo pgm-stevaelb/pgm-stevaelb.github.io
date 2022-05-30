@@ -151,6 +151,12 @@
   gap: var(--s-space);
 }
 
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .technology {
   color: hsl(var(--clr-text-alt));
   font-weight: var(--fw-bold);

@@ -22,7 +22,7 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
     },
     generateHTMLForProjects(project) {
       return `<article class="portfolio__block rounded ${project.category}" data-id="${project.id}">
-                <div class="portfolio__img rounded m-bot-m box-shadow-s" style="background-image: url(assets/media/images/portfolio/${project.img.full});"></div>
+                <div class="portfolio__img rounded m-bot-m box-shadow-s" style="background-image: url(assets/media/images/portfolio/${project.slug}/${project.img.full});"></div>
                 <div class="portfolio__details">
                   <h2 class="m-bot-s">${project.title}</h2>
                   <p class="m-bot-s">${project.description.short}</p>
@@ -43,12 +43,6 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
 			}).join('');
 			return output;
     }
-    // getAllCategories() {
-    //   this.allCategories = this.portfolio.map(e => e.category).join(',');
-    //   const catArray = this.allCategories.split(',');
-    //   const uniqueCats = [...new Set(catArray)];
-    //   this.$categories.innerHTML = uniqueCats.map(e => `<li><a href="#">${e}</a></li>`).join('');
-    // }
   };
 
   app.init();
