@@ -40,7 +40,7 @@
 		toggleDarkOrLightMode() {
       // Get the current mode in a separate variable
       const currentMode = localStorage.getItem('mode');
-      console.log(currentMode)
+      
       // Check if the current mode is light or dark and turn them around
       if (currentMode == 'light') {
         document.body.classList.replace('light-mode', 'dark-mode');

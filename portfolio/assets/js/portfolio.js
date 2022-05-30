@@ -5,10 +5,14 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
     init() {
       this.cacheElems();
 			this.buildUI();
+
+      // this.allCategories = null;
+      // this.getAllCategories();
     },
     cacheElems() {
       this.portfolio = portfolioJSON;
       this.$projects = document.querySelector('.portfolio-overview');
+      // this.$categories = document.querySelector('.category-list');
     },
     buildUI() {
       this.splitPortfolioForHTML();
@@ -17,7 +21,7 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
       this.$projects.innerHTML = this.portfolio.map((e) => this.generateHTMLForProjects(e)).join('');
     },
     generateHTMLForProjects(project) {
-      return `<article class="portfolio__block rounded" data-id="${project.id}">
+      return `<article class="portfolio__block rounded ${project.category}" data-id="${project.id}">
                 <div class="portfolio__img rounded m-bot-m box-shadow-s" style="background-image: url(assets/media/images/portfolio/${project.img.full});"></div>
                 <div class="portfolio__details">
                   <h2 class="m-bot-s">${project.title}</h2>
@@ -39,6 +43,12 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
 			}).join('');
 			return output;
     }
+    // getAllCategories() {
+    //   this.allCategories = this.portfolio.map(e => e.category).join(',');
+    //   const catArray = this.allCategories.split(',');
+    //   const uniqueCats = [...new Set(catArray)];
+    //   this.$categories.innerHTML = uniqueCats.map(e => `<li><a href="#">${e}</a></li>`).join('');
+    // }
   };
 
   app.init();
