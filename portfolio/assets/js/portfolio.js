@@ -26,8 +26,8 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
                     ${this.splitTechnologies(project)}
                   </ul>
                   <ul class="portfolio__links">
-                    <li><a href="portfolio/detail.html?project=${project.slug}">More info</a></li>
-                    <li><a href="${project.url}" target="_blank">Live link</a></li>
+                    <li><a href="portfolio/detail.html?project=${project.slug}" class="btn btn-pri">More info</a></li>
+                    <li><a href="${project.url}" target="_blank" class="btn btn-sec">Live link</a></li>
                   </ul>
                 </div>
               </article>`

@@ -221,6 +221,7 @@ a.active {
 
 /* Buttons */
 .btn {
+  display: block;
 	cursor: pointer;
 	font-family: var(--ff-display);
 	font-weight: var(--fw-semi);

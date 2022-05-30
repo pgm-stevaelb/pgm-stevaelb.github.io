@@ -151,12 +151,6 @@
   gap: var(--s-space);
 }
 
-/* .portfolio__categories li {
-  padding: var(--xs-space);
-	border: .2rem solid hsl(var(--clr-pri-400) / .5);
-  border-radius: .5rem;
-} */
-
 .technology {
   color: hsl(var(--clr-text-alt));
   font-weight: var(--fw-bold);
@@ -180,7 +174,7 @@
 
 .portfolio__links {
   display: flex;
-  gap: var(--xl-space);
+  gap: var(--m-space);
 }
 
 /* CONTACT */
