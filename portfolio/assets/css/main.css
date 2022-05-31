@@ -421,14 +421,14 @@ a.nav--link:hover {
 
 @media (min-width: 75rem) {
 	.container {
-		padding: var(--xxl-space);
-		padding-left: calc(20rem + (var(--xxl-space)));
+		padding: var(--xl-space);
+		padding-left: calc(20rem + (var(--xl-space)));
 	}
 }
 
 @media (min-width: 90rem) {
 	.container {
-		padding-left: calc(25rem + (var(--xxl-space)));
+		padding-left: calc(25rem + (var(--xl-space)));
 	}
 }
 

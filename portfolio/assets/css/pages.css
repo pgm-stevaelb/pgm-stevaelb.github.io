@@ -18,6 +18,12 @@
 	gap: var(--s-space);
 }
 
+.about-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--m-space);
+}
+
 /* SERVICES */
 .services-overview {
 	display: flex;
@@ -106,14 +112,14 @@
 
 @media (min-width: 75rem) {
 	.portfolio {
-		padding: var(--xxl-space);
-		padding-left: calc(20rem + (var(--xxl-space)));
+		padding: var(--xl-space);
+		padding-left: calc(20rem + (var(--xl-space)));
 	}
 }
 
 @media (min-width: 90rem) {
 	.portfolio {
-		padding-left: calc(25rem + (var(--xxl-space)));
+		padding-left: calc(25rem + (var(--xl-space)));
 	}
 }
 

@@ -1,0 +1,42 @@
+[
+	{
+		"tech": "Photoshop",
+		"icon": "photoshop.png"
+	},
+	{
+		"tech": "Illustrator",
+		"icon": "illustrator.png"
+	},
+	{
+		"tech": "InDesign",
+		"icon": "indesign.png"
+	},
+	{
+		"tech": "HTML",
+		"icon": "html.png"
+	},
+	{
+		"tech": "CSS",
+		"icon": "css.png"
+	},
+	{
+		"tech": "JS",
+		"icon": "js.png"
+	},
+	{
+		"tech": "WordPress",
+		"icon": "wordpress.png"
+	},
+	{
+		"tech": "Elementor",
+		"icon": "elementor.png"
+	},
+	{
+		"tech": "Oxygen Builder",
+		"icon": "oxygen.png"
+	},
+	{
+		"tech": "NodeJS",
+		"icon": "node.png"
+	}
+]

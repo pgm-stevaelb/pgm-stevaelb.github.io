@@ -1,4 +1,5 @@
 import aboutJSON from '../data/history.json' assert { type: "json" };
+import techJSON from '../data/technologies.json' assert { type: 'json' };
 
 (() => {
   const app = {
@@ -8,13 +9,18 @@ import aboutJSON from '../data/history.json' assert { type: "json" };
     },
     cacheElems() {
       this.history = aboutJSON;
+      this.tech = techJSON;
       this.$about = document.querySelector('.about-overview');
     },
     buildUI() {
       this.splitHistoryForHTML();
     },
     splitHistoryForHTML() {
-      this.$about.innerHTML = this.history.map(e => this.generateHTMLForAboutPage(e)).join('');
+      // This is for the extended content
+      // this.$about.innerHTML = this.history.map(e => this.generateHTMLForAboutPage(e)).join('');
+
+      // This is for only the techs
+      this.$about.innerHTML = this.tech.map(e => `<span aria-label="${e.tech}" data-cooltipz-dir="bottom-right"><li><img src="assets/media/images/about/${e.icon}" alt="${e.tech}" class="icon"></li></span>`).join('');
     },
     generateHTMLForAboutPage(about) {
       return `
