@@ -148,6 +148,7 @@
 
 .portfolio__categories {
 	display: flex;
+  flex-wrap: wrap;
 	gap: var(--s-space);
 }
 
@@ -240,9 +241,38 @@
 	background-color: hsl(268, 39%, 52%);
 }
 
+.technology.Node {
+	background-color: hsl(118, 40%, 38%);
+}
+
 .portfolio__links {
 	display: flex;
+  align-items: center;
 	gap: var(--m-space);
+}
+
+.portfolio-btn {
+	padding: var(--xs-space) var(--s-space);
+}
+
+.portfolio-btn img {
+  width: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .portfolio-btn img {
+    width: 1.5rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .portfolio-btn img {
+    width: 2rem;
+  }
+}
+
+.portfolio__icon {
+  width: 1rem;
 }
 
 /* CONTACT */

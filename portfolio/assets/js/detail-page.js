@@ -40,7 +40,11 @@ import portfolio from '../data/portfolio.json' assert { type: "json" };
         <ul class="portfolio__categories m-bot-xl">
           ${this.splitTechnologies(detail.technology)}
         </ul>
-        <a href="${detail.url}" target="_blank" class="btn btn-sec">${detail.url}</a>
+        <ul class="portfolio__links m-bot-xl">
+          <li><a href="portfolio/detail.html?project=${detail.slug}" class="btn btn-pri">More info</a></li>
+          ${detail.live === null ? '' : `<span aria-label="Go to live URL" data-cooltipz-dir="bottom-right"><li><a href="${detail.live}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/link.svg" alt="Web link"></a></li></span>`}
+          ${detail.github === null ? '' : `<span aria-label="Open Github repo" data-cooltipz-dir="bottom-right"><li><a href="${detail.github}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/github.svg" alt="Github link"></a></li></span>`}
+        </ul>
       `
     },
     splitTechnologies(list) {

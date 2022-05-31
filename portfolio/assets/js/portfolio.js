@@ -33,7 +33,8 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
                   </ul>
                   <ul class="portfolio__links">
                     <li><a href="portfolio/detail.html?project=${project.slug}" class="btn btn-pri">More info</a></li>
-                    <li><a href="${project.url}" target="_blank" class="btn btn-sec">Live link</a></li>
+                    ${project.live === null ? '' : `<li><a href="${project.live}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/link.svg" alt="Web link"></a></li>`}
+                    ${project.github === null ? '' : `<li><a href="${project.github}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/github.svg" alt="Github link"></a></li>`}
                   </ul>
                 </div>
               </article>`
@@ -52,6 +53,7 @@ import portfolioJSON from '../data/portfolio.json' assert { type: "json" }; //ht
     },
     filterItems() {
       const filters = document.querySelectorAll('.btn-cat');
+
       filters.forEach(filter => {
         filter.addEventListener('click', () => {
           let selectedFilter = filter.getAttribute('data-filter');

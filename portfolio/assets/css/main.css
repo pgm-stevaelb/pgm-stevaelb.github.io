@@ -256,20 +256,23 @@ a.active {
 	background-color: hsl(var(--clr-pri-400) / .75);
 }
 
-.btn:hover {
+.btn:hover,
+.btn-active {
 	color: hsl(var(--clr-text));
 	box-shadow: none;
 	transform: translate(.2rem, .2rem);
 }
 
 @media (min-width: 48rem) {
-	.btn:hover {
+	.btn:hover,
+  .btn-active {
 		transform: translate(.3rem, .3rem);
 	}
 }
 
 @media (min-width: 75rem) {
-	.btn:hover {
+	.btn:hover,
+  .btn-active {
 		transform: translate(.4rem, .4rem);
 	}
 }

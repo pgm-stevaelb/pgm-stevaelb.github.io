@@ -21,7 +21,8 @@
 			"github-dashboard-2.jpg",
 			"github-dashboard-3.jpg"
 		],
-		"url": "https://pgm-stevaelb.github.io/github-dashboard/",
+		"live": "https://pgm-stevaelb.github.io/github-dashboard/",
+		"github": "https://github.com/pgm-stevaelb/pgm-stevaelb.github.io/tree/main/github-dashboard",
 		"slug": "github-dashboard"
 	},
 	{
@@ -46,7 +47,8 @@
 			"arne-quinze-clone-2.jpg",
 			"arne-quinze-clone-3.jpg"
 		],
-		"url": "https://pgm-stevaelb.github.io/arne-quinze-clone/",
+		"live": "https://pgm-stevaelb.github.io/arne-quinze-clone/",
+		"github": "https://github.com/pgm-stevaelb/pgm-stevaelb.github.io/tree/main/arne-quinze-clone",
 		"slug": "arne-quinze-clone"
 	},
 	{
@@ -73,7 +75,8 @@
 			"broederscholen-4.jpg",
 			"broederscholen-5.jpg"
 		],
-		"url": "https://broeders.be/",
+		"live": "https://broeders.be/",
+		"github": null,
 		"slug": "broederscholen"
 	},
 	{
@@ -98,7 +101,8 @@
 			"kolvw-2.jpg",
 			"kolvw-3.jpg"
 		],
-		"url": "https://kolvw.be/",
+		"live": "https://kolvw.be/",
+		"github": null,
 		"slug": "kolvw"
 	},
 	{
@@ -125,7 +129,35 @@
 			"sloep-rent-4.jpg",
 			"sloep-rent-5.jpg"
 		],
-		"url": "https://sloep-rent.be/",
+		"live": "https://sloep-rent.be/",
+		"github": null,
 		"slug": "sloep-rent"
+	},
+	{
+		"id": 6,
+		"title": "Tinder Clone",
+		"description": {
+			"short": "Project created for Artevelde. The app is a Tinder clone and has the capabilities to like fictional people.",
+			"long": "This is a clone of Tinder with a very basic set of tools. Like, superlike and dislike other people (all people in the app are fictional). Chat with other people and check out the messages of each person in the app."
+		},
+		"category": "Back-end",
+		"technology": [
+			"HTML",
+			"CSS",
+			"JS",
+			"Node"
+		],
+		"img": {
+			"full": "tinder-full.jpg",
+			"thumb": ""
+		},
+		"gallery": [
+			"tinder-full.jpg",
+			"tinder-2.jpg",
+			"tinder-3.jpg"
+		],
+		"live": null,
+		"github": "https://github.com/pgm-stevaelb/tinder-clone",
+		"slug": "tinder-clone"
 	}
 ]
