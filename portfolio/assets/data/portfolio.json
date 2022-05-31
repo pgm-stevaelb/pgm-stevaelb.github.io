@@ -140,7 +140,7 @@
 			"short": "Project created for Artevelde. The app is a Tinder clone and has the capabilities to like fictional people.",
 			"long": "This is a clone of Tinder with a very basic set of tools. Like, superlike and dislike other people (all people in the app are fictional). Chat with other people and check out the messages of each person in the app."
 		},
-		"category": "Back-end",
+		"category": "Back-End",
 		"technology": [
 			"HTML",
 			"CSS",
@@ -159,5 +159,31 @@
 		"live": null,
 		"github": "https://github.com/pgm-stevaelb/tinder-clone",
 		"slug": "tinder-clone"
+	},
+	{
+		"id": 7,
+		"title": "Gentse Feesten clone",
+		"description": {
+			"short": "Project created for Artevelde. A clone of the website for Gentse Feesten 2020.",
+			"long": "This is a fully functional website that is a clone of Gentse Feesten 2020. Gentse Feesten is a free festival that takes place in the center of Ghent, Belgium. I implemented automated pages using slugs and there is also a search function."
+		},
+		"category": "Front-End",
+		"technology": [
+			"HTML",
+			"CSS",
+			"JS"
+		],
+		"img": {
+			"full": "gentse-feesten-full.jpg",
+			"thumb": ""
+		},
+		"gallery": [
+			"gentse-feesten-full.jpg",
+			"gentse-feesten-2.jpg",
+			"gentse-feesten-3.jpg"
+		],
+		"live": "https://pgm-stevaelb.github.io/gentse-feesten-clone/",
+		"github": "https://github.com/pgm-stevaelb/pgm-stevaelb.github.io/tree/main/gentse-feesten-clone",
+		"slug": "gentse-feesten-clone"
 	}
 ]
