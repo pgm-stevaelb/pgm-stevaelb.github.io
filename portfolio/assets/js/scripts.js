@@ -32,10 +32,10 @@
 			this.$eatenBurger.addEventListener('click', this.closeBurgerNav, false);
 		},
 		openBurgerNav() {
-			document.getElementById('nav-menu').style.width = '100vw';
+			document.getElementById('nav-menu').style.left = '0';
 		},
 		closeBurgerNav() {
-			document.getElementById('nav-menu').style.width = '0';
+			document.getElementById('nav-menu').style.left = '-100%';
 		},
 		toggleDarkOrLightMode() {
       // Get the current mode in a separate variable

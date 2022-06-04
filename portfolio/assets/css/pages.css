@@ -34,7 +34,7 @@
 @media (min-width: 48rem) {
 	.services-overview {
 		flex-flow: row wrap;
-		gap: var(--l-space);
+		gap: var(--xl-space);
 	}
 }
 
@@ -71,7 +71,6 @@
 	gap: var(--m-space);
 	position: absolute;
 	top: -1.5rem;
-	left: -.5rem;
 }
 
 .service__block--title h2 {
@@ -93,13 +92,24 @@
 
 .services__list li {
 	position: relative;
-	margin-left: var(--l-space);
+	margin-left: var(--xl-space);
+  margin-bottom: var(--xs-space);
 }
 
 .services__list li::before {
-	content: '✔️';
+	content: '✅';
 	position: absolute;
-	margin-left: calc(var(--l-space) * -1);
+	margin-left: calc(var(--xl-space) * -1);
+}
+
+@media (min-width: 48rem) {
+  .services__list li {
+    margin-left: var(--l-space);
+  }
+
+  .services__list li::before {
+    margin-left: calc(var(--l-space) * -1);
+  }
 }
 
 /* PORTFOLIO */
