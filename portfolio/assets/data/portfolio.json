@@ -4,7 +4,7 @@
 		"title": "Github Dashboard",
 		"description": {
 			"short": "Dashboard with basic searching capabilities using API's.",
-			"long": "First time creating a functioning dashboard testing and playing around with APIs. You can use it to show repositories by searching for a Github user in the right search panel. By clicking the YT Search button, you search for a YouTube clip. There is also an easy dark and light mode switch and you can search for a location at the top to get their current time and weather."
+			"long": "This is my first time building a working dashboard and experimenting with APIs. By searching for a Github user in the right search panel, you can see repositories. The YT Search button allows you to look for a YouTube video. There is also an easy dark and light mode switch, as well as the ability to search for a location at the top to get the current time and weather for that location."
 		},
 		"category": "Front-End",
 		"technology": [
@@ -30,7 +30,7 @@
 		"title": "Arne Quinze cloned website",
 		"description": {
 			"short": "Clone of website from Arne Quinze.",
-			"long": "Arne Quinze is a Belgian contemporary artist, painter and sculptor. His work involves everything from small drawings and paintings, medium-sized sculptures to massive installations. This was a project for Artevelde Hogeschool making use of JSON files to load in lots of data at once. Real website: https://www.arnequinze.com/."
+			"long": "Arne Quinze is a sculptor, painter, and contemporary artist from Belgium. His work ranges from small sketches and paintings to medium-scale sculptures and large-scale installations. This was a project for Artevelde Hogeschool in which JSON files were used to load large amounts of data at once. Real website: https://www.arnequinze.com/."
 		},
 		"category": "Front-End",
 		"technology": [
@@ -56,7 +56,7 @@
 		"title": "Websites Broederscholen Sint-Niklaas",
 		"description": {
 			"short": "Creation of all websites for the Broederscholen in Sint-Niklaas, Belgium.",
-			"long": "I created the new website for every school from the Broederscholen in Sint-Niklaas. I set up all of them in WordPress using Oxygen Builder to create the theme. I also use Meta Box for dynamic content like blog posts and classes."
+			"long": "I created the new website for every school from the Broederscholen in Sint-Niklaas. I created the theme for all of them in WordPress using Oxygen Builder. Meta Box is also used for dynamic content such as blog entries and classes."
 		},
 		"category": "WordPress",
 		"technology": [
@@ -84,7 +84,7 @@
 		"title": "Katholiek Onderwijs Land van Waas",
 		"description": {
 			"short": "Website for Katholiek Onderwijs Land van Waas, school group from Sint-Niklaas, Belgium.",
-			"long": "Katholiek Onderwijs Land van Waas is the general school group that combines primary and secondary education. It's a general website with information and documents that can be downloaded. I created the website entirely in WordPress using Oxygen Builder to create the theme and using Meta Box to add dynamic content like the different schools and the documents that can be downloaded."
+			"long": "The general school group Katholiek Onderwijs Land van Waas combines primary and secondary education. It's a generic website with downloadable documents and information. I built the website entirely in WordPress, utilizing Oxygen Builder to design the theme and Meta Box to provide dynamic information such as the various schools and downloadable documents."
 		},
 		"category": "WordPress",
 		"technology": [
@@ -110,7 +110,7 @@
 		"title": "Sloep-Rent",
 		"description": {
 			"short": "Website for Sloep-Rent, a boat rental company based in Temse, Belgium.",
-			"long": "Sloep-Rent is a boat rental company based in Temse, Belgium. They rent out boats for a specific time during the day to sail over the Schelde (a nice river running through the beautiful nature of Belgium). I created this website in WordPress, using Elementor Pro to create the theme and using WooCommerce to create the module to rent the boats."
+			"long": "Sloep-Rent, situated in Temse, Belgium, is a boat rental company. They rent out boats to sail over the Schelde for a specified time during the day (a nice river running through the beautiful nature of Belgium). This website was built in WordPress, with the theme designed using Elementor Pro and the boat rental module constructed using WooCommerce."
 		},
 		"category": "WordPress",
 		"technology": [
@@ -138,7 +138,7 @@
 		"title": "Tinder Clone",
 		"description": {
 			"short": "Project created for Artevelde. The app is a Tinder clone and has the capabilities to like fictional people.",
-			"long": "This is a clone of Tinder with a very basic set of tools. Like, superlike and dislike other people (all people in the app are fictional). Chat with other people and check out the messages of each person in the app."
+			"long": "This is a Tinder clone with a very limited set of features. Other people's likes, dislikes, and superlikes (all people in the app are fictional). In the app, you can chat with other individuals and check out their messages."
 		},
 		"category": "Back-End",
 		"technology": [
@@ -165,7 +165,7 @@
 		"title": "Gentse Feesten clone",
 		"description": {
 			"short": "Project created for Artevelde. A clone of the website for Gentse Feesten 2020.",
-			"long": "This is a fully functional website that is a clone of Gentse Feesten 2020. Gentse Feesten is a free festival that takes place in the center of Ghent, Belgium. I implemented automated pages using slugs and there is also a search function."
+			"long": "This website is a clone of Gentse Feesten 2020 and is fully functional. Gentse Feesten is a free festival held in the center Ghent, Belgium. I used slugs to create automatic pages, and there is also a search option."
 		},
 		"category": "Front-End",
 		"technology": [

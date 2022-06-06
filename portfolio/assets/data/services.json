@@ -2,7 +2,7 @@
 	{
 		"service": "WordPress Designer",
 		"icon": "wordpress.svg",
-		"description": "I create WordPress themes and build complete websites from scratch.",
+		"description": "I design WordPress themes and build entire websites from the ground up.",
 		"listTitle": "Plugins I use:",
 		"list": [
 			"Oxygen Builder (theme builder)",
@@ -13,7 +13,7 @@
 	{
 		"service": "Front-end developer",
 		"icon": "front-end.svg",
-		"description": "I love coding and making dreams come true for websites, apps, etc.",
+		"description": "I enjoy coding and creating websites, applications, and other projects come to life.",
 		"listTitle": "Languages I use:",
 		"list": [
 			"HTML / CSS",
@@ -24,7 +24,7 @@
 	{
 		"service": "Graphic designer",
 		"icon": "graphic-design.svg",
-		"description": "I will make the perfect logo and branding for your company. Or use your current branding to create whatever you want or need.",
+		"description": "I will design the ideal logo and branding for your business.",
 		"listTitle": "Software I use:",
 		"list": [
 			"Illustrator",
@@ -34,8 +34,8 @@
 	},
 	{
 		"service": "And more",
-		"icon": "front-end.svg",
-		"description": "Just give me a ring or send me an email to find out what I can do for you.",
+		"icon": "and-more.svg",
+		"description": "To find out what I can do for you, simply give me a call or send me an email.",
 		"listTitle": "Some more I do:",
 		"list": [
 			"Prototyping (Adobe XD)",
