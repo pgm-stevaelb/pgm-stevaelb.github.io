@@ -7,12 +7,6 @@
 }
 
 /* ABOUT */
-@media (min-width: 90rem) {
-	.about {
-		max-width: 100rem;
-	}
-}
-
 .about__icons {
 	display: flex;
 	gap: var(--s-space);
@@ -220,8 +214,8 @@
 	color: hsl(var(--clr-text-alt));
 	font-weight: var(--fw-bold);
 	padding: var(--xs-space) var(--s-space);
-	box-shadow: .2rem .2rem 0 0 hsl(var(--clr-pri-400) / .5);
-	border-radius: .5rem;
+	/* box-shadow: .2rem .2rem 0 0 hsl(var(--clr-pri-400) / .5);
+	border-radius: .5rem; */
 }
 
 .technology.HTML {

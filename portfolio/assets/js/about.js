@@ -20,7 +20,7 @@ import techJSON from '../data/technologies.json' assert { type: 'json' };
       // this.$about.innerHTML = this.history.map(e => this.generateHTMLForAboutPage(e)).join('');
 
       // This is for only the techs
-      this.$about.innerHTML = this.tech.map(e => `<span aria-label="${e.tech}" data-cooltipz-dir="bottom-right"><li><img src="assets/media/images/about/${e.icon}" alt="${e.tech}" class="icon"></li></span>`).join('');
+      this.$about.innerHTML = this.tech.map(e => `<li aria-label="${e.tech}" data-cooltipz-dir="bottom-right"><img src="assets/media/images/about/${e.icon}" alt="${e.tech}" class="icon icon--service"></li>`).join('');
     },
     generateHTMLForAboutPage(about) {
       return `
