@@ -41,9 +41,8 @@ import portfolio from '../data/portfolio.json' assert { type: "json" };
           ${this.splitTechnologies(detail.technology)}
         </ul>
         <ul class="portfolio__links m-bot-xl">
-          <li><a href="portfolio/detail.html?project=${detail.slug}" class="btn btn-pri">More info</a></li>
-          ${detail.live === null ? '' : `<span aria-label="Go to live URL" data-cooltipz-dir="bottom-right"><li><a href="${detail.live}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/link.svg" alt="Web link"></a></li></span>`}
-          ${detail.github === null ? '' : `<span aria-label="Open Github repo" data-cooltipz-dir="bottom-right"><li><a href="${detail.github}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/github.svg" alt="Github link"></a></li></span>`}
+          ${detail.live === null ? '' : `<li aria-label="Go to live URL" data-cooltipz-dir="bottom-right"><a href="${detail.live}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/link.svg" alt="Web link"></a></li>`}
+          ${detail.github === null ? '' : `<li aria-label="Open Github repo" data-cooltipz-dir="bottom-right"><a href="${detail.github}" target="_blank" class="btn btn-sec portfolio-btn"><img src="assets/media/images/icons/github.svg" alt="Github link"></a></li>`}
         </ul>
       `
     },
