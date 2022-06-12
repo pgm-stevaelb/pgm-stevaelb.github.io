@@ -10,7 +10,7 @@ import techJSON from '../data/technologies.json' assert { type: 'json' };
     cacheElems() {
       this.history = aboutJSON;
       this.tech = techJSON;
-      this.$about = document.querySelector('.about-overview');
+      this.$about = document.querySelector('.about__tech--overview');
     },
     buildUI() {
       this.splitHistoryForHTML();

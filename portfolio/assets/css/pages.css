@@ -12,10 +12,32 @@
 	gap: var(--s-space);
 }
 
-.about-overview {
+.about__tech--overview {
   display: flex;
   flex-wrap: wrap;
   gap: var(--m-space);
+}
+
+.about__info {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: var(--l-space);
+}
+
+@media (min-width: 30rem) {
+	.about__info--img {
+		width: 15rem;
+	}
+}
+
+@media (min-width: 48rem) {
+	.about__info {
+		flex-direction: row;
+	}
+
+	.about__info--img {
+		height: 30rem;
+	}
 }
 
 /* SERVICES */
