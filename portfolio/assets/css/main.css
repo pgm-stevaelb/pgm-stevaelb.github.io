@@ -309,6 +309,11 @@ button {
   line-height: 1.2;
 }
 
+.profile-pic {
+	border: solid .2rem hsl(var(--clr-pri-400) / .5);
+	box-shadow: .2rem .2rem 0 0 hsl(var(--clr-pri-400) / .5);
+}
+
 .mode-switch-span {
   position: fixed !important;
   z-index: 950;
