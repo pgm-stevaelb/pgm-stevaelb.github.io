@@ -94,7 +94,7 @@ body {
 }
 
 ::selection {
-	color: hsl(var(--clr-bg));
+	color: hsl(var(--clr-text));
 	background: hsl(var(--clr-sec-400) / .8);
 }
 
