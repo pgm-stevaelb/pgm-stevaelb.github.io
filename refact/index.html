@@ -5,19 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background: rgb(204,204,204); 
+        }
+        page {
+            display: block;
+            margin: 0 auto;
+        }
+        page[size="A4"] {  
+            width: 210mm;
+            height: 297mm; 
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #aaa;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="links"></div>
+    <div class="pages"></div>
     <script>
         const defaultLink = "https://content.standaardstudentshop.be/CMS/CDS/Standaard%20Boekhandel/Published%20content/AHS/2220160114029%20Refactoring%20UI%20%20Essentials%20Package/Resources/89923594-b958-45b0-a6f1-01424b824c61.pdf_/";
         const ext = ".png";
         let output = '';
-        for (let i = 1; i < 20; i++) {
-            output += `<article><p>Pagina ${i}</p><img src="${defaultLink}${i}${ext}" /></article>`;
-            // output += `<a href="${defaultLink}${i}${ext}">Link${i}</a>`;
-            // output += `${defaultLink}${i}${ext}<br>`;
+        for (let i = 1; i < 219; i++) {
+            output += `<page size="A4"><img src="${defaultLink}${i}${ext}" /></page>`;
         }
-        document.querySelector(".links").innerHTML = output;
+        document.querySelector(".pages").innerHTML = output;
     </script>
 </body>
 </html>
