@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="links"></div>
+    <script>
+        const defaultLink = "https://content.standaardstudentshop.be/CMS/CDS/Standaard%20Boekhandel/Published%20content/AHS/2220160114029%20Refactoring%20UI%20%20Essentials%20Package/Resources/89923594-b958-45b0-a6f1-01424b824c61.pdf_/";
+        const ext = ".png";
+        let output = '';
+        for (let i = 1; i < 219; i++) {
+            output += `<article><p>Pagina ${i}</p><img src="${defaultLink}${i}${ext}" /></article>`;
+            // output += `<a href="${defaultLink}${i}${ext}">Link${i}</a>`;
+            // output += `${defaultLink}${i}${ext}<br>`;
+        }
+        document.querySelector(".links").innerHTML = output;
+    </script>
+</body>
+</html>
