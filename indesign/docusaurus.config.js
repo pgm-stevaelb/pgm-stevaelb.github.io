@@ -4,7 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const organizationName = 'pgm-stevaelb.github';
+const organizationName = 'pgm-stevaelb';
 const projectName = 'indesign';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -13,6 +13,7 @@ const config = {
   tagline: 'Cursus InDesign, nauwkeurig opgebouwd voor keuzevak Broederschool Humaniora.',
   url: `https://${organizationName}.github.io`,
   baseUrl: `/${projectName}/`,
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
