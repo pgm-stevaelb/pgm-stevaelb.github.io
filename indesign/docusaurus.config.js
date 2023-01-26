@@ -12,7 +12,7 @@ const config = {
   title: 'Keuzevak InDesign 2023',
   tagline: 'Cursus InDesign, nauwkeurig opgebouwd voor keuzevak Broederschool Humaniora.',
   url: `https://${organizationName}.github.io`,
-  baseUrl: `/${projectName}/`,
+  baseUrl: `/pgm-stevaelb.github.io/${projectName}/`,
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
