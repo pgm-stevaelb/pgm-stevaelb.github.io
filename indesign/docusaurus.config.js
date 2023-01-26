@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Keuzevak InDesign 2023',
   tagline: 'Cursus InDesign, nauwkeurig opgebouwd voor keuzevak Broederschool Humaniora.',
-  url: 'https://github.com', //`https://${organizationName}.github.io`
-  baseUrl: `/pgm-stevaelb.github.io/`,
+  url: 'https://github.com',
+  baseUrl: `/indesign/`,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -17,8 +17,9 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'pgm-stevaelb', // Usually your GitHub org/user name.
-  projectName: 'indesign', // Usually your repo name.
+  projectName: 'pgm-stevaelb.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+  trailingSlash: true,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
