@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkindesign=self.webpackChunkindesign||[]).push([[7617],{7375:s=>{s.exports=JSON.parse('{"label":"hola","permalink":"/indesign/blog/tags/hola","allTagsPath":"/indesign/blog/tags","count":1}')}}]);

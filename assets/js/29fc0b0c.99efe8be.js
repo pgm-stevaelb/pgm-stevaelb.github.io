@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkindesign=self.webpackChunkindesign||[]).push([[1668],{2708:e=>{e.exports=JSON.parse('{"permalink":"/indesign/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
