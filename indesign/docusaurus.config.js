@@ -4,15 +4,12 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const organizationName = 'pgm-stevaelb';
-const projectName = 'indesign';
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Keuzevak InDesign 2023',
   tagline: 'Cursus InDesign, nauwkeurig opgebouwd voor keuzevak Broederschool Humaniora.',
-  url: `https://${organizationName}.github.io`,
-  baseUrl: `/pgm-stevaelb.github.io/${projectName}/`,
+  url: 'https://github.com', //`https://${organizationName}.github.io`
+  baseUrl: `/indesign/`,
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -20,8 +17,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName, // Usually your GitHub org/user name.
-  projectName, // Usually your repo name.
+  organizationName: 'pgm-stevaelb', // Usually your GitHub org/user name.
+  projectName: 'indesign', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
