@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+// https://www.youtube.com/watch?v=ImSK0nv7KfY
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Keuzevak InDesign 2023',
@@ -17,7 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'pgm-stevaelb', // Usually your GitHub org/user name.
-  projectName: 'pgm-stevaelb.github.io', // Usually your repo name.
+  projectName: 'pgm-stevaelb.github.io/indesign', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
