@@ -1,0 +1,11 @@
+{
+  "name": "pgm-stevaelb.github.io",
+  "version": "1.0.0",
+  "description": "My Github Pages page, I put my live sites here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
