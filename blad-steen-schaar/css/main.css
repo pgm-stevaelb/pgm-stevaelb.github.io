@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  height: 100vh;
+  background: #ff7f49;
+  background: linear-gradient(180deg, #ff7f49 0%, #eb6276 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h1 > span {
+  font-size: 50%;
+}
+
+h2 {
+  text-align: left;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: #49ff7f;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+  background-color: white;
+  padding: 10px 20px;
+  color: #fc4b00;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+button:hover {
+  outline: #fc4b00 solid 4px;
+}
+
+.container {
+  max-width: 60rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.spel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.speelveld {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.speler {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.speler__levens {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  border: 2px solid black;
+}
+
+.speler__leven {
+  height: 30px;
+  width: 20%;
+  background-color: #49ff7f;
+}
+
+.speler__keuze {
+  background-color: #ffffff;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.speler__keuze__afbeelding {
+  min-width: 100px;
+  max-width: 250px;
+  min-height: 100px;
+  max-width: 250px;
+}
+
+.versus {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.blad-steen-schaar {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.wapens {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.keuzes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.winner-loser {
+  text-align: center;
+}
+
+.winner-loser > p {
+  font-size: 2rem;
+  color: black;
+  font-weight: 900;
+}

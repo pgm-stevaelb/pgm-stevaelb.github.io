@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Favicon-->
+
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+
+    <!-- Geef je website hier een titel -->
+    <title>Blad Steen Schaar</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="spel">
+        <!-- Hier komt je HTML-code -->
+
+        <!-- Titel -->
+        <h1>Blad, Steen, Schaar <span id="vuur">🔥</span></h1>
+
+        <!-- Het speelveld -->
+        <div class="speelveld">
+          <!-- De speler zelf -->
+          <div class="speler" id="jij">
+            <h2 class="speler__naam" id="spelerNaam">Speler</h2>
+            <div class="speler__keuze" id="keuzeSpeler"></div>
+            <div id="spelerLeven" class="speler__levens"></div>
+          </div>
+
+          <!-- Versus -->
+          <p class="versus">VS</p>
+
+          <!-- De computer -->
+          <div class="speler" id="computer">
+            <h2 class="speler__naam">Slimste AI</h2>
+            <div class="speler__keuze" id="keuzeComputer"></div>
+            <div id="computerLeven" class="speler__levens"></div>
+          </div>
+        </div>
+
+        <!-- Hier komt de code voor de keuze van blad, steen of schaar -->
+        <div class="blad-steen-schaar">
+          <h2>Kies je wapen!</h2>
+          <div class="keuzes" id="keuzes">
+            <button id="btnBlad">
+              <img src="img/blad.png" alt="Blad" />
+            </button>
+            <button id="btnSteen">
+              <img src="img/steen.png" alt="Steen" />
+            </button>
+            <button id="btnSchaar">
+              <img src="img/schaar.png" alt="Schaar" />
+            </button>
+          </div>
+          <button class="btnReset" id="btnReset">Reset</button>
+          <!-- Winner or loser -->
+          <div class="winner-loser">
+            <p id="spelerWin" class="hidden">JIJ WINT! 🥳</p>
+            <p id="computerWin" class="hidden">Je verliest... 😞</p>
+            <p id="vuurWin" class="hidden">
+              NATUURLIJK! Vuur wint van alles! 🤯
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts hier toevoegen-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+/* Tutorial CSS */
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 25px 0;
+}
+
+.p--center {
+  text-align: center;
+}
+
+h2,
+h3 {
+  margin: 25px 0;
+  text-decoration: underline;
+}
+
+header {
+  height: 20vh;
+  background-color: white;
+  color: #ff7f49;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+blockquote {
+  border-left: 15px solid orange;
+  padding: 2rem;
+  margin: 2rem 0;
+  background-color: #f7f7f7;
+  color: orange;
+  font-size: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+iframe {
+  margin: 25px 0;
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.teaser {
+  background-color: white;
+}
+
+.img__tutorial {
+  height: 400px;
+  border: 2px white solid;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+ul {
+  margin: 25px 75px;
+  list-style-image: url("../img/arrow.png");
+}
+
+.article--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
